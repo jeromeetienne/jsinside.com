@@ -29,30 +29,50 @@
       </div>
       
       <div class="row">
+<!-- Button trigger modal -->
+<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">WebAudiox.jsfx.js - 8 bit procedural sound generation with Web Audio API</h4>
+      </div>
+      <div class="modal-body">
+	<iframe width="100%" height="350"  frameborder="0" allowfullscreen
+		src="//www.youtube.com/embed/-Lo433Bk2RY">
+	</iframe>
+      </div>
+      <div class="modal-footer">
+	<p>This is a screencast about WebAudiox and 8 bit procedural sound generation.
+		We use jsfx.js library to play funny game sounds with Web Audio API.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
         <h2>Current Videos
 		<div class="btn-group" id='tagbuttons'>
 			<button type="button" class="btn btn-default" data-tag=''>All
 				<span class="badge">?</span>
 			</button>
-			<button type="button" class="btn btn-default" data-tag='content'>Content
+			<button type="button" class="btn btn-default" data-tag='threejs'>Three.js
 				<span class="badge">?</span>
 			</button>
-			<button type="button" class="btn btn-default" data-tag='effect'>Effect
+			<button type="button" class="btn btn-default" data-tag='gamedev'>GameDev
 				<span class="badge">?</span>
 			</button>
-			<button type="button" class="btn btn-default" data-tag='shader'>Shader
+			<button type="button" class="btn btn-default" data-tag='sounds'>Sounds
 				<span class="badge">?</span>
 			</button>
-			<button type="button" class="btn btn-default" data-tag='input'>Input
+			<button type="button" class="btn btn-default" data-tag='javascript'>Javascript
 				<span class="badge">?</span>
 			</button>
-			<button type="button" class="btn btn-default" data-tag='physics'>Physics
-				<span class="badge">?</span>
-			</button>
-			<button type="button" class="btn btn-default" data-tag='tool'>Tool
-				<span class="badge">?</span>
-			</button>
-			<button type="button" class="btn btn-default" data-tag='postprocessing'>PostProcessing
+			<button type="button" class="btn btn-default" data-tag='testing'>testing
 				<span class="badge">?</span>
 			</button>
 		</div>
@@ -88,35 +108,27 @@
 		#items[data-tag=''] .item {
 			display	: block;
 		}
-		#items[data-tag~=content] .item[data-tag~=content] {
+		#items[data-tag~=threejs] .item[data-tag~=threejs] {
 			display	: block;
 		}
-		#items[data-tag~=effect] .item[data-tag~=effect] {
+		#items[data-tag~=gamedev] .item[data-tag~=gamedev] {
 			display	: block;
 		}
-		#items[data-tag~=shader] .item[data-tag~=shader] {
+		#items[data-tag~=sounds] .item[data-tag~=sounds] {
 			display	: block;
 		}
-		#items[data-tag~=physics] .item[data-tag~=physics] {
+		#items[data-tag~=javascript] .item[data-tag~=javascript] {
 			display	: block;
 		}
-		#items[data-tag~=tool] .item[data-tag~=tool] {
+		#items[data-tag~=testing] .item[data-tag~=testing] {
 			display	: block;
-		}
-		#items[data-tag~=postprocessing] .item[data-tag~=postprocessing] {
-			display	: block;
-		}
-		#items[data-tag~=input] .item[data-tag~=input] {
-			display : block;
 		}
 	</style>
 
 	<div class="row" id='items' data-tag=''>  
 	</div> <!-- /row -->
-
-	<!-- github ribbon -->
-	<a href="https://github.com/jeromeetienne/threex"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
-
+	<div class="row" id='modals' data-tag=''>  
+	</div> <!-- /row -->
 
 	<!-- Bootstrap core JavaScript
 	================================================== -->
@@ -125,9 +137,16 @@
 	<script src="www/bootstrap3.0.2/js/bootstrap.min.js"></script>
 	<script src="www/mustache/mustache.js"></script>
 
-	<template id='itemTemplate'>
-		<div class="col-md-6 item" id='{{name}}' data-tag='{{tags}}'>
-			<div class="thumbnail">
+	<template id='modalTemplate'>
+		<!-- Modal -->
+		<div class="modal fade" id="{{name}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		        <h4 class="modal-title" id="myModalLabel">{{title}}</h4>
+		      </div>
+		      <div class="modal-body">
 				<iframe width="100%" height="350"  frameborder="0" allowfullscreen
 					src="//www.youtube.com/embed/{{youtubeId}}">
 				</iframe>
@@ -136,6 +155,39 @@
 						{{title}}
 					</h4>
 					<p>{{{description}}}</p>
+				</div>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+	</template>
+	<style>
+		/*handle hashLink*/
+		#items .item .hashLink {
+			visibility	: hidden;
+		}
+		#items .item:hover .hashLink {
+			visibility	: visible;
+			text-decoration	: none;
+		}
+	</style>
+	<template id='itemTemplate'>
+		<div class="col-md-6 item" data-tag='{{tags}}'>
+			<div class="thumbnail">
+				<iframe width="100%" height="350"  frameborder="0" allowfullscreen
+					src="//www.youtube.com/embed/{{youtubeId}}">
+				</iframe>
+				<div class="caption">
+					<h4>
+						{{title}}
+						<small>
+							<a  class='hashLink' href='#{{name}}'>&#x00B6</a>
+						</small>
+					</h4>
+					<p>{{{description}}}</p>
+					<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#{{name}}">
+					  See Details
+					</button>
 				</div>
 			</div>
 		</div>
@@ -147,8 +199,10 @@ var items	= []
 //		threex.cubecamera						//
 //////////////////////////////////////////////////////////////////////////////////
 items.push({
+	name		: 'WebAudioxJsfx',
 	title		: 'WebAudiox.jsfx.js - 8 bit procedural sound generation with Web Audio API',
 	youtubeId	: '-Lo433Bk2RY',
+	tags		: 'sounds gamedev',
 	description	: [
 		'This is a screencast about WebAudiox and 8 bit procedural sound generation.',
 		'We use jsfx.js library to play funny game sounds with Web Audio API.',
@@ -159,8 +213,10 @@ items.push({
 //		threex.cubecamera						//
 //////////////////////////////////////////////////////////////////////////////////
 items.push({
+	name		: 'CloudGameInThreejs',
 	title		: 'Cloud Gaming for THREE.js',
 	youtubeId	: 'PxKl7KbygUE',
+	tags		: 'threejs gamedev',
 	description	: [
 		'This screencast presents how to do Cloud Gaming with three.js.',
 		'It is simple and requires little code.',
@@ -172,8 +228,10 @@ items.push({
 //		threex.cubecamera						//
 //////////////////////////////////////////////////////////////////////////////////
 items.push({
+	name		: 'TeapotIn3min',
 	title		: 'Learning Three.js: 3min to teapot with the boilerplate',
 	youtubeId	: '0XPOCi6FJX0',
+	tags		: 'threejs',
 	description	: [
 		'how to display a teapot in webgl in 3min :)'
 	].join(' ')
@@ -211,7 +269,7 @@ items.push({
 //////////////////////////////////////////////////////////////////////////////////
 
 jQuery(function(){
-	// get template text
+	// get template items
 	var htmlTemplate= jQuery('#itemTemplate').html()
 	var output	= ''
 	items.forEach(function(item){
@@ -219,11 +277,19 @@ jQuery(function(){
 	})
 	jQuery(output).appendTo('#items')
 
+	// get template modals
+	var htmlTemplate= jQuery('#modalTemplate').html()
+	var output	= ''
+	items.forEach(function(item){
+		output	+= Mustache.render(htmlTemplate, item);
+	})
+	jQuery(output).appendTo('#modals')
+
 	// honor location.hash as active	
 	if( window.location.hash.substr(1) ){
 		var selectedId	= window.location.hash.substr(1);
-		var element	= document.getElementById(selectedId)
-		element.classList.add('active')
+		// element.classList.add('active')
+		$('#'+selectedId).modal()
 	}
 })
 </script>
