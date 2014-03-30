@@ -29,32 +29,6 @@
       </div>
       
       <div class="row">
-<!-- Button trigger modal -->
-<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-  Launch demo modal
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="myModalLabel">WebAudiox.jsfx.js - 8 bit procedural sound generation with Web Audio API</h4>
-      </div>
-      <div class="modal-body">
-	<iframe width="100%" height="350"  frameborder="0" allowfullscreen
-		src="//www.youtube.com/embed/-Lo433Bk2RY">
-	</iframe>
-      </div>
-      <div class="modal-footer">
-	<p>This is a screencast about WebAudiox and 8 bit procedural sound generation.
-		We use jsfx.js library to play funny game sounds with Web Audio API.</p>
-      </div>
-    </div>
-  </div>
-</div>
-
         <h2>Current Videos
 		<div class="btn-group" id='tagbuttons'>
 			<button type="button" class="btn btn-default" data-tag=''>All
@@ -181,7 +155,7 @@
 					<h4>
 						{{title}}
 						<small>
-							<a  class='hashLink' href='#{{name}}'>&#x00B6</a>
+							<a  class='hashLink' data-toggle="modal" data-target="#{{name}}">&#x00B6</a>
 						</small>
 					</h4>
 					<p>{{{description}}}</p>
