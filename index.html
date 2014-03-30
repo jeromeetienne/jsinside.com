@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="THREEx - Games Extensions for three.js">
+    <meta name="author" content="Jerome Etienne">
+    <base target='_blank'>
+
+    <title>JsInside - bite sized videos to learn stuff</title>
+
+    <!-- Bootstrap core CSS --> 
+    <link href="www/bootstrap3.0.2/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <!-- <link href="www/bootstrap3.0.2/css/jumbotron-narrow.css" rel="stylesheet"> -->
+  </head>
+  <body>      
+
+    <div class="container">
+      <div class="jumbotron">
+        <h1>JsInside <small>bite sized videos to learn stuff</small>
+        </h1>
+        <p class="lead">Short videos to learn things about coding. 
+        	It is about varied number of subject. From do fun things with,
+        	to write safer code, to check your code, all the stuff which
+        	are parts of coding software. And let's have fun 
+        	in the process.
+      </div>
+      
+      <div class="row">
+        <h2>Current Videos
+		<div class="btn-group" id='tagbuttons'>
+			<button type="button" class="btn btn-default" data-tag=''>All
+				<span class="badge">?</span>
+			</button>
+			<button type="button" class="btn btn-default" data-tag='content'>Content
+				<span class="badge">?</span>
+			</button>
+			<button type="button" class="btn btn-default" data-tag='effect'>Effect
+				<span class="badge">?</span>
+			</button>
+			<button type="button" class="btn btn-default" data-tag='shader'>Shader
+				<span class="badge">?</span>
+			</button>
+			<button type="button" class="btn btn-default" data-tag='input'>Input
+				<span class="badge">?</span>
+			</button>
+			<button type="button" class="btn btn-default" data-tag='physics'>Physics
+				<span class="badge">?</span>
+			</button>
+			<button type="button" class="btn btn-default" data-tag='tool'>Tool
+				<span class="badge">?</span>
+			</button>
+			<button type="button" class="btn btn-default" data-tag='postprocessing'>PostProcessing
+				<span class="badge">?</span>
+			</button>
+		</div>
+	</h2>
+        <div>
+          Here is a list of the existing extensions. Feel free to contribute your own. Just do a
+          <a href='https://help.github.com/articles/using-pull-requests'>pull request</a>
+          , edit this file, copy an existing line and fit it to your own needs. 
+          Wanna try live in the browser ? There is a <a href='http://jeromeetienne.github.io/threex-playground/'>threex playground</a> waiting for you!
+          If you want to create your own, here is
+          <a href='https://github.com/jeromeetienne/threex.sample'>three.sample</a>
+          to start with. Look at <a href='www/how-to-write-a-threex-module.html'>"How to write a threex module"</a>.
+        </div>
+      <br/>
+	<style>
+		/*handle selected item*/
+		#items .item.active {
+			background-color: lightgrey;
+		}
+		/*handle hashLink*/
+		#items .item .hashLink {
+			visibility	: hidden;
+		}
+		#items .item:hover .hashLink {
+			visibility	: visible;
+			text-decoration	: none;
+		}
+
+		/*handle tags filter*/
+		#items .item {
+			display	: none;
+		}
+		#items[data-tag=''] .item {
+			display	: block;
+		}
+		#items[data-tag~=content] .item[data-tag~=content] {
+			display	: block;
+		}
+		#items[data-tag~=effect] .item[data-tag~=effect] {
+			display	: block;
+		}
+		#items[data-tag~=shader] .item[data-tag~=shader] {
+			display	: block;
+		}
+		#items[data-tag~=physics] .item[data-tag~=physics] {
+			display	: block;
+		}
+		#items[data-tag~=tool] .item[data-tag~=tool] {
+			display	: block;
+		}
+		#items[data-tag~=postprocessing] .item[data-tag~=postprocessing] {
+			display	: block;
+		}
+		#items[data-tag~=input] .item[data-tag~=input] {
+			display : block;
+		}
+	</style>
+
+	<div class="row" id='items' data-tag=''>  
+	</div> <!-- /row -->
+
+	<!-- github ribbon -->
+	<a href="https://github.com/jeromeetienne/threex"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+
+
+	<!-- Bootstrap core JavaScript
+	================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="www/jquery/jquery-1.10.2.min.js"></script>
+	<script src="www/bootstrap3.0.2/js/bootstrap.min.js"></script>
+	<script src="www/mustache/mustache.js"></script>
+
+	<template id='itemTemplate'>
+		<div class="col-md-6 item" id='{{name}}' data-tag='{{tags}}'>
+			<div class="thumbnail">
+				<iframe width="100%" height="350"  frameborder="0" allowfullscreen
+					src="//www.youtube.com/embed/{{youtubeId}}">
+				</iframe>
+				<div class="caption">
+					<h4>
+						{{title}}
+					</h4>
+					<p>{{{description}}}</p>
+				</div>
+			</div>
+		</div>
+	</template>
+<script>
+var items	= []
+
+//////////////////////////////////////////////////////////////////////////////////
+//		threex.cubecamera						//
+//////////////////////////////////////////////////////////////////////////////////
+items.push({
+	title		: 'WebAudiox.jsfx.js - 8 bit procedural sound generation with Web Audio API',
+	youtubeId	: '-Lo433Bk2RY',
+	description	: [
+		'This is a screencast about WebAudiox and 8 bit procedural sound generation.',
+		'We use jsfx.js library to play funny game sounds with Web Audio API.',
+	].join(' ')
+})
+
+//////////////////////////////////////////////////////////////////////////////////
+//		threex.cubecamera						//
+//////////////////////////////////////////////////////////////////////////////////
+items.push({
+	title		: 'Cloud Gaming for THREE.js',
+	youtubeId	: 'PxKl7KbygUE',
+	description	: [
+		'This screencast presents how to do Cloud Gaming with three.js.',
+		'It is simple and requires little code.',
+		'The code and slides are available <a href="https://github.com/jeromeetienne/threex.cloudgaming"></a>',
+	].join(' ')
+})
+
+//////////////////////////////////////////////////////////////////////////////////
+//		threex.cubecamera						//
+//////////////////////////////////////////////////////////////////////////////////
+items.push({
+	title		: 'Learning Three.js: 3min to teapot with the boilerplate',
+	youtubeId	: '0XPOCi6FJX0',
+	description	: [
+		'how to display a teapot in webgl in 3min :)'
+	].join(' ')
+})
+
+// //////////////////////////////////////////////////////////////////////////////////
+// //		threex.cubecamera						//
+// //////////////////////////////////////////////////////////////////////////////////
+// items.push({
+// 	name		: 'threex.cubecamera',
+// 	demoUrl		: 'http://jeromeetienne.github.io/threex.cubecamera/examples/demo.html',
+// 	thumbnailUrl	: 'www/screenshots/threex.cubecamera.png',
+// 	repository	: 'https://github.com/jeromeetienne/threex.cubecamera',
+// 	tags		: 'tool',
+// 	description	: [
+// 		'It provides an helper for cube cameras.',
+// 		'It is very usefull when a given object must reflect a texture cube live.',
+// 		'Note it require 6 rendering of the scene everytime you update it.',
+// 		'It becomes expensive fast.', 
+// 	].join(' ')
+// })
+
+
+//////////////////////////////////////////////////////////////////////////////////
+//		comment								//
+//////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////
+//		comment								//
+//////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////
+//		comment								//
+//////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////
+//		comment								//
+//////////////////////////////////////////////////////////////////////////////////
+
+jQuery(function(){
+	// get template text
+	var htmlTemplate= jQuery('#itemTemplate').html()
+	var output	= ''
+	items.forEach(function(item){
+		output	+= Mustache.render(htmlTemplate, item);
+	})
+	jQuery(output).appendTo('#items')
+
+	// honor location.hash as active	
+	if( window.location.hash.substr(1) ){
+		var selectedId	= window.location.hash.substr(1);
+		var element	= document.getElementById(selectedId)
+		element.classList.add('active')
+	}
+})
+</script>
+<script>
+//////////////////////////////////////////////////////////////////////////////////
+//		init Tag Buttons						//
+//////////////////////////////////////////////////////////////////////////////////
+
+jQuery(function(){
+	$('.btn-group').button()
+	jQuery('#tagbuttons .btn').on('click', function(){
+		var tag = jQuery(this).attr('data-tag')
+		jQuery('#items').attr('data-tag', tag)
+	})
+	jQuery('#tagbuttons .btn').each(function(){
+		var tag   = jQuery(this).attr('data-tag')
+		if( tag !== '' ){
+			var count = jQuery('#items .item[data-tag~='+tag+']').length
+		}else{
+			var count = jQuery('#items .item').length
+		}
+		jQuery('#tagbuttons .btn[data-tag~='+tag+'] .badge').text(count)
+	});
+})
+</script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
