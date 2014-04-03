@@ -26,7 +26,7 @@ items.push({
 		'This screencast presents how to do Cloud Gaming with three.js.',
 		'It is simple and requires little code.',
 		'The code and slides are available <a href="https://github.com/jeromeetienne/threex.cloudgaming"></a>',
-	].join(' ')
+	].join(' ') 
 })
 
 //////////////////////////////////////////////////////////////////////////////////
