@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="THREEx - Games Extensions for three.js">
+    <meta name="author" content="Jerome Etienne">
+    <base target='_blank'>
+
+    <title>JsInside - bite sized videos to learn stuff</title>
+
+    <!-- Bootstrap core CSS --> 
+    <link href="www/bootstrap3.0.2/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <!-- <link href="www/bootstrap3.0.2/css/jumbotron-narrow.css" rel="stylesheet"> -->
+  </head>
+  <body>      
+
+    <div class="container">
+      <div class="jumbotron">
+        <h1>JsInside <small>bite sized videos to learn stuff</small>
+        </h1>
+        <p class="lead">Short videos to learn things about Javascript, node.js, WebGL and cool HTML5 game stuff. 
+        	It is about varied number of subject. From do fun things with,
+        	to write safer code, to check your code, all the stuff which
+        	are parts of coding software. And let's have fun 
+        	in the process.
+        </p>
+      </div>
+      
+      <div class="row">
+        <h2>Current Videos
+		<div class="btn-group" id='tagbuttons'>
+			<button type="button" class="btn btn-default" data-tag=''>All
+				<span class="badge">?</span>
+			</button>
+			<button type="button" class="btn btn-default" data-tag='threejs'>Three.js
+				<span class="badge">?</span>
+			</button>
+			<button type="button" class="btn btn-default" data-tag='gamedev'>GameDev
+				<span class="badge">?</span>
+			</button>
+			<button type="button" class="btn btn-default" data-tag='sounds'>Sounds
+				<span class="badge">?</span>
+			</button>
+			<button type="button" class="btn btn-default" data-tag='javascript'>Javascript
+				<span class="badge">?</span>
+			</button>
+			<button type="button" class="btn btn-default" data-tag='testing'>testing
+				<span class="badge">?</span>
+			</button>
+		</div>
+	</h2>
+        <div>
+          Here are all the videos
+        </div>
+      <br/>
+	<style>
+		/*handle selected item*/
+		#items .item.active {
+			background-color: lightgrey;
+		}
+		/*handle hashLink*/
+		#items .item .hashLink {
+			visibility	: hidden;
+		}
+		#items .item:hover .hashLink {
+			visibility	: visible;
+			text-decoration	: none;
+		}
+
+		/*handle tags filter*/
+		#items .item {
+			display	: none;
+		}
+		#items[data-tag=''] .item {
+			display	: block;
+		}
+		#items[data-tag~=threejs] .item[data-tag~=threejs] {
+			display	: block;
+		}
+		#items[data-tag~=gamedev] .item[data-tag~=gamedev] {
+			display	: block;
+		}
+		#items[data-tag~=sounds] .item[data-tag~=sounds] {
+			display	: block;
+		}
+		#items[data-tag~=javascript] .item[data-tag~=javascript] {
+			display	: block;
+		}
+		#items[data-tag~=testing] .item[data-tag~=testing] {
+			display	: block;
+		}
+	</style>
+
+	<div class="row" id='items' data-tag=''>  
+	</div> <!-- /row -->
+	<div class="row" id='modals' data-tag=''>  
+	</div> <!-- /row -->
+
+	<!-- Bootstrap core JavaScript
+	================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="www/jquery/jquery-1.10.2.min.js"></script>
+	<script src="www/bootstrap3.0.2/js/bootstrap.min.js"></script>
+	<script src="www/mustache/mustache.js"></script>
+
+	<template id='modalTemplate'>
+		<!-- Modal -->
+		<div class="modal fade" id="{{name}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		        <h4 class="modal-title" id="myModalLabel">{{title}}</h4>
+		      </div>
+		      <div class="modal-body">
+				<iframe width="100%" height="350"  frameborder="0" allowfullscreen
+					src="//www.youtube.com/embed/{{youtubeId}}">
+				</iframe>
+				<div class="caption">
+					<h4>
+						{{title}}
+					</h4>
+					<p>{{{description}}}</p>
+				</div>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+	</template>
+	<style>
+		/*handle hashLink*/
+		#items .item .hashLink {
+			visibility	: hidden;
+		}
+		#items .item:hover .hashLink {
+			visibility	: visible;
+			text-decoration	: none;
+		}
+	</style>
+	<template id='itemTemplate'>
+		<div class="col-md-6 item" data-tag='{{tags}}'>
+			<div class="thumbnail">
+<!-- 				<iframe width="100%" height="350"  frameborder="0" allowfullscreen
+					src="//www.youtube.com/embed/{{youtubeId}}">
+				</iframe>
+ -->
+ 				<div class="caption">
+ 					<div class='col-md-8s'>
+						<h4>
+							{{title}}
+							<small>
+								<a  class='hashLink' data-toggle="modal" data-target="#{{name}}">&#x00B6</a>
+							</small>
+						</h4>
+						<p>{{{description}}}</p>
+						<button class="btn btn-primary" data-toggle="modal" data-target="#{{name}}">
+						  See Details
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</template>
+<script>
+var items	= []
+
+//////////////////////////////////////////////////////////////////////////////////
+//		threex.cubecamera						//
+//////////////////////////////////////////////////////////////////////////////////
+items.push({
+	name		: 'WebAudioxJsfx',
+	title		: 'WebAudiox.jsfx.js - 8 bit procedural sound generation with Web Audio API',
+	youtubeId	: '-Lo433Bk2RY',
+	tags		: 'sounds gamedev',
+	description	: [
+		'This is a screencast about WebAudiox and 8 bit procedural sound generation.',
+		'We use jsfx.js library to play funny game sounds with Web Audio API.',
+	].join(' ')
+})
+
+//////////////////////////////////////////////////////////////////////////////////
+//		threex.cubecamera						//
+//////////////////////////////////////////////////////////////////////////////////
+items.push({
+	name		: 'CloudGameInThreejs',
+	title		: 'Cloud Gaming for THREE.js',
+	youtubeId	: 'PxKl7KbygUE',
+	tags		: 'threejs gamedev',
+	description	: [
+		'This screencast presents how to do Cloud Gaming with three.js.',
+		'It is simple and requires little code.',
+		'The code and slides are available <a href="https://github.com/jeromeetienne/threex.cloudgaming"></a>',
+	].join(' ')
+})
+
+//////////////////////////////////////////////////////////////////////////////////
+//		threex.cubecamera						//
+//////////////////////////////////////////////////////////////////////////////////
+items.push({
+	name		: 'TeapotIn3min',
+	title		: 'Learning Three.js: 3min to teapot with the boilerplate',
+	youtubeId	: '0XPOCi6FJX0',
+	tags		: 'threejs',
+	description	: [
+		'how to display a teapot in webgl in 3min :)'
+	].join(' ')
+})
+
+//////////////////////////////////////////////////////////////////////////////////
+//		comment								//
+//////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////
+//		comment								//
+//////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////
+//		comment								//
+//////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////
+//		comment								//
+//////////////////////////////////////////////////////////////////////////////////
+
+jQuery(function(){
+	// get template items
+	var htmlTemplate= jQuery('#itemTemplate').html()
+	var output	= ''
+	items.forEach(function(item){
+		output	+= Mustache.render(htmlTemplate, item);
+	})
+	jQuery(output).appendTo('#items')
+
+	// get template modals
+	var htmlTemplate= jQuery('#modalTemplate').html()
+	var output	= ''
+	items.forEach(function(item){
+		output	+= Mustache.render(htmlTemplate, item);
+	})
+	jQuery(output).appendTo('#modals')
+
+	// honor location.hash as active	
+	if( window.location.hash.substr(1) ){
+		var selectedId	= window.location.hash.substr(1);
+		// element.classList.add('active')
+		$('#'+selectedId).modal()
+	}
+})
+</script>
+<script>
+//////////////////////////////////////////////////////////////////////////////////
+//		init Tag Buttons						//
+//////////////////////////////////////////////////////////////////////////////////
+
+jQuery(function(){
+	$('.btn-group').button()
+	jQuery('#tagbuttons .btn').on('click', function(){
+		var tag = jQuery(this).attr('data-tag')
+		jQuery('#items').attr('data-tag', tag)
+	})
+	jQuery('#tagbuttons .btn').each(function(){
+		var tag   = jQuery(this).attr('data-tag')
+		if( tag !== '' ){
+			var count = jQuery('#items .item[data-tag~='+tag+']').length
+		}else{
+			var count = jQuery('#items .item').length
+		}
+		jQuery('#tagbuttons .btn[data-tag~='+tag+'] .badge').text(count)
+	});
+})
+</script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
