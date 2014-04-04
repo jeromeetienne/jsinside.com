@@ -105,7 +105,13 @@
 
 		jQuery(function(){
 			var itemName	= location.hash.substr(1)
-			var item	= items.filter(function(item){ return item.name === itemName })[0]
+			for(var i = 0; i < items.length; i++){
+				if( items[i].name === itemName ){
+					var item	= items[i]
+				}
+			}
+			// postProcessing 
+			item.tags.split(/ /)
 			// get template items
 			var htmlTemplate= jQuery('#itemTemplate').html()
 			var output	= Mustache.render(htmlTemplate, item);
