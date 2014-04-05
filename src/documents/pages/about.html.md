@@ -2,7 +2,7 @@
 title: About
 layout: page
 tags: ['intro','page']
-pageOrder: 3
+pageOrder: 2
 ```
 
 ## What do you get

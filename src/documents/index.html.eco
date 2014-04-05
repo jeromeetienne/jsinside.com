@@ -20,7 +20,7 @@ title: 'Home'
 			<div class="thumbnail" style='height :150px'>
  				<div class="caption container-fluid">
 					<div class='col-md-2'>
-						<a href="/courses/<%= document.name %>.html">
+						<a href="/courses/<%= document.name %>/">
 							<img width='100%' src="//img.youtube.com/vi/<%= document.youtubeId %>/default.jpg">
 						</a>
 					</div>
@@ -29,7 +29,7 @@ title: 'Home'
 						<p><%- document.content %></p>
 					</div>
 					<div class='col-md-2'>
-						<a href="/courses/<%= document.name %>.html" class="btn btn-primary" role="button">See Details</a>
+						<a href="/courses/<%= document.name %>/" class="btn btn-primary" role="button">See Details</a>
 					</div>
 				</div>
 			</div>

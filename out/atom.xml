@@ -3,7 +3,7 @@
 	<title>JS Inside</title>
 	<link href="http://jsinside.com/atom.xml" rel="self"/>
 	<link href="http://jsinside.com"/>
-	<updated>2014-04-05T10:13:25.784Z</updated>
+	<updated>2014-04-05T10:49:17.844Z</updated>
 	<id>http://jsinside.com</id>
 	<author>
 		<name>Jerome Etienne</name>
@@ -14,7 +14,7 @@
 		<entry>
 			<title>Hello World!</title>
 			<link href="http://jsinside.com//posts/hello"/>
-			<updated>2014-04-05T10:00:24.000Z</updated>
+			<updated>2014-04-05T10:35:14.000Z</updated>
 			<id>http://jsinside.com//posts/hello</id>
 			<content type="html">&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
@@ -80,16 +80,6 @@ No bullshit. Just knowledge!&quot; /&gt;
 					
 						&lt;li
 							typeof=&quot;sioc:Page&quot;
-							about=&quot;/pages/hello&quot;
-							class=&quot;&quot;
-						&gt;
-							&lt;a href=&quot;/pages/hello&quot; property=&quot;dc:title&quot;&gt;
-								This is a Page
-							&lt;/a&gt;
-						&lt;/li&gt;
-					
-						&lt;li
-							typeof=&quot;sioc:Page&quot;
 							about=&quot;/pages/blog&quot;
 							class=&quot;&quot;
 						&gt;
@@ -132,7 +122,7 @@ No bullshit. Just knowledge!&quot; /&gt;
 &lt;!-- 		&lt;footer&gt;
 			&lt;p class=&quot;pull-left&quot;&gt;&amp;copy; Company 2014&lt;/p&gt;
 			&lt;p class=&quot;pull-right&quot;&gt;
-				This website was last updated at 2014-04-05T10:13:25.784Z
+				This website was last updated at 2014-04-05T10:49:17.844Z
 			&lt;/p&gt;
 		&lt;/footer&gt;
  --&gt;	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -190,7 +180,7 @@ var inject = function(){
 	&lt;div style='position: absolute; top: 10px; right: 10px; z-index:9999;'&gt;
 
 		&lt;!-- ******************* Twitter ************************* --&gt;
-		&lt;a href=&quot;https://twitter.com/share&quot; class=&quot;twitter-share-button&quot; data-via=&quot;jerome_etienne&quot;&gt;Tweet&lt;/a&gt;
+		&lt;a href=&quot;https://twitter.com/share&quot; class=&quot;twitter-share-button&quot; data-via=&quot;jsinsideio&quot;&gt;Tweet&lt;/a&gt;
 		&lt;script&gt;!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');&lt;/script&gt;
 
 		&lt;!-- ******************* google plus ************************* --&gt;
@@ -206,7 +196,7 @@ var inject = function(){
 		&lt;/script&gt;
 
 		&lt;!-- ******************* Facebook ************************* --&gt;
-		&lt;iframe src=&quot;http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fjetienne.com&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=true&amp;share=false&amp;height=21&amp;appId=85934995681&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; style=&quot;border:none; overflow:hidden; height:21px; width: 100px;&quot; allowTransparency=&quot;true&quot;&gt;&lt;/iframe&gt;
+		&lt;iframe src=&quot;http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fjsinside.com&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=true&amp;share=false&amp;height=21&amp;appId=85934995681&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; style=&quot;border:none; overflow:hidden; height:21px; width: 100px;&quot; allowTransparency=&quot;true&quot;&gt;&lt;/iframe&gt;
 	&lt;/div&gt;
 
 
@@ -217,7 +207,7 @@ var inject = function(){
 	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-	ga('create', 'UA-4037844-1', 'jetienne.com');
+	ga('create', 'UA-4037844-25', 'jsinside.com');
 	ga('send', 'pageview');
 	&lt;/script&gt;
 &lt;/body&gt;
@@ -228,7 +218,7 @@ var inject = function(){
 		<entry>
 			<title>This is a Goodbye Blog Post</title>
 			<link href="http://jsinside.com//posts/bye"/>
-			<updated>2014-04-05T08:09:07.000Z</updated>
+			<updated>2014-04-05T10:35:13.000Z</updated>
 			<id>http://jsinside.com//posts/bye</id>
 			<content type="html">&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
@@ -294,16 +284,6 @@ No bullshit. Just knowledge!&quot; /&gt;
 					
 						&lt;li
 							typeof=&quot;sioc:Page&quot;
-							about=&quot;/pages/hello&quot;
-							class=&quot;&quot;
-						&gt;
-							&lt;a href=&quot;/pages/hello&quot; property=&quot;dc:title&quot;&gt;
-								This is a Page
-							&lt;/a&gt;
-						&lt;/li&gt;
-					
-						&lt;li
-							typeof=&quot;sioc:Page&quot;
 							about=&quot;/pages/blog&quot;
 							class=&quot;&quot;
 						&gt;
@@ -346,7 +326,7 @@ No bullshit. Just knowledge!&quot; /&gt;
 &lt;!-- 		&lt;footer&gt;
 			&lt;p class=&quot;pull-left&quot;&gt;&amp;copy; Company 2014&lt;/p&gt;
 			&lt;p class=&quot;pull-right&quot;&gt;
-				This website was last updated at 2014-04-05T10:13:25.784Z
+				This website was last updated at 2014-04-05T10:49:17.844Z
 			&lt;/p&gt;
 		&lt;/footer&gt;
  --&gt;	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -404,7 +384,7 @@ var inject = function(){
 	&lt;div style='position: absolute; top: 10px; right: 10px; z-index:9999;'&gt;
 
 		&lt;!-- ******************* Twitter ************************* --&gt;
-		&lt;a href=&quot;https://twitter.com/share&quot; class=&quot;twitter-share-button&quot; data-via=&quot;jerome_etienne&quot;&gt;Tweet&lt;/a&gt;
+		&lt;a href=&quot;https://twitter.com/share&quot; class=&quot;twitter-share-button&quot; data-via=&quot;jsinsideio&quot;&gt;Tweet&lt;/a&gt;
 		&lt;script&gt;!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');&lt;/script&gt;
 
 		&lt;!-- ******************* google plus ************************* --&gt;
@@ -420,7 +400,7 @@ var inject = function(){
 		&lt;/script&gt;
 
 		&lt;!-- ******************* Facebook ************************* --&gt;
-		&lt;iframe src=&quot;http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fjetienne.com&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=true&amp;share=false&amp;height=21&amp;appId=85934995681&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; style=&quot;border:none; overflow:hidden; height:21px; width: 100px;&quot; allowTransparency=&quot;true&quot;&gt;&lt;/iframe&gt;
+		&lt;iframe src=&quot;http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fjsinside.com&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=true&amp;share=false&amp;height=21&amp;appId=85934995681&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; style=&quot;border:none; overflow:hidden; height:21px; width: 100px;&quot; allowTransparency=&quot;true&quot;&gt;&lt;/iframe&gt;
 	&lt;/div&gt;
 
 
@@ -431,7 +411,7 @@ var inject = function(){
 	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-	ga('create', 'UA-4037844-1', 'jetienne.com');
+	ga('create', 'UA-4037844-25', 'jsinside.com');
 	ga('send', 'pageview');
 	&lt;/script&gt;
 &lt;/body&gt;

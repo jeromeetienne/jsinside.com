@@ -40,6 +40,8 @@ docpadConfig = {
 
 			# The website author's email
 			email: "jerome.etienne@gmail.com"
+			
+			
 
 			# Styles
 			styles: [
@@ -94,7 +96,7 @@ docpadConfig = {
 			database.findAllLive({layout:'course'}, [date:-1])
 
 		posts: (database) ->
-			database.findAllLive({tags:$has:'post'}, [date:-1])
+			database.findAllLive({layout:'post'}, [date:-1])
 
 
 	# =================================
@@ -139,6 +141,20 @@ docpadConfig = {
 					res.redirect(newUrl+req.url, 301)
 				else
 					next()
+
+
+	# =================================
+	# Server Configuration
+
+	# Port
+	# Use to change the port that DocPad listens to
+	# By default we will detect the appropriate port number for our environment
+	# if no environment port number is detected we will use 9778 as the port number
+	# Checked environment variables are:
+	# - PORT - Heroku, Nodejitsu, Custom
+	# - VCAP_APP_PORT - AppFog
+	# - VMC_APP_PORT - CloudFoundry
+	port: 8000  # default
 }
 
 
