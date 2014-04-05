@@ -1,0 +1,48 @@
+```
+title: Contact
+layout: page
+pageOrder: 2
+```
+
+
+<!-- Primary marketing message or call to action -->
+<div class="jumbotron">
+        <h1>To Contact US <small>Dont hesitate, we like to talk to people :)</small></h1>
+</div>
+
+<style>
+.contactElement {
+	text-align: center;
+}
+.contactElement i {
+	font-size: 600%;
+}
+.contactElement a {
+	
+	/*color: black;*/
+}
+</style>
+<div class="container">
+	<!-- Example row of columns -->
+	<div class="row">
+		<div class="col-md-4 contactElement">
+			<a href='http://twitter.com/jsinsideio' target='_blank'>
+				<i class="fa fa-twitter"></i>
+				<h2>@JSInsideio</h2>
+			</a>
+		</div>
+		<div class="col-md-4 contactElement">
+			<a href='https://github.com/jsinside' target='_blank'>
+				<i class="fa fa-github-alt"></i>
+				<h2>GitHub</h2>
+			</a>
+		</div>
+		<div class="col-md-4 contactElement">
+			<a href='https://plus.google.com/117863343152100715476/about' target='_blank'>
+				<i class="fa fa-google-plus"></i>
+				<h2>google plus</h2>
+			</a>
+		</div>
+	</div>
+</div>
+

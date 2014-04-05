@@ -1,7 +1,7 @@
 ```
 title: About
 layout: page
-pageOrder: 2
+pageOrder: 3
 ```
 
 <!-- Primary marketing message or call to action -->
