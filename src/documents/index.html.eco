@@ -1,0 +1,38 @@
+---
+layout: 'default'
+title: 'Home'
+---
+
+<!-- Primary marketing message or call to action -->
+<div class="jumbotron">
+        <h1>JsInside <small>bite sized videos to learn stuff in JS</small>
+        </h1>
+        <p class="lead">
+		JSInside is all about learning things with javascript in a fast and efficient way.
+		You have high quality bite sized videos. They are straight and to the point.
+		No bullshit. Just knowledge!
+        </p>
+</div>
+
+<% for document in @getCollection('linkItems').toJSON(): %>
+	<div class="row">
+		<div class="col-md-12">
+			<div class="thumbnail" style='height :150px'>
+ 				<div class="caption container-fluid">
+					<div class='col-md-2'>
+						<a href="/courses/<%= document.name %>.html">
+							<img width='100%' src="//img.youtube.com/vi/<%= document.youtubeId %>/default.jpg">
+						</a>
+					</div>
+					<div class='col-md-8'>
+						<h4><%= document.title %></h4>
+						<p><%- document.content %></p>
+					</div>
+					<div class='col-md-2'>
+						<a href="/courses/<%= document.name %>.html" class="btn btn-primary" role="button">See Details</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<% end %>
