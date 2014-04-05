@@ -25,22 +25,28 @@ pageOrder: 2
 <div class="container">
 	<!-- Example row of columns -->
 	<div class="row">
-		<div class="col-md-4 contactElement">
+		<div class="col-md-3 contactElement">
 			<a href='http://twitter.com/jsinsideio' target='_blank'>
 				<i class="fa fa-twitter"></i>
 				<h2>@JSInsideio</h2>
 			</a>
 		</div>
-		<div class="col-md-4 contactElement">
+		<div class="col-md-3 contactElement">
 			<a href='https://github.com/jsinside' target='_blank'>
 				<i class="fa fa-github-alt"></i>
 				<h2>GitHub</h2>
 			</a>
 		</div>
-		<div class="col-md-4 contactElement">
+		<div class="col-md-3 contactElement">
 			<a href='https://plus.google.com/117863343152100715476/about' target='_blank'>
 				<i class="fa fa-google-plus"></i>
 				<h2>google plus</h2>
+			</a>
+		</div>
+		<div class="col-md-3 contactElement">
+			<a href='https://www.facebook.com/jsinsideio/' target='_blank'>
+				<i class="fa fa-facebook"></i>
+				<h2>facebook</h2>
 			</a>
 		</div>
 	</div>
