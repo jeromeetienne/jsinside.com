@@ -5,7 +5,7 @@ title: 'Home'
 
 <!-- Primary marketing message or call to action -->
 <div class="jumbotron">
-        <h1>JsInside <small>bite sized videos to learn stuff in JS</small>
+        <h1>JSinside <small>bite sized videos to learn stuff in JS</small>
         </h1>
         <p class="lead">
 		JSInside is all about learning things with javascript in a fast and efficient way.
