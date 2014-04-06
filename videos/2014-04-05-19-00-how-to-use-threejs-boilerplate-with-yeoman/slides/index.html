@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-  <title>How to use Threex Game Extension for Three.js</title>
+  <title>How To Install Three.js Boilerplate With Yeoman</title>
   <style type="text/css">
     body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -406,59 +406,60 @@ pre .chunk {
 <p><style>h1 {margin-top:50px;}</style></p>
 <base target='_blank'/>
 
-<h1 id="how-to-use-threex-game-extension-for-three-js">How to use Threex Game Extension for Three.js</h1>
+<h1 id="how-to-install-three-js-boilerplate-with-yeoman">How To Install Three.js Boilerplate With Yeoman</h1>
 <h2 id="-a-href-http-twitter-com-jerome_etienne-jerome_etienne-a-"><a href='http://twitter.com/jerome_etienne'>@jerome_etienne</a></h2>
 </section>
   </div>
   <div class="slide hidden" id="slide-2">
-    <section class="slide-content"><h3 id="what-is-threex-">What is THREEx ?</h3>
+    <section class="slide-content"><h3 id="what-is-yeoman-">What is Yeoman ?</h3>
 <ul>
-<li><a href="http://jeromeetienne.github.io/threex/">homepage</a></li>
-<li>many extensions already - 40 and counting</li>
-<li>all dedicated to help you write games in three.js</li>
+<li>&quot;scaffolding tool for modern webapps&quot;</li>
+<li><a href="http://yeoman.io/">homepage</a></li>
 </ul>
+<h4 id="install-yeoman">install yeoman</h4>
+<pre><code>sudo npm install -g yo</code></pre>
 </section>
   </div>
   <div class="slide hidden" id="slide-3">
-    <section class="slide-content"><h3 id="how-to-find-a-threex-game-extension">How to find a THREEx game extension</h3>
+    <section class="slide-content"><h3 id="what-is-three-js-boilerplate-">What is THREE.js boilerplate ?</h3>
 <ul>
-<li><code>bower search threex.</code></li>
-<li>from <a href="http://jeromeetienne.github.io/threex">homepage</a></li>
+<li>to run your own three.js project</li>
+<li>in a few seconds</li>
+<li>designed for fast bootstrap</li>
+<li>designed for good practices</li>
 </ul>
 </section>
   </div>
   <div class="slide hidden" id="slide-4">
-    <section class="slide-content"><h3 id="how-to-install-threex-game-extensions">How to install THREEx game extensions</h3>
-<ul>
-<li><a href="http://bower.io/">bower</a> - from twitter</li>
-<li>plain .zip file from github</li>
-</ul>
+    <section class="slide-content"><h3 id="install-yeoman-generator-for-boilerplate">Install Yeoman Generator For Boilerplate</h3>
+<p>just use this line </p>
+<pre><code>sudo npm install -g generator-threejs-boilerplate</code></pre>
 </section>
   </div>
   <div class="slide hidden" id="slide-5">
-    <section class="slide-content"><h3 id="how-to-use-a-threex-game-extension">How to use a THREEx game extension</h3>
-<ul>
-<li>with <code>script</code> </li>
-</ul>
-<pre><code> &lt;script src=&#39;path/to/threex.extension/threex.extension.js&#39;&gt;&lt;/script&gt;
- // ... here add other files you may need</code></pre>
+    <section class="slide-content"><h3 id="generate-your-first-boilerplate">Generate Your First Boilerplate</h3>
+<h4 id="1-create-a-folder-for-your-three-js-project">1. Create a folder for your three.js project</h4>
+<pre><code>mkdir mythreejsproject
+cd mythreejsproject</code></pre>
+<h4 id="2-generate-your-three-js-boilerplate">2. Generate your three.js boilerplate</h4>
+<pre><code>yo threejs-boilerplate</code></pre>
+<p>Take the default one</p>
 </section>
   </div>
   <div class="slide hidden" id="slide-6">
-    <section class="slide-content"><h3 id="how-to-use-a-threex-game-extension">How to use a THREEx game extension</h3>
+    <section class="slide-content"><h3 id="show-me-the-code">Show Me The Code</h3>
 <ul>
-<li>with require.js</li>
+<li>Lets look in <code>index.html</code></li>
 </ul>
-<pre><code>require([&#39;path/to/threex.extension/package.require.js&#39;], function(){
-    // ... your code goes here
-})</code></pre>
+<pre><code>subl index.html</code></pre>
 </section>
   </div>
   <div class="slide hidden" id="slide-7">
-    <section class="slide-content"><h3 id="general">General</h3>
+    <section class="slide-content"><h3 id="tuning-boilerplate-to-your-needs">Tuning Boilerplate To Your Needs</h3>
 <ul>
-<li>All documented in the README.md. <a href="https://github.com/jeromeetienne/threex.oimo">threex.oimo</a></li>
-<li>license are typically MIT, so no worry</li>
+<li>with/without <a href="http://requirejs.org/">require.js</a></li>
+<li>with/without WebGL detection</li>
+<li>with/without window resize</li>
 </ul>
 </section>
   </div>

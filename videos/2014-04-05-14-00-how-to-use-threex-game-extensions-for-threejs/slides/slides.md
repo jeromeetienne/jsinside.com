@@ -1,112 +1,69 @@
-title: Three.js Mini Game Workshop 
+title: How to use Threex Game Extension for Three.js
 output: index.html
-
---
-# What Is Threex
-  
---
-
-### What we gonna do ?
-
-* present what is threex
-* effort to easy three.js games
-* extension system - very light, vanilla.js light
+author:
+  name: "Jerome Etienne"
+  twitter: "@jerome_etienne"
+  url: "http://jetienne.com"
 
 --
 
-### Goals
+<style>.slide-content{width: 1024px;}</style>
+<style>.slide-content code {font-size:150%;}</style>
+<style>h1 {margin-top:50px;}</style>
+<base target='_blank'/>
 
-* "to make dev of three.js games easy"
+# How to use Threex Game Extension for Three.js
 
---
-
-### Means 
-
-* dev of game modules around html5 tech
-* minigame to show off what is possible
-* documentation and advocaty of the effort
+## <a href='http://twitter.com/jerome_etienne'>@jerome_etienne</a>
 
 --
 
-### Techs
+### What is THREEx ?
 
-* webgl
-* webaudioapi
-* webrtc
-* websocket
-
---
-
-### Policy
-
-* fix problems people actually have
-* open standard is prefered
-* open source is preffered
+* [homepage](http://jeromeetienne.github.io/threex/)
+* many extensions already - 40 and counting
+* all dedicated to help you write games in three.js
 
 --
 
-# Existing Code
+### How to find a THREEx game extension
+
+* ```bower search threex.```
+* from [homepage](http://jeromeetienne.github.io/threex)
 
 --
 
-### in 3d
+### How to install THREEx game extensions
 
-* all three.js obviously
-* threex extensions
-* some good idea in tquery plugins. to import
-* good stuff to import from babylon.js 
-  * it has a game orientation
+* [bower](http://bower.io/) - from twitter
+* plain .zip file from github
 
 --
 
-### in audio
+### How to use a THREEx game extension
 
-* sound localisation is a key feature
-* webaudiox.js to ease access to webaudio api
-* html5rocks tutorial
+* with ```script``` 
 
---
-
-### in physics
-
-* not much
-  * due to no clear winner for 'good 3d physics library in js'
-  * mainly because there are no clear winner for 'good 3d physics library in js'
-* some work in threex.cannonjs
-* maybe something based on obb,aabb, sphere, raycasting
-  * good math in /src/math three.js
-  * it is included in Geometry
-* what babylon.js is doing ?
+```
+ <script src='path/to/threex.extension/threex.extension.js'></script>
+ // ... here add other files you may need
+```
 
 --
 
-### in inputs
+### How to use a THREEx game extension
 
-* for keyboard, threex.keyboardstate
-* for touchscreen joystick, simulate arrow and click, virtualjoystick.js
-* leap motion
-* device orientation
+* with require.js
 
---
-
-### in user authentication
-
-* passport.js with all big social networks
+```
+require(['path/to/threex.extension/package.require.js'], function(){
+	// ... your code goes here
+})
+```
 
 --
 
-### in IA
+### General
 
-* machine.js
-* pathfinding.js
-
-
---
-
-### about game itself
-
-* unclear how much we should do 
-  * out of scope of the library ?
-* "maybe you can do that like that, or like this. it is up to you"
-* component/behavior ? or some other wellknow scheme ?
-* chat
+* All documented in the README.md. [threex.oimo](https://github.com/jeromeetienne/threex.oimo)
+* license are typically MIT, so no worry
