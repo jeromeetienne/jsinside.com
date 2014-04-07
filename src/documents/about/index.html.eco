@@ -1,12 +1,12 @@
-```
+---
 title: About
 layout: page
 pageOrder: 3
-```
+---
 
 <!-- Primary marketing message or call to action -->
 <div class="jumbotron">
-        <h1>What You Get</h1>
+        <h1>About US</h1>
         <p>
 		JSinside is a professional training site that's still fun and enjoyable!
 		You can learn something new in just a few minutes. 
@@ -47,52 +47,45 @@ pageOrder: 3
 			</div>
 		</div>
 	</div>
+
 	<!-- Example row of columns -->
 	<div class="row">
 		<h2>The Team</h2>
 		<hr>
 		<div class="col-md-6">
-			<div class="thumbnail">
-				<div class="container">
-					<div class='col-md-4'>
-						<a href='http://twitter.com/andraconnect' target='_blank'>
-							<img src="/images/avatars/jetienne-avatar-140x140.jpg" class="img-rounded" style='height: 140px'>
-						</a>
-					</div>
-					<div class='col-md-8'>
-						<div class="caption">
-							<a href='http://twitter.com/andraconnect' target='_blank'>
-								<h3>@jerome_etienne <i class="fa fa-twitter"></i></h3>
-							</a>
-							<p>
-								Web developer. Loves JavaScript and 3D games.
-								Loves teaching motivated people who are willing to learn something new.
-							</p>
-						</div>
-					</div>
+			<div class="container">
+				<div class='col-md-4'>
+					<a href='http://twitter.com/jerome_etienne' target='_blank'>
+						<img src="/images/avatars/jetienne-avatar-140x140.jpg" class="img-rounded" style='height: 140px'>
+					</a>
+				</div>
+				<div class='col-md-8'>
+					<a href='http://twitter.com/jerome_etienne' target='_blank'>
+						<h3>@jerome_etienne <i class="fa fa-twitter"></i></h3>
+					</a>
+					<p>
+						Javascript hardcore developer. Loves JavaScript and 3D games.
+						Loves teaching motivated people who are willing to learn something new.
+					</p>
 				</div>
     			</div>
 		</div>
 		<div class="col-md-6">
-			<div class="thumbnail">
-				<div class="container">
-					<div class='col-md-4'>
-						<a href='http://twitter.com/andraconnect' target='_blank'>
-							<img src="/images/avatars/andraconnect-avatar-140x140.jpg" class="img-rounded" style='height: 140px'>
-						</a>
-					</div>
-					<div class='col-md-8'>
-						<div class="caption">
-							<a href='http://twitter.com/andraconnect' target='_blank'>
-								<h3>@AndraConnect <i class="fa fa-twitter"></i></h3>
-							</a>
-							<p>
-								Community manager. Loves networking,
-								talking and organizing meetups where 
-								people can share their ideas
-							</p>
-						</div>
-					</div>
+			<div class="container">
+				<div class='col-md-4'>
+					<a href='http://twitter.com/andraconnect' target='_blank'>
+						<img src="/images/avatars/andraconnect-avatar-140x140.jpg" class="img-rounded" style='height: 140px'>
+					</a>
+				</div>
+				<div class='col-md-8'>
+					<a href='http://twitter.com/andraconnect' target='_blank'>
+						<h3>@AndraConnect <i class="fa fa-twitter"></i></h3>
+					</a>
+					<p>
+						Community manager. Loves networking,
+						talking and organizing meetups where 
+						people can share their ideas
+					</p>
 				</div>
     			</div>
 		</div>
