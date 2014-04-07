@@ -1,0 +1,8 @@
+---
+layout: 'default'
+title: Courses
+pageOrder: 1
+---
+
+<!-- include courseList partial -->
+<%- @partial('courseList.html.eco') %>

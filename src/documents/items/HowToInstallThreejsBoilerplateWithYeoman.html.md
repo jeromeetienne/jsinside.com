@@ -1,6 +1,7 @@
 ```
 name		: how-to-install-threejs-boilerplate-with-yeoman
 title		: How To Install Three.js Boilerplate With Yeoman
+date		: 2011-08-30 11:24
 youtubeId	: PbeTAlsrMlM
 tags		: [threejs, gamedev, yeoman]
 courseData	: true

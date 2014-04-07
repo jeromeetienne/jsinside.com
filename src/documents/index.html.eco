@@ -14,27 +14,6 @@ title: 'Home'
         </p>
 </div>
 
-<% for document in @getCollection('linkItems').toJSON(): %>
-	<div class="row">
-		<div class="col-md-12">
-			<div class="thumbnail">
- 				<div class="caption container">
-					<div class='col-md-3'>
-						<a href="/view/<%= document.name %>.html">
-							<img height='140px' src="//img.youtube.com/vi/<%= document.youtubeId %>/default.jpg" class='img-rounded'>
-						</a>
-					</div>
-					<div class='col-md-7'>
-						<a href="/view/<%= document.name %>.html">
-							<h4><%= document.title %></h4>
-						</a>
-						<p><%- document.contentRendered %></p>
-					</div>
-					<div class='col-md-2'>
-						<a href="/view/<%= document.name %>.html" class="btn btn-primary" role="button">See Details</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-<% end %>
+<!-- include courseList partial -->
+<%- @partial('courseList.html.eco') %>
+

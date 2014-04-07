@@ -1,7 +1,7 @@
 ---
 title: About
 layout: page
-pageOrder: 3
+pageOrder: 4
 ---
 
 <!-- Primary marketing message or call to action -->
@@ -54,7 +54,7 @@ pageOrder: 3
 		<hr>
 		<div class="col-md-6">
 			<div class="container">
-				<div class='col-md-4'>
+				<div class='col-md-4' style='text-align:center;'>
 					<a href='http://twitter.com/jerome_etienne' target='_blank'>
 						<img src="/images/avatars/jetienne-avatar-140x140.jpg" class="img-rounded" style='height: 140px'>
 					</a>
@@ -64,7 +64,9 @@ pageOrder: 3
 						<h3>@jerome_etienne <i class="fa fa-twitter"></i></h3>
 					</a>
 					<p>
-						Javascript hardcore developer. Loves JavaScript and 3D games.
+						Hardcore javascript developer. 
+						Loves Javascript, node.js, WebGL and cool HTML5 game stuff.
+						8th most active user on github.
 						Loves teaching motivated people who are willing to learn something new.
 					</p>
 				</div>
@@ -72,7 +74,7 @@ pageOrder: 3
 		</div>
 		<div class="col-md-6">
 			<div class="container">
-				<div class='col-md-4'>
+				<div class='col-md-4' style='text-align:center;'>
 					<a href='http://twitter.com/andraconnect' target='_blank'>
 						<img src="/images/avatars/andraconnect-avatar-140x140.jpg" class="img-rounded" style='height: 140px'>
 					</a>

@@ -97,6 +97,9 @@ docpadConfig = {
 		linkItems: (database) ->
 			database.findAllLive({courseData: $exists: true}, [date:-1])
 
+		coursePages: (database) ->
+			database.findAllLive({layout:'course'}, [date:-1])
+
 		posts: (database) ->
 			database.findAllLive({layout:'post'}, [date:-1])
 

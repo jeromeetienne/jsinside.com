@@ -64,6 +64,11 @@
 							</a>
 						</li>
 					<% end %>
+					<li>
+						<a href='http://feeds.feedburner.com/JsInside'>
+							<i class="fa fa-rss"></i>
+						</a>
+					</li>
 				</ul>
 			</div><!--/.navbar-collapse -->
 		</div>
@@ -87,30 +92,6 @@
 
 	<!-- Scripts -->
 	<%- @getBlock('scripts').add(@site.scripts).toHTML() %>
-
-	<!-- ************************************************************ -->
-	<!-- Share Part -->
-	<div style='position: absolute; top: 10px; right: 10px; z-index:9999;'>
-
-		<!-- ******************* Twitter ************************* -->
-		<a href="https://twitter.com/share" class="twitter-share-button" data-via="jsinsideio">Tweet</a>
-		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-
-		<!-- ******************* google plus ************************* -->
-		<!-- Place this tag where you want the +1 button to render. -->
-		<div class="g-plusone" data-size="medium"></div>
-		<!-- Place this tag after the last +1 button tag. -->
-		<script type="text/javascript">
-		  (function() {
-		    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-		    po.src = 'https://apis.google.com/js/plusone.js';
-		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-		  })();
-		</script>
-
-		<!-- ******************* Facebook ************************* -->
-		<iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fjsinside.com&width&layout=button_count&action=like&show_faces=true&share=false&height=21&appId=85934995681" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:21px; width: 100px;" allowTransparency="true"></iframe>
-	</div>
 
 
 	<!-- google analytic -->

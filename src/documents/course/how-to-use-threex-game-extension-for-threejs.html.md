@@ -1,7 +1,8 @@
 ```
 layout		: course
-title		: 'How To Use Threex Game Extension For Three.js',
-youtubeId	: 'eJpqBKJCpSI',
+name		: how-to-use-threex-game-extension-for-threejs
+title		: How To Use Threex Game Extension For Three.js
+youtubeId	: eJpqBKJCpSI
 tags		: [threejs, gamedev]
 ```
 

@@ -3,11 +3,11 @@
 var fs		= require('fs')
 
 var srcPath	= 'src/documents/items/'
-var dstPath	= 'src/documents/view/'
+var dstPath	= 'src/documents/course/'
 
 var basenames	= require('fs').readdirSync(srcPath)
 
-basenames	= [basenames[0]]
+// basenames	= [basenames[0]]
 
 basenames.forEach(function(basename){
 	// console.log('basename', basename)
@@ -46,7 +46,7 @@ basenames.forEach(function(basename){
 		lines.forEach(function(line){
 			var re = new RegExp(key+"[\t ]*:[\t ]*(.*)[\t ]*");
 			var matches	= line.match(re)
-			console.log('line', line, matches)
+			// console.log('line', line, matches)
 			if( matches === null )		return
 			if( foundValue !== undefined )	return
 			foundValue	= matches[1]
@@ -62,7 +62,7 @@ basenames.forEach(function(basename){
 			var re = new RegExp(key+"[\t ]*:[\t ]*(.*)[\t ]*");
 			// var re = new RegExp(key);
 			var matches	= line.match(re)
-			console.log('line', line, matches)
+			// console.log('line', line, matches)
 			if( matches === null )	return true
 			return false
 		})

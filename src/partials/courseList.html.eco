@@ -1,0 +1,30 @@
+<div class="row">
+	<h1>List of All Courses</h1>
+	<p>Here is the list of all the courses available.</p>
+	<hr>
+</div>
+
+<% for document in @getCollection('linkItems').toJSON(): %>
+	<div class="row">
+		<div class="col-md-12">
+			<div class="thumbnail">
+ 				<div class="caption container">
+					<div class='col-md-3 col-sm-4' style='text-align: center;'>
+						<a href="/course/<%= document.name %>/">
+							<img height='140px' src="//img.youtube.com/vi/<%= document.youtubeId %>/default.jpg" class='img-rounded'>
+						</a>
+					</div>
+					<div class='col-md-7 col-sm-6'>
+						<a href="/course/<%= document.name %>/">
+							<h4><%= document.title %></h4>
+						</a>
+						<p><%- document.contentRendered %></p>
+					</div>
+					<div class='col-md-2 col-sm-2' style='text-align: center;'>
+						<a href="/course/<%= document.name %>/" class="btn btn-primary" role="button">See Details</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<% end %>
