@@ -95,7 +95,7 @@ docpadConfig = {
 			database.findAllLive({pageOrder: $exists: true}, [pageOrder:1,title:1])
 
 		linkItems: (database) ->
-			database.findAllLive({layout:'course'}, [date:-1])
+			database.findAllLive({courseData: $exists: true}, [date:-1])
 
 		posts: (database) ->
 			database.findAllLive({layout:'post'}, [date:-1])

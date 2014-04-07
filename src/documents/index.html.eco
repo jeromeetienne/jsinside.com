@@ -20,16 +20,18 @@ title: 'Home'
 			<div class="thumbnail">
  				<div class="caption container">
 					<div class='col-md-3'>
-						<a href="/courses/<%= document.name %>/">
+						<a href="/view/<%= document.name %>.html">
 							<img height='140px' src="//img.youtube.com/vi/<%= document.youtubeId %>/default.jpg" class='img-rounded'>
 						</a>
 					</div>
 					<div class='col-md-7'>
-						<h4><%= document.title %></h4>
-						<p><%- document.content %></p>
+						<a href="/view/<%= document.name %>.html">
+							<h4><%= document.title %></h4>
+						</a>
+						<p><%- document.contentRendered %></p>
 					</div>
 					<div class='col-md-2'>
-						<a href="/courses/<%= document.name %>/" class="btn btn-primary" role="button">See Details</a>
+						<a href="/view/<%= document.name %>.html" class="btn btn-primary" role="button">See Details</a>
 					</div>
 				</div>
 			</div>

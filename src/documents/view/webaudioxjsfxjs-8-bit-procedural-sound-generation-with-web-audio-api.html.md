@@ -1,9 +1,8 @@
 ```
-name		: 'WebAudioxJsfx',
+layout		: course
 title		: 'WebAudiox.jsfx.js - 8 bit procedural sound generation with Web Audio API',
 youtubeId	: '-Lo433Bk2RY',
 tags		: [sounds, gamedev]
-layout		: course
 ```
 
 This is a screencast about WebAudiox and 8 bit procedural sound generation.

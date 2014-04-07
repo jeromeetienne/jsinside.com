@@ -1,9 +1,8 @@
 ```
-name		: 'HowToInstallThreejsBoilerplateWithYeoman',
+layout		: course
 title		: 'How To Install Three.js Boilerplate With Yeoman',
 youtubeId	: 'PbeTAlsrMlM',
 tags		: [threejs, gamedev, yeoman]
-layout		: course
 ```
 
 This videos explains what is

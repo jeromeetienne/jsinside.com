@@ -1,9 +1,9 @@
 ```
-name		: 'CloudGameInThreejs',
-title		: 'Cloud Gaming for THREE.js',
-youtubeId	: 'PxKl7KbygUE',
-tags		: [threejs, gamedev]
 layout		: course
+name		: cloud-gaming-for-threejs
+title		: Cloud Gaming for THREE.js
+youtubeId	: PxKl7KbygUE
+tags		: [threejs, gamedev]
 ```
 
 This screencast presents how to do Cloud Gaming with three.js.
