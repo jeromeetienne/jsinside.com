@@ -2,6 +2,7 @@
 layout		: course
 name		: cloud-gaming-for-threejs
 title		: Cloud Gaming for THREE.js
+date		: 2011-08-30 11:24
 youtubeId	: PxKl7KbygUE
 tags		: [threejs, gamedev]
 ```

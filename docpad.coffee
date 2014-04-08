@@ -160,6 +160,10 @@ docpadConfig = {
 	# - VCAP_APP_PORT - AppFog
 	# - VMC_APP_PORT - CloudFoundry
 	port: 8000  # default
+	
+	# to fix watch on macox
+	# - see http://docpad.org/docs/troubleshoot#watching-doesn-t-work-works-only-some-of-the-time-i-get-eisdir-errors
+	watchOptions: preferredMethods: ['watchFile','watch']
 }
 
 
