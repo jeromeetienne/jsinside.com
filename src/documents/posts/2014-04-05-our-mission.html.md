@@ -1,6 +1,7 @@
 ```
-title: Our Mission
-layout: post
+title	: Our Mission
+layout	: post
+date	: 2014-04-05 20:24
 ```
 
 The goal is to do short educational videos where you will learn useful things to improve your technical skills.

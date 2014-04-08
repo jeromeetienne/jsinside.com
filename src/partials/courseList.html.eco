@@ -21,6 +21,7 @@
 						<p><%- document.contentRendered %></p>
 					</div>
 					<div class='col-md-2 col-sm-2' style='text-align: center;'>
+						<p><small><%= document.date.toDateString() %></small></p>
 						<a href="/course/<%= document.name %>/" class="btn btn-primary" role="button">See Details</a>
 					</div>
 				</div>

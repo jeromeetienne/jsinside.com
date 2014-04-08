@@ -10,8 +10,10 @@ layout: default
 		</iframe>
 	</div>
 	<div class='col-md-4'>
+		<div><small><%= @document.date.toDateString() %></small></div>
 		<div><%- @content %></div>
 	</div>
 </div>
+
 
 

@@ -1,13 +1,7 @@
-# How To Install Three.js Boilerplate With Yeoman
+# How To Create Your First Project with Express.js
 
-This videos explains what is
-[yeoman](http://yeoman.io)
-and how to use it to generate
-[three.js boilerplate](http://jeromeetienne.github.io/threejsboilerplatebuilder/).
-It will walk you through the yeoman installation.
-It show how to build your own three.js project in a few seconds.
-It generate a sample project with all the good pratices.
-It is very efficient way to get started.
-This video goes deeper and explain how to fine 
-tune the boilerplate to your own need, by
-just anwering a few questions.
+This video explain how to install
+[express.js](http://expressjs.com/) with 
+[node.js](http://nodejs.org).
+You will learn how to generate your first project
+and how to customized your project.

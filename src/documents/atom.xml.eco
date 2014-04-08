@@ -16,7 +16,12 @@
 			<link href="<%= @site.url+'/'+document.url %>"/>
 			<updated><%= document.date.toISOString() %></updated>
 			<id><%= @site.url+'/'+document.url %></id>
-			<content type="html"><%= document.contentRenderedWithoutLayouts %></content>
+			<content type="html">
+				<iframe width="480" height="360" frameborder="0"
+					src="//www.youtube.com/embed/<%= @document.youtubeId%>">
+				</iframe>
+				<%= document.contentRenderedWithoutLayouts %>
+			</content>
 		</entry>
 	<% end %>
 </feed>

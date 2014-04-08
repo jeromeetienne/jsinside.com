@@ -1,6 +1,7 @@
 ```
-title: Hello World!
-layout: post
+title	: Hello World!
+layout	: post
+date	: 2014-04-05 11:24
 ```
 
 Hello everybody! We have just created our JSinside website. We are quite proud of it.

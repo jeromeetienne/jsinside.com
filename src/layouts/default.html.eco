@@ -15,6 +15,8 @@
 	<meta name="keywords" content="<%= @getPreparedKeywords() %>" />
 	<meta name="author" content="<%= @site.author or '' %>" />
 
+	<link rel="alternate" type="application/atom+xml" title="JSinside rss feed" href="http://jsinside.com/atom.xml" />
+
 	<!-- Output DocPad produced meta elements -->
 	<%- @getBlock('meta').toHTML() %>
 
