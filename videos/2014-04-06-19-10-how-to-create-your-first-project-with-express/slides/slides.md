@@ -80,7 +80,7 @@ npm install
 Use this command to launch the server
 
 ```
-node apps.js
+node app.js
 ```
 
 and go to [http://127.0.0.1:3000](http://127.0.0.1:3000) to see it live! :)
