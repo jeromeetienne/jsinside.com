@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-  <title>How to Add Strong Typing To Your Function with Better.js</title>
+  <title>Getting Started With Javascript</title>
   <style type="text/css">
     body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -406,117 +406,270 @@ pre .chunk {
 <p><style>h1 {margin-top:50px;}</style></p>
 <base target='_blank'/>
 
-<h1 id="how-to-add-strong-typing-to-your-function-with-better-js">How to Add Strong Typing To Your Function with Better.js</h1>
+<h1 id="getting-started-with-javascript">Getting Started With Javascript</h1>
 <h2 id="-a-href-http-twitter-com-jerome_etienne-jerome_etienne-a-"><a href='http://twitter.com/jerome_etienne'>@jerome_etienne</a></h2>
 </section>
   </div>
   <div class="slide hidden" id="slide-2">
-    <section class="slide-content"><h3 id="what-is-better-js">What is better.js</h3>
-<ul>
-<li>it helps you check the correctness of your code</li>
-<li>helps you find bugs earlier</li>
-<li>works on node.js and browser</li>
-<li><a href="http://betterjs.org"><a href="http://betterjs.org">http://betterjs.org</a></a></li>
-</ul>
-<p><strong>Easier and Faster to write Safer javascript</strong></p>
+    <section class="slide-content"><h2 id="so-you-want-to-code-">So you want to code?</h2>
 </section>
   </div>
   <div class="slide hidden" id="slide-3">
-    <section class="slide-content"><h3 id="let-s-install-it">Let&#39;s install it</h3>
-<p>For node.js</p>
-<pre><code>npm install better.js</code></pre>
-<p>For web pages with script tag</p>
-<pre><code> &lt;script src=&#39;better.js&#39;&gt;&lt;/script&gt;</code></pre>
-<p>for web page with <a href="http://bower.io">bower</a></p>
-<pre><code>bower install better.js</code></pre>
+    <section class="slide-content"><h3 id="what-is-code-">What Is Code?</h3>
+<ul>
+<li>Code is <a href="http://en.wikipedia.org/wiki/Computer_programming">programming computers</a>.</li>
+<li>Instructions to make it do what you want. </li>
+<li>Computers run those instructions very fast.</li>
+</ul>
+<p>Over <a href="http://en.wikipedia.org/wiki/Instructions_per_second">110 million per second</a>!</p>
 </section>
   </div>
   <div class="slide hidden" id="slide-4">
-    <section class="slide-content"><h2 id="today-we-focus-on-strong-typing-and-function">Today we focus on strong typing and function</h2>
+    <section class="slide-content"><h3 id="how-useful-is-programming-">How Useful Is Programming?</h3>
+<ul>
+<li>You can do your own webiste.</li>
+<li>You can do your own application.</li>
+<li>You can control those computers you see everywhere.</li>
+</ul>
+<p>TODO find the quote on programming is the new literacy.</p>
 </section>
   </div>
   <div class="slide hidden" id="slide-5">
-    <section class="slide-content"><h3 id="first-lets-define-a-function">First lets define a function</h3>
-<ul>
-<li>Let&#39;s pick a simple function</li>
-<li>which convert a number to a string</li>
-</ul>
-<pre><code>var numberToString = function(myNumber){
-    return String(myNumber)
-}</code></pre>
+    <section class="slide-content"><h2 id="so-which-kind-of-programming-language-are-we-gonna-learn-">So, which kind of programming language are we gonna learn?</h2>
+<h1 id="the-best-one-">The best one!</h1>
 </section>
   </div>
   <div class="slide hidden" id="slide-6">
-    <section class="slide-content"><h2 id="nothing-that-impressive-">Nothing that impressive...</h2>
+    <section class="slide-content"><h3 id="what-is-javacript-">What Is Javacript?</h3>
+<ul>
+<li>Javascript is a programming language. </li>
+<li>Running everywhere: server or browser. </li>
+<li>It&#39;s used in any webpage you visit.</li>
+</ul>
 </section>
   </div>
   <div class="slide hidden" id="slide-7">
-    <section class="slide-content"><h2 id="let-s-review-the-type-of-this-function">Let&#39;s review the type of this function</h2>
+    <section class="slide-content"><h1 id="the-basics-of-javascript">The Basics of Javascript</h1>
 </section>
   </div>
   <div class="slide hidden" id="slide-8">
-    <section class="slide-content"><h3 id="type-of-this-function">Type Of This Function</h3>
+    <section class="slide-content"><h3 id="ok-let-s-write-our-first-javascript">Ok, Let&#39;s Write Our First Javascript</h3>
 <ul>
-<li>receives a <code>Number</code> as arguments</li>
-<li>returns a <code>String</code> value</li>
+<li>Open a web browser. </li>
+<li>Open a Javascript console (cmd+alt+i)</li>
+<li>Type this line. </li>
 </ul>
-<pre><code>var numberToString = function(myNumber){
-    return String(myNumber)
-}</code></pre>
+<pre><code>console.log(&quot;Hello, world!&quot;)</code></pre>
+<ul>
+<li>Hello World! appears. </li>
+<li>You did your first code. Congratulations!</li>
+</ul>
 </section>
   </div>
   <div class="slide hidden" id="slide-9">
-    <section class="slide-content"><h3 id="give-it-a-try">Give It A Try</h3>
-<p>With naive javascript</p>
-<pre><code>numberToString(3) // return &quot;3&quot;</code></pre>
-<p>Good</p>
-<pre><code>numberToString(&quot;three&quot;) // return &quot;three&quot;</code></pre>
-<p><strong>BAD</strong> the error isn&#39;t detected by javascript</p>
+    <section class="slide-content"><h1 id="meta">META</h1>
 </section>
   </div>
   <div class="slide hidden" id="slide-10">
-    <section class="slide-content"><h2 id="how-to-improve-that">How to improve that</h2>
+    <section class="slide-content"><h3 id="comment-your-javascript-">Comment Your Javascript!</h3>
+<ul>
+<li>A comment is a text which describes what you do.</li>
+<li>You can write it in human language. Lucky you! :)</li>
+</ul>
+<p>Single line comment</p>
+<pre><code>// this is a single line comment.</code></pre>
+<p>Multi line comment </p>
+<pre><code>/* 
+   This is a multi 
+   line comment.
+*/</code></pre>
 </section>
   </div>
   <div class="slide hidden" id="slide-11">
-    <section class="slide-content"><h3 id="a-better-js-for-this-function">a Better.js for this function</h3>
-<pre><code>var Bjs     = require(&#39;better.js&#39;)
-numberToString = Bjs.Function(numberToString, {
-    arguments : [Number],
-    return : String,
-})</code></pre>
+    <section class="slide-content"><h3 id="variables">Variables</h3>
 <ul>
-<li>Better.js overloads the origin function</li>
-<li>It makes sure your specification is followed</li>
+<li>When you play with computers you&#39;ve got values everywhere. </li>
+<li>Like <code>3</code> is a number and it is a value. </li>
+<li>Like <code>&quot;Hello&quot;</code> is a string and it is a value.</li>
 </ul>
-<p><strong>It isn&#39;t, better.js will notify you immediatly</strong></p>
+<ul>
+<li>You need to store them thus you can retrieve them later. </li>
+<li>When programming, we store them in <strong>variables</strong></li>
+</ul>
 </section>
   </div>
   <div class="slide hidden" id="slide-12">
-    <section class="slide-content"><h2 id="what-then-">What then ?</h2>
+    <section class="slide-content"><h3 id="variables">Variables</h3>
+<p>So, let&#39;s create a variable that stores a number. </p>
+<pre><code>var myNumber = 3;</code></pre>
+<p>Not bad, now a text.</p>
+<pre><code>var myText = &quot;Hello&quot;</code></pre>
+<p>Not too hard hey?</p>
 </section>
   </div>
   <div class="slide hidden" id="slide-13">
-    <section class="slide-content"><h3 id="let-s-see">Let&#39;s see</h3>
-<p>to run after adding the better.js to your function</p>
-<pre><code>numberToString(3) // return &quot;3&quot;</code></pre>
-<p>Good, legit usage so better.js let you thru</p>
-<pre><code>numberToString(&quot;three&quot;) // Throw Exception &quot;Arguments 1 should be a Number but is of type String&quot;</code></pre>
-<p><strong>Excelent</strong> The error is immediatly detected and you are notified</p>
+    <section class="slide-content"><h3 id="variable-types">Variable types</h3>
+<ul>
+<li>There are different kinds of variable types. </li>
+<li>The most common are:<ul>
+<li><strong>Numbers</strong>: it can either be a float number or an integer number</li>
+<li><strong>String</strong>: a line of text </li>
+<li><strong>Boolean</strong>: a true or false statement </li>
+<li><strong>Arrays</strong>: a collection of values </li>
+<li><strong>Objects</strong></li>
+</ul>
+</li>
+<li>Let&#39;s take a look at each one.</li>
+</ul>
 </section>
   </div>
   <div class="slide hidden" id="slide-14">
-    <section class="slide-content"><h3 id="conclusion">Conclusion</h3>
-<p>Thanks to better.js </p>
-<ul>
-<li>you find bug earlier</li>
-<li>you get notified of new class of bugs, variable type bug</li>
-<li>they were silently ignored before</li>
-</ul>
-<p><strong>Better.js helps you write better code</strong></p>
+    <section class="slide-content"><h1 id="numbers">Numbers</h1>
 </section>
   </div>
   <div class="slide hidden" id="slide-15">
+    <section class="slide-content"><h3 id="what-are-numbers-">What are numbers?</h3>
+<ul>
+<li>In Javascript a number is a value </li>
+<li>A number can be either a <strong>Float</strong> or an <strong>Integer</strong>.</li>
+<li>When you define your variables you set their values to a number type.</li>
+</ul>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-16">
+    <section class="slide-content"><h3 id="creating-a-number">Creating a number</h3>
+<ul>
+<li><p>You can create a number using <code>var</code></p>
+</li>
+<li><p>So, let&#39;s create a number from a constant value.</p>
+</li>
+</ul>
+<pre><code>// This is a float:
+
+var a = 1.2;
+
+// This is a integer:
+
+var b = 10;</code></pre>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-17">
+    <section class="slide-content"><h3 id="creating-a-number">Creating a number</h3>
+<ul>
+<li><p>Pretty good!</p>
+</li>
+<li><p>Now let&#39;s create a number from the value of another variable. </p>
+</li>
+</ul>
+<pre><code>var a = 2;
+var b = a;</code></pre>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-18">
+    <section class="slide-content"><h2 id="ok-now-that-we-grasped-the-concept-of-numbers-">Ok, now that we grasped the concept of numbers.</h2>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-19">
+    <section class="slide-content"><h2 id="let-s-see-what-we-can-do-with-them-">Let&#39;s see what we can do with them!</h2>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-20">
+    <section class="slide-content"><h3 id="operators">Operators</h3>
+<ul>
+<li><p>We can apply math operations to numbers using basic operators.</p>
+<ul>
+<li>Addition <code>c = a + b</code></li>
+<li>Substraction <code>c = a - b</code></li>
+<li>Multiplication <code>c = a * b</code></li>
+<li>Division <code>c = a / b</code></li>
+</ul>
+</li>
+<li><p>We can also use parentheses to separate and group expressions </p>
+</li>
+</ul>
+<p><code>c = (a / b) + d</code></p>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-21">
+    <section class="slide-content"><h3 id="advanced-operators">Advanced Operators</h3>
+<ul>
+<li><p>We can use advanced operators such as:</p>
+<ul>
+<li><p>Modulus (division remainder) <code>x = y % 2</code></p>
+</li>
+<li><p>Increment: Given a = 5</p>
+</li>
+</ul>
+<p><code>c = a++</code>, Results: c = 5 and a = 6</p>
+<p><code>c = ++a</code>, Results: c = 6 and a = 6</p>
+</li>
+</ul>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-22">
+    <section class="slide-content"><h3 id="advanced-operators">Advanced Operators</h3>
+<ul>
+<li>Decrement: Given a = 5</li>
+</ul>
+<p><code>c = a--</code>, Results: c = 5 and a = 4</p>
+<p><code>c = --a</code>, Results: c = 4 and a = 4</p>
+<p>Quite easy, don&#39;t you think?</p>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-23">
+    <section class="slide-content"><h1 id="strings">Strings</h1>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-24">
+    <section class="slide-content"><h3 id="what-are-strings-">What Are Strings?</h3>
+<ul>
+<li>Strings are text based variables. Like this: </li>
+</ul>
+<p><code>Hello World</code></p>
+<ul>
+<li>Strings are values, just like numbers. </li>
+<li>We can create new strings.</li>
+<li>We can perform operations on them.</li>
+</ul>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-25">
+    <section class="slide-content"><h3 id="let-s-create-a-string-">Let&#39;s Create a String!</h3>
+<ul>
+<li>We can enclose our text in single or double quotes.</li>
+</ul>
+<pre><code>// Single quotes can be used 
+var str = &#39;Hello World&#39;;
+
+// Double quotes can be used too
+var otherStr = &quot;Hello World&quot;;</code></pre>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-26">
+    <section class="slide-content"><h3 id="let-s-do-some-operations-on-strings">Let&#39;s Do Some Operations On Strings</h3>
+<ul>
+<li>You know addition between numbers.<ul>
+<li>3 + 2 = 5 </li>
+</ul>
+</li>
+<li>But, what is addition between texts?</li>
+</ul>
+<p>It is just putting them one after the other,</p>
+<ul>
+<li>We <strong>concatenate</strong> them. </li>
+</ul>
+<p><code>&quot;Hello&quot; + &quot; World&quot; = &quot;Hello World&quot;</code></p>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-27">
+    <section class="slide-content"><h3 id="length-of-a-string">Length of a string</h3>
+<p>To get the length:</p>
+<pre><code>var stringLength = &quot;my string&quot;.length;</code></pre>
+<p>After, <code>stringLength</code> equals to 8. </p>
+<p>Easy no?</p>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-28">
     <section class="slide-content"><div class="author">
   <h1 class="name">Jerome Etienne</h1>
     <h3 class="twitter">

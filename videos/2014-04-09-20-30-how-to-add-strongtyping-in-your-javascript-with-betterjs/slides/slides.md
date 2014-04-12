@@ -30,13 +30,19 @@ author:
 
 ### Let's install it
 
+For node.js
+
 ```
 npm install better.js
 ```
 
+For web pages with script tag
+
 ```
  <script src='better.js'></script>
 ```
+
+for web page with [bower](http://bower.io)
 
 ```
 bower install better.js
@@ -54,7 +60,6 @@ bower install better.js
 * which convert a number to a string
 
 ```
-var Bjs	= require('better.js')
 var numberToString = function(myNumber){
 	return String(myNumber)
 }
@@ -108,9 +113,10 @@ numberToString("three") // return "three"
 ### a Better.js for this function
 
 ```
+var Bjs	 = require('better.js')
 numberToString = Bjs.Function(numberToString, {
-	arguments	: [Number],
-	return		: String,
+	arguments : [Number],
+	return : String,
 })
 ```
 

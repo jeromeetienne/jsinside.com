@@ -1,7 +1,3 @@
-# How To Create Your First Project with Express.js
+# How to Add Strong Typing To Your Function with Better.js
 
-This video explain how to install
-[express.js](http://expressjs.com/) with 
-[node.js](http://nodejs.org).
-You will learn how to generate your first project
-and how to customized your project.
+This video explains how to add strong typing to your javascript function.
