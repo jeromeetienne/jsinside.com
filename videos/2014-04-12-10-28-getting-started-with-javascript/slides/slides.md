@@ -13,7 +13,7 @@ output: index.html
 
 --
 
-### Table Of Content
+### Table Of Contents
 
 * [Getting Started With Javascript](#3)
 * [Basics of Javascript](#10)
@@ -47,11 +47,11 @@ Over [110 million per second](http://en.wikipedia.org/wiki/Instructions_per_seco
 
 ### How Useful Is Programming?
 
-* You can do your own webiste.
-* You can do your own application.
-* You can control those computers you see everywhere.
+* You can do your own webistes.
+* You can do your own applications.
+* You can control the computers you see everywhere.
 
-> "Programming as the New Literacy" - an anonymous wise guy
+> "Programming is the New Literacy" - an anonymous wise guy
 
 --
 
@@ -97,9 +97,9 @@ META transition
 
 Just a few steps:
 
-1. Open a web browser
+1. Open a web browser.
 1. Open a Javascript console (cmd+alt+i)
-1. Now you are all setup
+1. Now you are all setup.
 
 **You can play with javascript live!**
 
@@ -123,7 +123,7 @@ console.log("Hello, world!")
 
 --
 
-### What is a Comment
+### What is a Comment?
 
 * A comment is a text which describes what you do.
 * You can write it in human language. Lucky you! :)
@@ -135,15 +135,15 @@ console.log("Hello, world!")
 ```
 --
 
-### Why Commenting Your Code
+### Why Commenting Your Code Is Important?
 
-* To explain what it does
-* Help a lot understand what the code is intented to do
-* Keep it simple, short and clear
+* To explain what it does.
+* Helps a lot to understand what the code is intented to do.
+* Keeps it simple, short and clear.
 
 --
 
-### What for Longer Your Javascript
+### How To Write Multi-Line Comment?
 
 Another way to comment
 
@@ -176,7 +176,7 @@ Another way to comment
 
 --
 
-### Variables Usages 
+### Variable Usages 
 
 So, let's create a variable that stores a number. 
 
@@ -198,7 +198,7 @@ Not too hard hey?
 ### Variable types 
 
 * There are different kinds of variable types.
-* Depends on the values they contain
+* Depends on the values they contain.
 
 --
 
@@ -208,11 +208,11 @@ Not too hard hey?
 
 ### Common Types
 
-* **Numbers**: it can either be a float number or an integer number
-* **String**: a line of text 
-* **Boolean**: a true or false statement 
-* **Arrays**: a collection of values 
-* **Objects**: a associative array
+* **Numbers**: it can either be a float number or an integer number.
+* **String**: a line of text.
+* **Boolean**: a true or false value. 
+* **Arrays**: a collection of values. 
+* **Objects**: a associative array.
 
 --
 
@@ -375,7 +375,48 @@ Easy no?
 
 --
 
-### What is Condition ?
+### What Is a Condition ?
+
+Here is a definition in human terms
+
+> **"When something happens or not, depending on a condition."**
+
+Not clear yet ? Don't worry it's simpler than it looks
+
+--
+
+### An Example of Loop
+
+* To go to the fridge, you needs to walk 15 steps
+* So you repeat ```walkOneStep()``` 15 times
+
+```
+for( var i = 0; i < 15; i++ ){
+	walkOneStep()l
+}
+```
+
+Simple Enough
+
+--
+
+## Let's have a closer look at this code
+
+--
+
+### The ```for``` loop
+
+* Usage: Repeat a given amount of time
+* 3 Parts: **initialisation**, **end condition** and **count instruction**
+
+```
+for( var i = 0; i < 15; i++ ){
+	walkOneStep()l
+}
+```
+--
+
+### What is A Condition ?
 
 "When something happens or not, depending on a condition"
 
@@ -538,18 +579,39 @@ More complex subtle way to express conditions
 
 --
 
-### What is a loop
+### What Is a Loop ?
 
->  When you need to repeat something
+Here is a definition in human terms
 
-* To go to the fridge, it needs to walk 15 steps
-* repeat ```walkOneStep()``` 15 times
+> **"This is group of instructions that you repeat."**
+
+Not clear yet ? Don't worry it's simpler than it looks
+
+--
+
+### An Example of Loop
+
+* To go to the fridge, you needs to walk 15 steps
+* So you repeat ```walkOneStep()``` 15 times
+
+```
+for( var i = 0; i < 15; i++ ){
+	walkOneStep()l
+}
+```
+
+Simple Enough
+
+--
+
+## Let's have a closer look at this code
 
 --
 
 ### The ```for``` loop
 
-Repeat a given amount of time
+* Usage: Repeat a given amount of time
+* 3 Parts: **initialisation**, **end condition** and **count instruction**
 
 ```
 for( var i = 0; i < 15; i++ ){
@@ -559,13 +621,15 @@ for( var i = 0; i < 15; i++ ){
 
 --
 
-## Sometime it is more than counting
+## Sometimes it is more than counting
 
 --
 
 ### The ```while``` loop
 
-Repeat while a given condition is true
+* Usage: Repeat while a given condition is true
+* 2 Parts: **end condition** and **instructions to run**
+
 
 ```
 while( notInTheKitchen() ){
@@ -575,12 +639,18 @@ while( notInTheKitchen() ){
 
 --
 
-### Loops are simple but powerful tools
+## Let's pack it up.
 
-* Loops are a big thing
-* You will use them a lot
-* Computers like to repeat things over and over :)
+--
 
+### What Have We Learned ?
+
+* Loops are **"groups of instructions that you repeat."**
+* ```for``` loop repeats instructions at a given amount of time
+* ```while``` loop repeats instructions while a given condition is true
+* Loops are simple but powerful tools
+
+Computers like to repeat things over and over :)
 
 --
 
@@ -594,7 +664,23 @@ while( notInTheKitchen() ){
 
 ### What Is a Function ?
 
-> This is group of instructions which are called with a name
+Here is a definition in human terms
+
+> **"This is a group of instructions which are called with a name"**
+
+Not clear yet ? Don't worry it's simpler than it looks
+
+--
+
+## What about an example ?
+
+--
+
+### What Is a Function ?
+
+* You know you will say 'Hello!' a lot.
+* You group the instructions to say hello in a single place.
+* You call that place ```sayHello```
 
 ```
 function sayHello(){
@@ -602,27 +688,38 @@ function sayHello(){
 }
 ```
 
-* You know you will say 'Hello!' a lot
-* you group the instructions to say hello in a single place
-* you call that place ```sayHello```
+--
+
+## Quite easy after all... Let's go a bit deeper
 
 --
 
-### What Is a Function ?
+### Why Using Functions ?
+
+* Function regroup repetitive tasks.
+* ["Dont Repeat Yourself" principles](http://en.wikipedia.org/wiki/Don't_repeat_yourself)
+* You divide your code into smaller groups of instructions.
+* You make its organisation clearer.
+
+--
+
+### A More Formal Definition of Function
 
 1. it receives **arguments** as input
-1. it execute some instructions
+1. it executes some instructions
 1. it **returns** a value as output
 
 --
 
-### What Is a Function ?
+### Another Example of Function
+
+A bit longer, more real-life.
 
 ```
 // receive arguments name, age
 function canDrink(name, age){
 
-	// Instructions to excecute
+	// Instructions to execute
 	console.log('Hello', name);     
 
 	// returns value as output
@@ -633,6 +730,20 @@ function canDrink(name, age){
 	}
 }
 ```
+
+--
+
+## Let's pack it up.
+
+--
+
+### What Have We Learned ?
+
+* What are functions and how to write them.
+* When to use them and why they are useful.
+* Functions are important notions of programming.
+
+We are now a bit better at it. Good!
 
 --
 
