@@ -73,7 +73,40 @@ Over [110 million per second](http://en.wikipedia.org/wiki/Instructions_per_seco
 
 --
 
-META transition
+### Why Learning Javascript?
+
+> **"It is the most used language in the world."**
+
+* All of what you will learn in this course, will be reused easily.
+* If you look for help on this topic you will find it easily. 
+
+
+--
+
+### Why Learning Javascript?
+
+> **"It is a standard, so it is here to stay."**
+
+* Javascript has been standardized by [ECMA-262-5 specification](ECMAScript Language Specification - ECMA-262 Edition 5.1).
+* It is supported by 
+[microsoft](http://microsoft.com),
+[google](http://google.com),
+[mozilla](http://mozilla.com)
+and many others.
+
+
+* What you will learn here will be useful for a long time. 
+
+--
+
+### Why Learning Javascript?
+
+> **"You will understand the magic behind all those websites."** 
+
+* Huge websites like [facebook](http://facebook.com) or [twitter](twitter.com) depends on javascript
+* All those [fun web games](http://jeromeetienne.github.io/stellar7/) are built using javascript
+
+Useful knowledge, fun to learn, what else can we ask for ?
 
 --
 
@@ -153,6 +186,317 @@ Another way to comment
    multi - line comment.
 */
 ```
+
+--
+
+## Let's pack it up.
+
+--
+
+### What Have We Learned ?
+
+* We have run our first Javascript. Congrats! 
+* We ran it inside the browser Javascript console. 
+* Comments are an efficient way to explain the code. 
+
+
+--
+
+# The End
+
+--
+
+--
+
+# Variables
+
+--
+
+### What Is a Variable ?
+
+Here is a definition in human terms
+
+> **"A variable is a place with a name which store a value"**
+
+Not clear yet ? Don't worry it's simpler than it looks
+
+--
+
+### An Example of Variable
+
+* Let's say our variable is named ```myNumber```
+* It stores the value 3
+* So it contains the number 3, simple enough
+
+```
+var myNumber = 3;
+```
+
+
+--
+
+## Let's have a closer look at the code
+
+--
+
+### A Closer Look at Variables
+
+* First we do the **declaration**.
+* in javascript, you do that with ```var```.
+
+```
+var myNumber;
+```
+
+--
+
+### Storing a value in a variable
+
+* Then we do the **assignation**.
+* In javascript, you do that with ```=```
+
+```
+myNumber = 3;
+```
+
+--
+
+### Fetch the value from a variable
+
+* Then we do the **fetching**.
+* In javascript, you do that with the name of the variable.
+* with ```myNumber```, in our case.
+
+```
+console.log('My number is', myNumber);
+
+// Display 'My number is 3'
+```
+
+--
+
+## What if i dont want to store a number ?
+
+--
+
+### Variables Got Types
+
+Here is a definition in human terms
+
+> **"The type of a variable is the category of its value."**
+
+Not clear yet ? Don't worry it's simpler than it looks
+
+--
+
+## Which kind of types are possible ?
+
+--
+
+### Variable Type in Javascript
+
+* **Number**: to store value like *100* or *3.14*
+* **String**: to store text like *"Hello"*
+* **Boolean**: to store true or false, very binary :)
+* **Array**: to store lists of values which may be of different types
+* **Object**: to store collections of values by their names
+
+--
+
+## Let's pack it up.
+
+--
+
+### What Have We Learned ?
+
+* A variable is a place with a name which store a value
+* How to declare variables with ```var```
+* How to store values in it and fetch them back later
+* Those values got types!
+
+Our next video will details variable types.
+
+--
+
+# The End
+
+--
+
+# Variable Type Number
+
+--
+
+### What is the type Number
+
+> **"It is to store number."**
+
+Suprising, isn't it ? :)
+
+--
+
+### Creating A Variable for a Number
+
+* You can create variable for integer see *myInteger*
+* or for decimal like *myDecimal*
+* In javascript, they will both be of type ```Number```
+
+```
+var myInteger = 10;   // to store an integer
+var myDecimal = 1.2;  // to store a decimal
+```
+
+--
+
+## Now we got numbers, we add them together 
+
+--
+
+### Adding Numbers
+
+Let's see how to add numbers
+
+```
+var total = 3+2;
+
+// total is now equal to 5
+```
+
+Like the usual ways, you learned in school.
+
+--
+
+### Other Operations on Numbers
+
+All the usual operations are there.
+
+```
+var total = 3 - 2;  // a substraction
+var total = 3 * 2;  // a multiplication
+var total = 3 / 2;  // a division
+```
+
+--
+
+## Math... ?
+
+--
+
+### More advanced Operations with Math API
+
+[Math API](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math)
+gives access to more advanced operations
+
+```
+var result = Math.sqrt(2);    // result is square root of 2
+var x      = Math.cos(3.14);  // x is cosinus of 3.14
+var value  = Math.pow(2, 3);  // value is 2 to the 3 power, so 8
+```
+
+--
+
+### Grouping Operation 
+
+You can group operations with ```()```
+
+* it will compute what is between **()** first
+* so **(5+2) = 7** is done first
+* then this result is **3 * 7 = 21**
+
+```
+var value = 3 * (5+2);
+```
+
+--
+
+## That's enough math for today!
+
+--
+
+## Let's pack it up.
+
+--
+
+### What Have We Learned ?
+
+* The type ```Number``` can store numbers, whatever decimal or float.
+* All usual math operations are available ```+```, ```-```, ```/``` etc...
+* More math are available in 
+[Math API](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math)
+e.g. ```Math.cos()```
+
+
+--
+
+# The End
+
+--
+
+# Variable Type String
+
+--
+
+### What is the type String
+
+In human terms
+
+> **"Type string is to store text."**
+
+Suprising, isn't it ? :)
+
+--
+
+## Then, why not call that "the type *text*" instead ?
+
+--
+
+### Funny Historical Reason
+
+* In the past, computer stored text as **string of character**
+* With time, it got shorten to **string**
+* So now a text is called a string.
+
+Isn't history funny ? :P
+
+--
+
+## What can we do with strings then ?
+
+--
+
+### Adding String
+
+* Adding strings is just putting one at the end of the other
+* Don't react the same as ```Number``` 
+
+```
+var value = "he"+"llo";	// value is equal to "hello"
+```
+
+Still cool, no ?
+
+--
+
+## All the operations are possible on string too ?
+
+--
+
+### More advanced operations on strings
+
+* ```+``` is the only math operator for string
+* but it is possible to play with it
+
+
+```
+var value = "hello".length;        // value is equal to 5 because "hello" has 5 characters
+var value = "hello".toUpperCase(); // value is "HELLO"
+var value = "JOHn".toLowerCase();  // value is "john"
+```
+
+
+
+
+
+
 
 --
 
@@ -385,52 +729,27 @@ Not clear yet ? Don't worry it's simpler than it looks
 
 --
 
-### An Example of Loop
+### An Example of Condition
 
-* To go to the fridge, you needs to walk 15 steps
-* So you repeat ```walkOneStep()``` 15 times
+> **"If I wanna eat, I go to the fridge."**
 
-```
-for( var i = 0; i < 15; i++ ){
-	walkOneStep()l
-}
-```
+* If I don't wanna eat, I stay where I am.
+* If I want to eat, I go to the fridge.
+* You do something or not, depending on a condition
 
 Simple Enough
 
 --
 
-## Let's have a closer look at this code
+## Let's have a closer look at the code
 
---
-
-### The ```for``` loop
-
-* Usage: Repeat a given amount of time
-* 3 Parts: **initialisation**, **end condition** and **count instruction**
-
-```
-for( var i = 0; i < 15; i++ ){
-	walkOneStep()l
-}
-```
---
-
-### What is A Condition ?
-
-"When something happens or not, depending on a condition"
-
-### Example: If wanna eat, goto the fridge
-* if i dunno wanna eat, i stay where i am
-* if i want to eat, i go to the frigde
-
-Simple
 
 --
 
 ### Condition In Javascript
 
-In programming, it is called a ```if```
+* In programming, it is called a ```if```
+* 2 Parts: **condition** and **instructions to run**
 
 ```
 if( iWannaEat ){
@@ -452,11 +771,13 @@ if( iWannaEat ){
 }
 ```
 
-This is called a branching
+This is called a branching.
 
 --
 
 ### Chaining Conditions
+
+You can refine your choice by chaining conditions.
 
 ```
 if( iWannaEat ){
@@ -470,17 +791,60 @@ if( iWannaEat ){
 
 --
 
-## Sure but how to know if i wanna eat ? 
+## Sure but how to know if I wanna eat ? 
 
 --
 
-## Dunno... ask your belly :)
+## Dunno... have you asked your belly? (please laugh :)
 
 --
 
-### How To Express Condition
+## More seriously, we will answer this in our next video.
 
-> "By expressing comparisons between values"
+--
+
+## Let's pack it up.
+
+--
+
+### What Have We Learned ?
+
+* Condition is **"when intructions are run or not, depending on a condition"**
+* ```if``` may be used to run instructions if a condition is true.
+* ```else``` may be used to run instructions if this condition is false.
+* Conditions may be chained together at leisure.
+
+
+
+--
+
+# The End
+
+--
+
+# How To Express Conditions ?
+
+--
+
+### What is a Condition?
+
+Here is a definition in human terms
+
+> **"Express conditions by comparing values"**
+
+Seems obvious no ? :)
+
+--
+
+## What about an example ?
+
+--
+
+### How To Express a Condition
+
+* Compare the value of variable ```name```
+* With the value ```"john"```
+* Test if they are equal.
 
 ```
 if( name === 'john' ){
@@ -488,11 +852,7 @@ if( name === 'john' ){
 }
 ```
 
-* Compare the value of variable ```name```
-* with the value ```"john"```
-* Test if they are equal
-
-Easy enougth
+Easy enough ;)
 
 --
 
@@ -502,7 +862,7 @@ Easy enougth
 
 ### Operators
 
-Many way to compare values with 
+Many ways to compare values with 
 other
 [operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators)
 
@@ -516,7 +876,7 @@ other
 
 ### Conditions are Boolean
 
-* each individual condition is either true or false
+Each individual condition is either true or false.
 
 ```
 if( age >= 18 ){
@@ -531,9 +891,9 @@ if( age >= 18 ){
 
 ### Chaining Conditions 
 
-* Let's chain conditions together
-* operator ```&&``` means both conditions MUST be true
-* the first condition AND the second condition MUST be true
+* Let's chain conditions together.
+* Operator ```&&``` means both conditions MUST be true.
+* The first condition AND the second condition MUST be true.
 
 ```
 if( name === 'john' && age >= 18 ){
@@ -545,8 +905,8 @@ if( name === 'john' && age >= 18 ){
 
 ### Chaining Conditions 
 
-* operator ```||``` means at least one condition MUST be true
-* the first condition OR the second condition MUST be true
+* Operator ```||``` means at least one condition MUST be true.
+* The first condition OR the second condition MUST be true.
 
 ```
 if( name === 'john' || age >= 18 ){
@@ -558,7 +918,7 @@ if( name === 'john' || age >= 18 ){
 
 ### Grouping Conditions 
 
-* use parenthese ```()``` to group conditions
+Use parentheses ```()``` to group conditions
 
 ```
 if( (name === 'john' && age >= 18) || iWannaEat ){
@@ -566,8 +926,21 @@ if( (name === 'john' && age >= 18) || iWannaEat ){
 }
 ```
 
-More complex subtle way to express conditions
+More complex subtle way to express conditions.
 
+
+--
+
+## Let's pack it up.
+
+--
+
+### What Have We Learned ?
+
+* We can express **"conditions by comparing values."**
+* Operators show us various ways to compare values.
+* There are equal to, different than, less than etc... 
+* Conditions are boolean which can be chained.
 
 --
 
