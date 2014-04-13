@@ -103,7 +103,7 @@ and many others.
 
 > **"You will understand the magic behind all those websites."** 
 
-* Huge websites like [facebook](http://facebook.com) or [twitter](twitter.com) depends on javascript
+* Huge websites like [facebook](http://facebook.com) or [twitter](twitter.com) depend on javascript
 * All those [fun web games](http://jeromeetienne.github.io/stellar7/) are built using javascript
 
 Useful knowledge, fun to learn, what else can we ask for ?
@@ -216,9 +216,9 @@ Another way to comment
 
 Here is a definition in human terms
 
-> **"A variable is a place with a name which store a value"**
+> **"A variable is a place with a name which stores a value"**
 
-Not clear yet ? Don't worry it's simpler than it looks
+Not clear yet ? Don't worry it's simpler than it looks.
 
 --
 
@@ -226,7 +226,7 @@ Not clear yet ? Don't worry it's simpler than it looks
 
 * Let's say our variable is named ```myNumber```
 * It stores the value 3
-* So it contains the number 3, simple enough
+* So it contains the number 3, simple enough.
 
 ```
 var myNumber = 3;
@@ -242,7 +242,7 @@ var myNumber = 3;
 ### A Closer Look at Variables
 
 * First we do the **declaration**.
-* in javascript, you do that with ```var```.
+* In javascript, you do that with ```var```.
 
 ```
 var myNumber;
@@ -275,7 +275,7 @@ console.log('My number is', myNumber);
 
 --
 
-## What if i dont want to store a number ?
+## What if i don't want to store a number ?
 
 --
 
@@ -295,11 +295,11 @@ Not clear yet ? Don't worry it's simpler than it looks
 
 ### Variable Type in Javascript
 
-* **Number**: to store value like *100* or *3.14*
-* **String**: to store text like *"Hello"*
+* **Number**: to store values like *100* or *3.14*.
+* **String**: to store text like *"Hello"*.
 * **Boolean**: to store true or false, very binary :)
-* **Array**: to store lists of values which may be of different types
-* **Object**: to store collections of values by their names
+* **Array**: to store lists of values which may be of different types.
+* **Object**: to store collections of values by their names.
 
 --
 
@@ -309,12 +309,12 @@ Not clear yet ? Don't worry it's simpler than it looks
 
 ### What Have We Learned ?
 
-* A variable is a place with a name which store a value
+* A variable is a place with a name which stores a value.
 * How to declare variables with ```var```
-* How to store values in it and fetch them back later
+* How to store values in it and fetch them back later.
 * Those values got types!
 
-Our next video will details variable types.
+Our next video will detail variable types.
 
 --
 
@@ -326,9 +326,9 @@ Our next video will details variable types.
 
 --
 
-### What is the type Number
+### What is the type Number?
 
-> **"It is to store number."**
+> **"The variable type Number is to store numbers."**
 
 Suprising, isn't it ? :)
 
@@ -347,7 +347,7 @@ var myDecimal = 1.2;  // to store a decimal
 
 --
 
-## Now we got numbers, we add them together 
+## Now that we got numbers, we add them together.
 
 --
 
@@ -361,7 +361,7 @@ var total = 3+2;
 // total is now equal to 5
 ```
 
-Like the usual ways, you learned in school.
+The usual way you learned in school :)
 
 --
 
@@ -398,9 +398,9 @@ var value  = Math.pow(2, 3);  // value is 2 to the 3 power, so 8
 
 You can group operations with ```()```
 
-* it will compute what is between **()** first
-* so **(5+2) = 7** is done first
-* then this result is **3 * 7 = 21**
+* It will compute what is between **()** first
+* So **(5+2) = 7** is done first
+* Then this result is **3 * 7 = 21**
 
 ```
 var value = 3 * (5+2);
@@ -418,9 +418,9 @@ var value = 3 * (5+2);
 
 ### What Have We Learned ?
 
-* The type ```Number``` can store numbers, whatever decimal or float.
+* The type ```Number``` can store numbers, either decimal or float.
 * All usual math operations are available ```+```, ```-```, ```/``` etc...
-* More math are available in 
+* More math is available in 
 [Math API](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math)
 e.g. ```Math.cos()```
 
@@ -435,7 +435,7 @@ e.g. ```Math.cos()```
 
 --
 
-### What is the type String
+### What is the type String?
 
 In human terms
 
@@ -451,8 +451,8 @@ Suprising, isn't it ? :)
 
 ### Funny Historical Reason
 
-* In the past, computer stored text as **string of character**
-* With time, it got shorten to **string**
+* In the past, computer stored text as **string of character**.
+* With time, it got shorten to **string**.
 * So now a text is called a string.
 
 Isn't history funny ? :P
@@ -463,10 +463,10 @@ Isn't history funny ? :P
 
 --
 
-### Adding String
+### Adding Strings
 
-* Adding strings is just putting one at the end of the other
-* Don't react the same as ```Number``` 
+* Adding strings is just putting one at the end of the other.
+* They don't react the same way as ```Number``` 
 
 ```
 var value = "he"+"llo";	// value is equal to "hello"
@@ -476,14 +476,14 @@ Still cool, no ?
 
 --
 
-## All the operations are possible on string too ?
+## Are all the operations are possible on string too ?
 
 --
 
 ### More advanced operations on strings
 
-* ```+``` is the only math operator for string
-* but it is possible to play with it
+* ```+``` is the only math operator for string.
+* But it is possible to play with it.
 
 
 ```
@@ -492,222 +492,197 @@ var value = "hello".toUpperCase(); // value is "HELLO"
 var value = "JOHn".toLowerCase();  // value is "john"
 ```
 
+--
 
+## Let's pack it up.
 
+--
 
+### What Have We Learned ?
 
+* The type ```String``` can store text of any length.
+* It is called string for funny historical reason.
+* How to add strings together with ```+```
+* How to modify string in more advanced ways.
+
+Not bad. Let's pat our back :)
+
+--
+
+# The End
 
 
 --
 
-# Variables
+# Functions
 
 --
 
-### Variables and Values 
+### What Is a Function ?
 
-* When you play with computers you've got values everywhere. 
-* Like ```3``` is a number and it is a value. 
-* Like ```"Hello"``` is a string and it is a value.
+Here is a definition in human terms
 
---
+> **"This is a group of instructions which are called with a name"**
 
-### Variables and Values
-
-
-* You need to store values thus you can retrieve them later. 
-* When programming, we store them in **variables**
+Not clear yet ? Don't worry it's simpler than it looks
 
 --
 
-### Variable Usages 
+## What about an example ?
 
-So, let's create a variable that stores a number. 
+--
+
+### What Is a Function ?
+
+* You know you will say 'Hello!' a lot.
+* You group the instructions to say hello in a single place.
+* You call that place ```sayHello```
 
 ```
-var myNumber = 3; 
-```
-
-Not bad, now a text.
- 
-
-```
-var myText = "Hello"
-```
-
-Not too hard hey? 
-
---
-
-### Variable types 
-
-* There are different kinds of variable types.
-* Depends on the values they contain.
-
---
-
-## Let's take a look at each one
-
---
-
-### Common Types
-
-* **Numbers**: it can either be a float number or an integer number.
-* **String**: a line of text.
-* **Boolean**: a true or false value. 
-* **Arrays**: a collection of values. 
-* **Objects**: a associative array.
-
---
-
-# Numbers 
-
---
-
-### What are numbers?
-
-* In Javascript a number is a value 
-* A number can be either a **Float** or an **Integer**.
-* When you define your variables you set their values to a number type.
-
---
-
-### Creating A Number 
-
-* You can create a number using ```var```
-* So, let's create a number from a constant value.
-
-```
-// This is a float:
-
-var a = 1.2;
-
-// This is a integer:
-
-var b = 10;
+function sayHello(){
+	console.log('Hello!')
+}
 ```
 
 --
 
-## Pretty good!
+## Quite easy after all... Let's go a bit deeper
 
 --
 
-### Creating A Number 
+### Why Using Functions ?
 
-Now let's create a number from the value of another variable. 
+* Function regroup repetitive tasks.
+* ["Dont Repeat Yourself" principles](http://en.wikipedia.org/wiki/Don't_repeat_yourself)
+* You divide your code into smaller groups of instructions.
+* You make its organisation clearer.
+
+--
+
+### A More Formal Definition of Function
+
+1. It receives **arguments** as input.
+1. It executes some instructions.
+1. It **returns** a value as output.
+
+--
+
+### Another Example of Function
+
+A bit longer, more real-life.
 
 ```
-var a = 2;
-var b = a;
+// receive arguments name, age
+function canDrink(name, age){
+
+	// Instructions to execute
+	console.log('Hello', name);     
+
+	// returns value as output
+	if( age < 18 ){
+		return false;
+	}else{
+		return true;
+	}
+}
 ```
 
 --
 
-## Ok, we grasped the concept of numbers. 
+## Let's pack it up.
 
 --
 
-## Now, let's see what we can do with them!
+### What Have We Learned ?
+
+* What are functions and how to write them.
+* When to use them and why they are useful.
+* Functions are important notions of programming.
+
+We are now a bit better at it. Good!
 
 --
 
-### Operators 
-
-* We can apply math operations to numbers using basic operators.
-
-  * Addition ```c = a + b```
-  * Substraction ```c = a - b```
-  * Multiplication ```c = a * b```
-  * Division ```c = a / b```
-  
-* We can also use parentheses to separate and group expressions 
-
-```c = (a / b) + d```
+# The End
 
 --
 
-### Advanced Operators
-
-* We can use advanced operators such as:
-
-  * Modulus (division remainder) ```x = y % 2```
-  
-  * Increment: Given a = 5
-  
-  ```c = a++```, Results: c = 5 and a = 6
-  
-  ```c = ++a```, Results: c = 6 and a = 6 
-  
---
-  
-### Advanced Operators 
-
-* Decrement: Given a = 5
-  
-```c = a--```, Results: c = 5 and a = 4
-  
-```c = --a```, Results: c = 4 and a = 4
-
-Quite easy, don't you think?
-
+# Loops
 
 --
 
-# Strings
+### What Is a Loop ?
+
+Here is a definition in human terms
+
+> **"This is a group of instructions that you repeat."**
+
+Not clear yet ? Don't worry it's simpler than it looks
 
 --
 
-### What Are Strings?
+### An Example of Loop
 
-* Strings are text based variables. Like this: 
-
-```Hello World```
-
-* Strings are values, just like numbers. 
-* We can create new strings.
-* We can perform operations on them.
-
---
-
-### Let's Create a String!
-
-* We can enclose our text in single or double quotes.
+* To go to the fridge, you needs to walk 15 steps
+* So you repeat ```walkOneStep()``` 15 times
 
 ```
-// Single quotes can be used 
-var str = 'Hello World';
+for( var i = 0; i < 15; i++ ){
+	walkOneStep()l
+}
+```
 
-// Double quotes can be used too
-var otherStr = "Hello World";
-``` 
---
-
-### Let's Do Some Operations On Strings
-
-* You know addition between numbers.
-  * 3 + 2 = 5 
-* But, what is addition between texts?
-
-
-It is just putting them one after the other,
-* We **concatenate** them. 
-
-```"Hello" + " World" = "Hello World"```
+Simple Enough
 
 --
 
-### Length of a string 
+## Let's have a closer look at this code
 
-To get the length:
+--
+
+### The ```for``` loop
+
+* Usage: Repeat a given amount of time.
+* 3 Parts: **initialisation**, **end condition** and **count instruction**.
 
 ```
-var stringLength = "my string".length;
+for( var i = 0; i < 15; i++ ){
+	walkOneStep()l
+}
 ```
 
-After, ```stringLength``` equals to 8. 
- 
-Easy no?
+--
+
+## Sometimes it is more than counting
+
+--
+
+### The ```while``` loop
+
+* Usage: Repeat while a given condition is true.
+* 2 Parts: **end condition** and **instructions to run**.
+
+
+```
+while( notInTheKitchen() ){
+	walkOneStep()
+}
+```
+
+--
+
+## Let's pack it up.
+
+--
+
+### What Have We Learned ?
+
+* Loops are **"groups of instructions that you repeat."**
+* ```for``` loop repeats instructions at a given amount of time.
+* ```while``` loop repeats instructions while a given condition is true.
+* Loops are simple but powerful tools.
+
+Computers like to repeat things over and over :)
 
 --
 
@@ -735,7 +710,7 @@ Not clear yet ? Don't worry it's simpler than it looks
 
 * If I don't wanna eat, I stay where I am.
 * If I want to eat, I go to the fridge.
-* You do something or not, depending on a condition
+* You do something or not, depending on a condition.
 
 Simple Enough
 
@@ -813,8 +788,6 @@ if( iWannaEat ){
 * ```if``` may be used to run instructions if a condition is true.
 * ```else``` may be used to run instructions if this condition is false.
 * Conditions may be chained together at leisure.
-
-
 
 --
 
@@ -945,184 +918,6 @@ More complex subtle way to express conditions.
 --
 
 # The End
-
---
-
-# Loops
-
---
-
-### What Is a Loop ?
-
-Here is a definition in human terms
-
-> **"This is group of instructions that you repeat."**
-
-Not clear yet ? Don't worry it's simpler than it looks
-
---
-
-### An Example of Loop
-
-* To go to the fridge, you needs to walk 15 steps
-* So you repeat ```walkOneStep()``` 15 times
-
-```
-for( var i = 0; i < 15; i++ ){
-	walkOneStep()l
-}
-```
-
-Simple Enough
-
---
-
-## Let's have a closer look at this code
-
---
-
-### The ```for``` loop
-
-* Usage: Repeat a given amount of time
-* 3 Parts: **initialisation**, **end condition** and **count instruction**
-
-```
-for( var i = 0; i < 15; i++ ){
-	walkOneStep()l
-}
-```
-
---
-
-## Sometimes it is more than counting
-
---
-
-### The ```while``` loop
-
-* Usage: Repeat while a given condition is true
-* 2 Parts: **end condition** and **instructions to run**
-
-
-```
-while( notInTheKitchen() ){
-	walkOneStep()
-}
-```
-
---
-
-## Let's pack it up.
-
---
-
-### What Have We Learned ?
-
-* Loops are **"groups of instructions that you repeat."**
-* ```for``` loop repeats instructions at a given amount of time
-* ```while``` loop repeats instructions while a given condition is true
-* Loops are simple but powerful tools
-
-Computers like to repeat things over and over :)
-
---
-
-# The End
-
---
-
-# Functions
-
---
-
-### What Is a Function ?
-
-Here is a definition in human terms
-
-> **"This is a group of instructions which are called with a name"**
-
-Not clear yet ? Don't worry it's simpler than it looks
-
---
-
-## What about an example ?
-
---
-
-### What Is a Function ?
-
-* You know you will say 'Hello!' a lot.
-* You group the instructions to say hello in a single place.
-* You call that place ```sayHello```
-
-```
-function sayHello(){
-	console.log('Hello!')
-}
-```
-
---
-
-## Quite easy after all... Let's go a bit deeper
-
---
-
-### Why Using Functions ?
-
-* Function regroup repetitive tasks.
-* ["Dont Repeat Yourself" principles](http://en.wikipedia.org/wiki/Don't_repeat_yourself)
-* You divide your code into smaller groups of instructions.
-* You make its organisation clearer.
-
---
-
-### A More Formal Definition of Function
-
-1. it receives **arguments** as input
-1. it executes some instructions
-1. it **returns** a value as output
-
---
-
-### Another Example of Function
-
-A bit longer, more real-life.
-
-```
-// receive arguments name, age
-function canDrink(name, age){
-
-	// Instructions to execute
-	console.log('Hello', name);     
-
-	// returns value as output
-	if( age < 18 ){
-		return false;
-	}else{
-		return true;
-	}
-}
-```
-
---
-
-## Let's pack it up.
-
---
-
-### What Have We Learned ?
-
-* What are functions and how to write them.
-* When to use them and why they are useful.
-* Functions are important notions of programming.
-
-We are now a bit better at it. Good!
-
---
-
-# The End
- 
-
 
 
 
