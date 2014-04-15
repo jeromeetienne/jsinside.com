@@ -1,4 +1,4 @@
-how variable type are there ?
+How variable type are there ?
 
 [ ] 2
 [x] 5
@@ -6,7 +6,7 @@ how variable type are there ?
 
 --
 
-how variable type are there ?
+How many variable type are there ?
 
 [ ] 2
 [x] 5

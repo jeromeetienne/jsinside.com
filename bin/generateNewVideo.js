@@ -8,34 +8,58 @@ process.argv.slice(2).forEach(function(value, index){
 	title 	+= capitalise(value)
 });
 
-
 // build the template data
+var date	= new Date()
 var data	= {
+	name		: convertToSlug(title),
 	title		: title,
-	date		: new Date(),
+	date		: date,
+	baseName	: pad(date.getFullYear(), 4, 0)
+			+ '-' + pad(date.getMonth(), 2, 0)
+			+ '-' + pad(date.getDay(), 2, 0)
+			+ '-' + pad(date.getHours(), 2, 0)
+			+ '-' + pad(date.getSeconds(), 2, 0)
+			+ '-' + convertToSlug(title),
 }
-data.name	= convertToSlug(data.title)
+
+
+
+var dstDirName	= require('path').join('/tmp', data.baseName)
+
+// build the destination directory
+require('fs').mkdirSync(dstDirName)
+
+
 
 // read the template itself
 var srcName	= 'templates/newVideo.ejs'
 var srcContent	= require('fs').readFileSync(srcName, 'utf8')
 
 // render the template
-var output	= require('ejs').render(srcContent, data)
+var dstContent	= require('ejs').render(srcContent, data)
+
+var dstFullName	= require('path').join(dstDirName, data.baseName)
+console.log(dstFullName, dstContent, 'utf8')
+	
+require('fs').writeFileSync(dstFullName, dstContent, 'utf8')
 
 
-console.log('output')
-console.log(output)
+// console.log('output')
+// console.log(output)
 
 
-var dstName	= pad(data.date.getFullYear(), 4, 0)
-			+ '-' + pad(data.date.getMonth(), 2, 0)
-			+ '-' + pad(data.date.getDay(), 2, 0)
-			+ '-' + pad(data.date.getHours(), 2, 0)
-			+ '-' + pad(data.date.getSeconds(), 2, 0)
-			+ '-' + data.name
 
-console.log('dstName', dstName)
+
+// var dstName	= data.baseName
+
+// console.log('dstName', dstName)
+// TODO to write this
+
+
+
+//////////////////////////////////////////////////////////////////////////////////
+//										//
+//////////////////////////////////////////////////////////////////////////////////
 
 // from http://stackoverflow.com/questions/1053902/how-to-convert-a-title-to-a-url-slug-in-jquery	
 function convertToSlug(text){

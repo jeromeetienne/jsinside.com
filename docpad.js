@@ -102,16 +102,6 @@
 					}
 				});
 			},
-			populateCollectionsBefore: function(opts){
-				console.log('populateCollectionsBefore', arguments)
-				// debugger;
-				// console.log(JSON.stringify(Object.keys(global), null, '\t'))
-				// var collections		= database.findAllLive({
-				// 	layout: 'post'
-				// }, [{
-				// 	date: -1
-				// }]);
-			}
 		},
 
 		// listen on port 8000
