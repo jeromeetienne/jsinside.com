@@ -2,7 +2,7 @@
 layout		: course
 name		: how-to-create-your-first-project-with-express
 title		: How To Create Your First Project with Express.js
-date		: 2011-08-30 11:24
+date		: Mon, 03 Jul 2006 21:44:38 GMT
 youtubeId	: 66JGGjfFhBw
 tags		: [node.js, express.js]
 ```

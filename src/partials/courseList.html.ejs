@@ -4,7 +4,7 @@
 	<hr>
 </div>
 
-<% for document in @getCollection('linkItems').toJSON(): %>
+<% getCollection('linkItems').toJSON().forEach(function(document){ %>
 	<div class="row">
 		<div class="col-md-12">
 			<div class="thumbnail">
@@ -22,10 +22,10 @@
 					</div>
 					<div class='col-md-2 col-sm-2' style='text-align: center;'>
 						<p><small><%= document.date.toDateString() %></small></p>
-						<a href="/course/<%= document.name %>/" class="btn btn-primary" role="button">See Details</a>
+						<a href="/course/<%= document.name %>/" class="btn btn-primary" role="button">Course Page</a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-<% end %>
+<% }) %>

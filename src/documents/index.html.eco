@@ -15,5 +15,5 @@ title: 'Home'
 </div>
 
 <!-- include courseList partial -->
-<%- @partial('courseList.html.eco') %>
+<%- @partial('courseList.html.ejs') %>
 
