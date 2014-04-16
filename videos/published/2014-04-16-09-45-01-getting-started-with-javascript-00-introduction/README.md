@@ -1,5 +1,4 @@
 ```
-layout		: course
 title		: Getting Started With Javascript - 00 - Introduction
 name		: getting-started-with-javascript-00-introduction
 tags		: [javascript, beginner]

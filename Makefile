@@ -5,7 +5,7 @@ server:
 
 build:
 	bin/generateHtmlPageFromCourses.js videos/published/*
-	bin/generateHtmlPageFromCourses.js videos/incubator/*getting-started-with-javascript*
+	bin/generateHtmlPageFromCourses.js videos/incubator/*getting-started-with-javascript-0*
 	docpad generate
 
 clean:
