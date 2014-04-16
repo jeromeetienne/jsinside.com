@@ -1,5 +1,0 @@
-# How to use Threex Game Extensions for Three.js
-
-This video explains what are threex game extension for three.js.
-You will learn how to find the game extension that you need,
-How to install them and how to include them in your own games.

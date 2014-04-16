@@ -1,5 +1,4 @@
 ```
-layout		: course
 name        : how-to-create-your-first-project-with-express
 title       : How To Create Your First Project with Express.js
 date        : Tue Apr 15 2014 17:26:11 GMT+0200 (CEST)

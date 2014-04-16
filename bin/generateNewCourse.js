@@ -15,46 +15,42 @@ var data	= {
 	title		: title,
 	date		: date,
 	baseName	: pad(date.getFullYear(), 4, 0)
-			+ '-' + pad(date.getMonth(), 2, 0)
-			+ '-' + pad(date.getDay(), 2, 0)
+			+ '-' + pad(date.getMonth()+1, 2, 0)
+			+ '-' + pad(date.getDate(), 2, 0)
 			+ '-' + pad(date.getHours(), 2, 0)
+			+ '-' + pad(date.getMinutes(), 2, 0)
 			+ '-' + pad(date.getSeconds(), 2, 0)
 			+ '-' + convertToSlug(title),
 }
 
-
-
-var dstDirName	= require('path').join('/tmp', data.baseName)
+// Destination directory name
+var dstDirName	= require('path').join(__dirname, '../videos', data.baseName)
+// var dstDirName	= require('path').join('/tmp', data.baseName)
 
 // build the destination directory
 require('fs').mkdirSync(dstDirName)
+console.log('build directory', dstDirName)
 
-
-
-// read the template itself
-var srcName	= 'templates/newVideo.ejs'
-var srcContent	= require('fs').readFileSync(srcName, 'utf8')
-
-// render the template
-var dstContent	= require('ejs').render(srcContent, data)
-
-var dstFullName	= require('path').join(dstDirName, data.baseName)
-console.log(dstFullName, dstContent, 'utf8')
+// read the README.md itself
+var srcName	= 'templateNewCourse/README.md.ejs'
+var extName	= require('path').extname(srcName)
+if( extName === '.ejs' ){
+	var srcContent	= require('fs').readFileSync(srcName, 'utf8')
+	var dstContent	= require('ejs').render(srcContent, data)
+	var dstBasename	= require('path').basename(srcName, extName)
+	var dstFullName	= require('path').join(dstDirName, 'README.md')	
+	console.log(dstFullName)
+}else	console.assert(false)
 	
 require('fs').writeFileSync(dstFullName, dstContent, 'utf8')
 
-
-// console.log('output')
-// console.log(output)
+console.log('generated README.md')
 
 
-
-
-// var dstName	= data.baseName
-
-// console.log('dstName', dstName)
-// TODO to write this
-
+var cmdline	= "cp -a templateNewCourse/slides '"+dstDirName+"/'"; 
+require('child_process').exec(cmdline, function(){
+	console.log('copied slides')
+})
 
 
 //////////////////////////////////////////////////////////////////////////////////

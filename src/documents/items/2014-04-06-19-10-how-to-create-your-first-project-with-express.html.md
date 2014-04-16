@@ -1,13 +1,13 @@
 ```
-name		: how-to-create-your-first-project-with-express
-title		: How To Create Your First Project with Express.js
-date		: Tue Apr 15 2014 17:26:11 GMT+0200 (CEST)
-youtubeId	: 66JGGjfFhBw
-tags		: [node.js, express.js]
 courseData	: true
+name        : how-to-create-your-first-project-with-express
+title       : How To Create Your First Project with Express.js
+date        : Tue Apr 15 2014 17:26:11 GMT+0200 (CEST)
+youtubeId   : 66JGGjfFhBw
+tags        : [node.js, express.js]
 ```
 
-This video explain how to install
+This video explains how to install
 [express.js](http://expressjs.com/) with 
 [node.js](http://nodejs.org).
 You will learn how to generate your first project

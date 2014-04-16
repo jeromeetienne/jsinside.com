@@ -1,4 +1,11 @@
-# Getting started with Javascript 
+```
+courseData	: true
+name        : getting-started-with-javascript-global
+title       : Getting Started With Javascript - Global
+date        : 2011-08-30 11:24
+youtubeId   : PbeTAlsrMlM
+tags        : [threejs, gamedev, yeoman]
+```
 
 This video is for beginners.
 It explains the basics of coding with Javascript.
