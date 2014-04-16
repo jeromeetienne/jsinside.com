@@ -24,15 +24,17 @@ var data	= {
 }
 
 // Destination directory name
-var dstDirName	= require('path').join(__dirname, '../videos', data.baseName)
+var dstDirName	= require('path').join(__dirname, '../videos/incubator', data.baseName)
 // var dstDirName	= require('path').join('/tmp', data.baseName)
 
 // build the destination directory
 require('fs').mkdirSync(dstDirName)
 console.log('build directory', dstDirName)
 
+var templateDir	= require('path').join(__dirname, '/templateNewCourse')
+
 // read the README.md itself
-var srcName	= 'templateNewCourse/README.md.ejs'
+var srcName	= templateDir+'/README.md.ejs'
 var extName	= require('path').extname(srcName)
 if( extName === '.ejs' ){
 	var srcContent	= require('fs').readFileSync(srcName, 'utf8')
@@ -47,7 +49,7 @@ require('fs').writeFileSync(dstFullName, dstContent, 'utf8')
 console.log('generated README.md')
 
 
-var cmdline	= "cp -a templateNewCourse/slides '"+dstDirName+"/'"; 
+var cmdline	= "cp -a "+templateDir+"/slides '"+dstDirName+"/'"; 
 require('child_process').exec(cmdline, function(){
 	console.log('copied slides')
 })

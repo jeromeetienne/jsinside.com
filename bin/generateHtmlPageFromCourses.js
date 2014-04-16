@@ -4,22 +4,12 @@
 var fs		= require('fs')
 var path	= require('path')
 
-var srcPath	= __dirname+'/../videos/published/'
+var srcPaths	= process.argv.slice(2)
 
-// TODO later - let it up to the user to give the directories
-// it gives flexibility in the videos choises
-// it allows to test course easily
+srcPaths.forEach(function(srcPath){
+	var basename	= path.basename(srcPath)
 
-//////////////////////////////////////////////////////////////////////////////////
-//										//
-//////////////////////////////////////////////////////////////////////////////////
-
-var basenames	= fs.readdirSync(srcPath)
-
-// basenames	= [basenames[basenames.length-1]]
-
-basenames.forEach(function(basename){
-	var srcFileName	= path.join(__dirname+'/../videos/published', basename, 'README.md')
+	var srcFileName	= path.join(srcPath, 'README.md')
 	var srcContent	= fs.readFileSync(srcFileName, 'utf8')
 	console.log('processing', basename)
 
@@ -31,7 +21,6 @@ basenames.forEach(function(basename){
 	// produce the item and put it in src/documents/items
 	var courseContent	= addHeaderLine(srcContent, 'layout\t\t: course')
 	var name		= getHeaderValue(courseContent, 'name');
-console.log('name', name)
 	var courseFileName	= path.join(__dirname, '../src/documents/course', name+'.html.md')
 	fs.writeFileSync(courseFileName, courseContent)
 
