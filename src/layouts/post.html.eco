@@ -9,11 +9,11 @@ layout: default
 </article>
 
 <footer>
-	<% if  @document.relatedDocuments and @document.relatedDocuments.length: %>
+	<% if @getRelatedDocuments().length: %>
 	<section id="related">
 		<h3>Related Posts</h3>
 		<nav class="linklist">
-			<% for document in @document.relatedDocuments: %>
+			<% for document in @getRelatedDocuments(): %>
 				<li><span><%= document.date.toDateString() %></span>
 				&raquo;
 				<a href="<%= document.url %>"><%= document.title %></a></li>
@@ -22,6 +22,8 @@ layout: default
 	</section>
 	<% end %>
 </footer>
+
+
 
 <!-- -------------- -->
 <!-- DISCUSS CONFIG -->

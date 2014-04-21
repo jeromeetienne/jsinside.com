@@ -1,0 +1,14 @@
+---
+title: Blog
+layout: page
+pageOrder: 2
+---
+
+<h1><%= document.title %></h1>
+<nav class="linklist">
+	<% getCollection('posts').toJSON().forEach(function(document){ %>
+		<li><span><%= document.date.toDateString() %></span>
+		&raquo;
+		<a href="<%= document.url %>"><%= document.title %></a></li>
+	<% }) %>
+</nav>

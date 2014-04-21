@@ -6,25 +6,58 @@ var path	= require('path')
 
 var srcPaths	= process.argv.slice(2)
 
+var flow	= Flow()
+
 srcPaths.forEach(function(srcPath){
-	var basename	= path.basename(srcPath)
+	flow.seq(function(next){
+		var basename	= path.basename(srcPath)
 
-	var srcFileName	= path.join(srcPath, 'README.md')
-	var srcContent	= fs.readFileSync(srcFileName, 'utf8')
-	console.log('processing', basename)
+		// read the 
+		var srcFileName	= path.join(srcPath, 'README.md')
+		var srcContent	= fs.readFileSync(srcFileName, 'utf8')
+		console.log('processing', basename)
 
-	// produce the item and put it in src/documents/items
-	var itemContent		= addHeaderLine(srcContent, 'courseData\t: true')
-	var itemFileName	= path.join(__dirname, '../src/documents/items', basename+'.html.md')
-	fs.writeFileSync(itemFileName, itemContent)
+		// produce the item and put it in src/documents/items
+		var itemContent		= addHeaderLine(srcContent, 'courseData\t: true')
+		var itemFileName	= path.join(__dirname, '../src/documents/items', basename+'.html.md')
+		fs.writeFileSync(itemFileName, itemContent)
 
-	// produce the item and put it in src/documents/items
-	var courseContent	= addHeaderLine(srcContent, 'layout\t\t: course')
-	var name		= getHeaderValue(courseContent, 'name');
-	var courseFileName	= path.join(__dirname, '../src/documents/course', name+'.html.md')
-	fs.writeFileSync(courseFileName, courseContent)
 
-	console.log('processed', basename)
+		// produce the item and put it in src/documents/items
+		var courseContent	= addHeaderLine(srcContent, 'layout\t\t: course')
+		var name		= getHeaderValue(courseContent, 'name');
+		var courseFileName	= path.join(__dirname, '../src/documents/course', name+'.html.md')
+		fs.writeFileSync(courseFileName, courseContent)
+
+		console.log('processed', basename)
+
+		// create src/files/data if needed
+		var dataDirname	= __dirname+'/../src/files/data'
+		fs.existsSync(dataDirname) || fs.mkdirSync(dataDirname)
+
+		// create src/file/data/
+		var dataDirname	= __dirname+'/../src/files/data/'+name
+		fs.existsSync(dataDirname) || fs.mkdirSync(dataDirname)
+
+		Flow().seq(function(nextNestest){
+			var srcFullname	= srcPath+'/files'
+			if( fs.existsSync(srcFullname) )	nextNestest()
+			var cmdline	= 'cp -a '+srcFullname+' '+dataDirname+'/'; 
+			require('child_process').exec(cmdline, function(){
+				nextNestest()
+			})
+		}).seq(function(nextNestest){
+			var srcFullname	= srcPath+'/slides'
+			if( fs.existsSync(srcFullname) )	nextNestest()
+			var cmdline	= 'cp -a '+srcFullname+' '+dataDirname+'/'; 
+			// console.log('exec', cmdline);	nextNestest()
+			require('child_process').exec(cmdline, function(){
+				nextNestest()
+			})
+		}).seq(function(){
+			next()
+		})
+	})
 })
 
 
@@ -73,5 +106,28 @@ function convertToSlug(text){
 	return text.toLowerCase().replace(/[^\w ]+/g,'').replace(/ +/g,'-')
 }
 
+function Flow(){
+	var self, stack = [], timerId = setTimeout(function(){ timerId = null; self._next(); }, 0);
+	return self = {
+		destroy : function(){ timerId && clearTimeout(timerId); },
+		par	: function(callback, isSeq){
+			if(isSeq || !(stack[stack.length-1] instanceof Array)) stack.push([]);
+			stack[stack.length-1].push(callback);
+			return self;
+		},seq	: function(callback){ return self.par(callback, true);	},
+		_next	: function(err, result){
+			var errors = [], results = [], callbacks = stack.shift() || [], nbReturn = callbacks.length, isSeq = nbReturn == 1;
+			for(var i = 0; i < callbacks.length; i++){
+				(function(fct, index){
+					fct(function(error, result){
+						errors[index]	= error;
+						results[index]	= result;		
+						if(--nbReturn == 0)	self._next(isSeq?errors[0]:errors, isSeq?results[0]:results)
+					}, err, result)
+				})(callbacks[i], i);
+			}
+		}
+	}
+};
 
 
