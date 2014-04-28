@@ -403,6 +403,7 @@ pre .chunk {
   <div class="slide" id="slide-1">
     <section class="slide-content"><p><style>.slide-content{width: 1024px;}</style></p>
 <p><style>.slide-content pre code {font-size:160%;}</style></p>
+<p><style>.slide-content pre {background-color:lightgrey;}</style></p>
 <p><style>.slide-content code {font-size:120%;}</style></p>
 <p><style>h1 {margin-top:50px;}</style></p>
 <base target='_blank'/>
@@ -455,39 +456,90 @@ pre .chunk {
 <li>it overload your code adding new verifications</li>
 <li>helping you to find bugs earlier</li>
 </ul>
-<hr>
-<h3 id="pure-100-javascript">Pure 100% Javascript</h3>
 </section>
   </div>
   <div class="slide hidden" id="slide-7">
-    <section class="slide-content"><h1 id="what-better-js-can-do-for-you-">What Better.JS Can Do For You ?</h1>
+    <section class="slide-content"><h3 id="pure-100-javascript">Pure 100% Javascript</h3>
 </section>
   </div>
   <div class="slide hidden" id="slide-8">
-    <section class="slide-content"><h3 id="better-classes">Better Classes</h3>
+    <section class="slide-content"><h1 id="an-example">An Example</h1>
 </section>
   </div>
   <div class="slide hidden" id="slide-9">
-    <section class="slide-content"><h3 id="better-functions">Better Functions</h3>
+    <section class="slide-content"><h3 id="an-example-of-strong-typing-for-function">An Example Of Strong Typing For Function</h3>
+<p>First let do a function to do addition</p>
+<pre><code>var add = function(n1,n2){
+    return n1+n2
+}</code></pre>
+<p>Overload add with a better.js function</p>
+<pre><code>add = Bjs.Function(add, {
+    arguments : [Number, Number]
+})</code></pre>
 </section>
   </div>
   <div class="slide hidden" id="slide-10">
-    <section class="slide-content"><h3 id="better-properties">Better Properties</h3>
+    <section class="slide-content"><h3 id="using-this-function">Using This Function</h3>
+<p>Using it with Number, as intented</p>
+<pre><code>add(3, 2);
+// return 5</code></pre>
+<p>Using it with wrong type of arguments</p>
+<pre><code>add(3, &#39;two&#39;);
+// Exception Thrown Invalid Type for Argument 2. 
+// It should be Number</code></pre>
 </section>
   </div>
   <div class="slide hidden" id="slide-11">
-    <section class="slide-content"><h1 id="the-end">The End</h1>
+    <section class="slide-content"><h3 id="benefits">Benefits</h3>
+<ul>
+<li>Support for strong typing in javascript</li>
+<li>Arguments of wrong type are detected</li>
+<li>Misusages is notified imeddiatly to the developpers </li>
+</ul>
+<p>Earlier bugs detection leads to higher quality code</p>
 </section>
   </div>
   <div class="slide hidden" id="slide-12">
-    <section class="slide-content"><h1 id="better-js-installation-in-browser">Better.js Installation In Browser</h1>
+    <section class="slide-content"><h3 id="ok-tell-us-more">OK tell us more</h3>
 </section>
   </div>
   <div class="slide hidden" id="slide-13">
-    <section class="slide-content"><h2 id="where-can-i-get-it-">Where Can I Get It ?</h2>
+    <section class="slide-content"><h1 id="what-better-js-can-do-for-you-">What Better.JS Can Do For You ?</h1>
 </section>
   </div>
   <div class="slide hidden" id="slide-14">
+    <section class="slide-content"><h3 id="better-classes">Better Classes</h3>
+<p><img src="images/betterjs-class-features-summary.png" alt="Better.js Class Features Summary"></p>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-15">
+    <section class="slide-content"><h3 id="better-functions">Better Functions</h3>
+<p><img src="images/betterjs-function-features-summary.png" alt="Better.js Functions Features Summary"></p>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-16">
+    <section class="slide-content"><h3 id="better-properties">Better Properties</h3>
+<p><img src="images/betterjs-property-features-summary.png" alt="Better.js Property Features Summary"></p>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-17">
+    <section class="slide-content"><h1 id="the-end">The End</h1>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-18">
+    <section class="slide-content"><h1 id="better-js-installation-in-browser">Better.js Installation In Browser</h1>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-19">
+    <section class="slide-content"><h3 id="how-to-install-better-in-browser">How To Install Better in Browser</h3>
+<ul>
+<li>Install it in your project</li>
+<li>Include it in your page</li>
+<li>Use it in your application</li>
+</ul>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-20">
     <section class="slide-content"><h3 id="how-to-install-it-download-from-github">How To Install It? Download From Github</h3>
 <ul>
 <li>Download it from <a href="http://github.com/jeromeetienne/better.js/">better.js github repository</a></li>
@@ -496,7 +548,7 @@ pre .chunk {
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-15">
+  <div class="slide hidden" id="slide-21">
     <section class="slide-content"><h3 id="how-to-install-it-via-bower-package">How To Install It? Via Bower Package</h3>
 <ul>
 <li><a href="http://bower.io">bower</a> package manager 
@@ -506,25 +558,25 @@ done by <a href="http://twitter.com">twitter</a></li>
 <pre><code>bower install better.js</code></pre>
 </section>
   </div>
-  <div class="slide hidden" id="slide-16">
+  <div class="slide hidden" id="slide-22">
     <section class="slide-content"><h3 id="how-to-include-it-in-your-code">How To Include It In Your Code</h3>
 <p>With the usual <a href="https://developer.mozilla.org/en/docs/Web/HTML/Element/script">script tag</a></p>
 <pre><code>&lt;script src=&quot;better.js&quot;&gt;&lt;/script&gt;</code></pre>
 </section>
   </div>
-  <div class="slide hidden" id="slide-17">
+  <div class="slide hidden" id="slide-23">
     <section class="slide-content"><h1 id="an-example">An Example</h1>
 </section>
   </div>
-  <div class="slide hidden" id="slide-18">
+  <div class="slide hidden" id="slide-24">
     <section class="slide-content"><p>META: same examples as for node.js</p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-19">
+  <div class="slide hidden" id="slide-25">
     <section class="slide-content"><h2 id="let-s-pack-it-up-">Let&#39;s pack it up.</h2>
 </section>
   </div>
-  <div class="slide hidden" id="slide-20">
+  <div class="slide hidden" id="slide-26">
     <section class="slide-content"><h3 id="what-have-we-learned-">What Have We Learned ?</h3>
 <ul>
 <li>Install it via download From <a href="http://github.com/jeromeetienne/better.js/">better.js github repository</a></li>
@@ -534,30 +586,41 @@ done by <a href="http://twitter.com">twitter</a></li>
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-21">
+  <div class="slide hidden" id="slide-27">
     <section class="slide-content"><h1 id="the-end">The End</h1>
 </section>
   </div>
-  <div class="slide hidden" id="slide-22">
+  <div class="slide hidden" id="slide-28">
     <section class="slide-content"><h1 id="better-js-installation-in-node-js">Better.js Installation In Node.js</h1>
 </section>
   </div>
-  <div class="slide hidden" id="slide-23">
+  <div class="slide hidden" id="slide-29">
+    <section class="slide-content"><h3 id="how-to-install-better-in-node-js">How To Install Better in Node.js</h3>
+<ul>
+<li>Install it in your project</li>
+<li>Include it in your code</li>
+<li>Use it in your application</li>
+</ul>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-30">
     <section class="slide-content"><h3 id="how-to-install-it">How To Install It</h3>
+<p>Using the usual npm install line</p>
 <pre><code>npm install better.js</code></pre>
 </section>
   </div>
-  <div class="slide hidden" id="slide-24">
+  <div class="slide hidden" id="slide-31">
     <section class="slide-content"><h3 id="how-to-include-it-in-your-code">How To Include It In Your Code</h3>
-<pre><code>var Bjs = require(&#39;better&#39;)</code></pre>
+<p>Using the usual require() line</p>
+<pre><code>var Bjs = require(&#39;better.js&#39;)</code></pre>
 </section>
   </div>
-  <div class="slide hidden" id="slide-25">
+  <div class="slide hidden" id="slide-32">
     <section class="slide-content"><h1 id="an-example">An Example</h1>
 </section>
   </div>
-  <div class="slide hidden" id="slide-26">
-    <section class="slide-content"><p>Let&#39;s have a function</p>
+  <div class="slide hidden" id="slide-33">
+    <section class="slide-content"><h3 id="let-s-have-a-function">Let&#39;s have a function</h3>
 <pre><code>function add(n1,n2){
     return n1+n2
 }</code></pre>
@@ -570,11 +633,11 @@ add = Bjs.Function(add, {
 // Exception</code></pre>
 </section>
   </div>
-  <div class="slide hidden" id="slide-27">
+  <div class="slide hidden" id="slide-34">
     <section class="slide-content"><h2 id="let-s-pack-it-up-">Let&#39;s pack it up.</h2>
 </section>
   </div>
-  <div class="slide hidden" id="slide-28">
+  <div class="slide hidden" id="slide-35">
     <section class="slide-content"><h3 id="what-have-we-learned-">What Have We Learned ?</h3>
 <ul>
 <li>use <code>npm install better.js</code> to install better.js</li>
@@ -582,28 +645,21 @@ add = Bjs.Function(add, {
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-29">
+  <div class="slide hidden" id="slide-36">
     <section class="slide-content"><h1 id="the-end">The End</h1>
 </section>
   </div>
-  <div class="slide hidden" id="slide-30">
+  <div class="slide hidden" id="slide-37">
     <section class="slide-content"><h1 id="better-js-for-functions">Better.js For Functions</h1>
 </section>
   </div>
-  <div class="slide hidden" id="slide-31">
+  <div class="slide hidden" id="slide-38">
     <section class="slide-content"><h3 id="what-better-js-can-do-for-your-functions">What Better.js Can Do For Your Functions</h3>
-<ul>
-<li><p>Strong Typing For Arguments</p>
-</li>
-<li><p>Strong Typing For Return Value</p>
-</li>
-<li><p>Private For Functions</p>
-</li>
-</ul>
+<p><img src="images/betterjs-function-features-summary.png" alt="Better.js Functions Features Summary"></p>
 <p>See Details in <a href="http://betterjs.org/docs/betterjs-function.html">Better.js Function Documentation</a></p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-32">
+  <div class="slide hidden" id="slide-39">
     <section class="slide-content"><h3 id="strong-typing-for-arguments">Strong Typing For Arguments</h3>
 <p>Types of <code>arg1, arg2</code> are verified at every usage</p>
 <pre><code>function foo(arg1, arg2){
@@ -612,40 +668,40 @@ add = Bjs.Function(add, {
 }</code></pre>
 </section>
   </div>
-  <div class="slide hidden" id="slide-33">
+  <div class="slide hidden" id="slide-40">
     <section class="slide-content"><h3 id="strong-typing-for-return-value">Strong Typing For Return Value</h3>
 <p>Type of returned <code>value</code> are verified at every usage</p>
-<pre><code>function foo(arg1, arg2){
+<pre><code>function add(arg1, arg2){
     var value = arg1 + arg2
     return value
 }</code></pre>
 </section>
   </div>
-  <div class="slide hidden" id="slide-34">
+  <div class="slide hidden" id="slide-41">
     <section class="slide-content"><h3 id="private-for-functions">Private For Functions</h3>
 <ul>
-<li>If <code>foo</code> is a private function of a class,</li>
+<li>If <code>add</code> is a private function of a class,</li>
 <li>better.js can ensure it is called only from this class</li>
 </ul>
-<pre><code>function foo(arg1, arg2){
+<pre><code>function add(arg1, arg2){
     var value = arg1 + arg2
     return value
 }</code></pre>
 </section>
   </div>
-  <div class="slide hidden" id="slide-35">
+  <div class="slide hidden" id="slide-42">
     <section class="slide-content"><h1 id="an-example">An Example</h1>
 </section>
   </div>
-  <div class="slide hidden" id="slide-36">
+  <div class="slide hidden" id="slide-43">
     <section class="slide-content"><p>META</p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-37">
+  <div class="slide hidden" id="slide-44">
     <section class="slide-content"><h2 id="let-s-pack-it-up-">Let&#39;s pack it up.</h2>
 </section>
   </div>
-  <div class="slide hidden" id="slide-38">
+  <div class="slide hidden" id="slide-45">
     <section class="slide-content"><h3 id="what-have-we-learned-">What Have We Learned ?</h3>
 <ul>
 <li>META: take it from feature summary</li>
@@ -653,23 +709,23 @@ add = Bjs.Function(add, {
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-39">
+  <div class="slide hidden" id="slide-46">
     <section class="slide-content"><h1 id="the-end">The End</h1>
 </section>
   </div>
-  <div class="slide hidden" id="slide-40">
+  <div class="slide hidden" id="slide-47">
     <section class="slide-content"><h1 id="better-js-for-class">Better.js For Class</h1>
 </section>
   </div>
-  <div class="slide hidden" id="slide-41">
+  <div class="slide hidden" id="slide-48">
     <section class="slide-content"><h1 id="the-end">The End</h1>
 </section>
   </div>
-  <div class="slide hidden" id="slide-42">
+  <div class="slide hidden" id="slide-49">
     <section class="slide-content"><h1 id="better-js-for-property">Better.js For Property</h1>
 </section>
   </div>
-  <div class="slide hidden" id="slide-43">
+  <div class="slide hidden" id="slide-50">
     <section class="slide-content"><h1 id="the-end">The End</h1>
 </section>
   </div>

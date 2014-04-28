@@ -4,6 +4,7 @@ output: index.html
 
 <style>.slide-content{width: 1024px;}</style>
 <style>.slide-content pre code {font-size:160%;}</style>
+<style>.slide-content pre {background-color:lightgrey;}</style>
 <style>.slide-content code {font-size:120%;}</style>
 <style>h1 {margin-top:50px;}</style>
 <base target='_blank'/>
@@ -52,9 +53,67 @@ output: index.html
 * it overload your code adding new verifications
 * helping you to find bugs earlier
 
----
+--
 
 ### Pure 100% Javascript
+
+--
+
+# An Example
+
+--
+
+### An Example Of Strong Typing For Function
+
+First let do a function to do addition
+
+```
+var add = function(n1,n2){
+    return n1+n2
+}
+```
+
+Overload add with a better.js function
+
+```
+add = Bjs.Function(add, {
+    arguments : [Number, Number]
+})
+```
+
+--
+
+### Using This Function
+
+Using it with Number, as intented
+
+```
+add(3, 2);
+// return 5
+```
+
+Using it with wrong type of arguments
+
+```
+add(3, 'two');
+// Exception Thrown Invalid Type for Argument 2. 
+// It should be Number
+```
+
+--
+
+### Benefits
+
+* Support for strong typing in javascript
+* Arguments of wrong type are detected
+* Misusages is notified imeddiatly to the developpers 
+
+Earlier bugs detection leads to higher quality code
+
+--
+
+### OK tell us more 
+
 --
 
 # What Better.JS Can Do For You ?
@@ -63,13 +122,19 @@ output: index.html
 
 ### Better Classes
 
+![Better.js Class Features Summary](images/betterjs-class-features-summary.png)
+
 --
 
 ### Better Functions
 
+![Better.js Functions Features Summary](images/betterjs-function-features-summary.png)
+
 --
 
 ### Better Properties
+
+![Better.js Property Features Summary](images/betterjs-property-features-summary.png)
 
 --
 
@@ -81,7 +146,11 @@ output: index.html
 
 --
 
-## Where Can I Get It ?
+### How To Install Better in Browser
+
+* Install it in your project
+* Include it in your page
+* Use it in your application
 
 --
 
@@ -144,7 +213,17 @@ META: same examples as for node.js
 
 --
 
+### How To Install Better in Node.js
+
+* Install it in your project
+* Include it in your code
+* Use it in your application
+
+--
+
 ### How To Install It
+
+Using the usual npm install line
 
 ```
 npm install better.js
@@ -153,8 +232,10 @@ npm install better.js
 
 ### How To Include It In Your Code
 
+Using the usual require() line
+
 ```
-var Bjs = require('better')
+var Bjs = require('better.js')
 ```
 
 --
@@ -163,7 +244,7 @@ var Bjs = require('better')
 
 --
 
-Let's have a function
+### Let's have a function
 
 ```
 function add(n1,n2){
@@ -208,11 +289,7 @@ add('foo', 'bar');
 
 ### What Better.js Can Do For Your Functions
 
-* Strong Typing For Arguments
-
-* Strong Typing For Return Value
-
-* Private For Functions
+![Better.js Functions Features Summary](images/betterjs-function-features-summary.png)
 
 See Details in [Better.js Function Documentation](http://betterjs.org/docs/betterjs-function.html)
 
@@ -236,7 +313,7 @@ function foo(arg1, arg2){
 Type of returned ```value``` are verified at every usage
 
 ```
-function foo(arg1, arg2){
+function add(arg1, arg2){
     var value = arg1 + arg2
     return value
 }
@@ -246,11 +323,11 @@ function foo(arg1, arg2){
 
 ### Private For Functions
 
-* If ```foo``` is a private function of a class,
+* If ```add``` is a private function of a class,
 * better.js can ensure it is called only from this class
 
 ```
-function foo(arg1, arg2){
+function add(arg1, arg2){
     var value = arg1 + arg2
     return value
 }
