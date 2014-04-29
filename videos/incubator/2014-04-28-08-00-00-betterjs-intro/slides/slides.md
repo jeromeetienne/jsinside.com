@@ -15,23 +15,100 @@ output: index.html
 
 --
 
-### Introducing Better.js
+### What Is Better.js
 
-* What is Better.js
+**"Library to help you write a better javascript"**
 
-* Better.js Installation In Browser
-
-* Better.js Installation In Node.js
+* [Better.js homepage](http://betterjs.org) - [github repository](https://github.com/jeromeetienne/better.js/)
+* Released under MIT license
+* Works in node.js and in browser
+* 6k after min+gzip
 
 --
 
-### Basic Usage Of Better.js
+## How Does It Helps Me Write Better Javascript ?
 
-* Better.js For **Functions**
+--
 
-* Better.js For **Properties**
+### How Better.js Helps Write Better Javascript ?
 
-* Better.js For **Classes**
+1. With better.js, you specify how your code is intented to run.
+
+1. You run with better.js during your test phase.
+
+1. better.js verifies your code running according to specifications.
+
+1. You find bugs earlier.
+
+In spirit, **better.js is a test tool** like jshint, like mocha, qunit.
+
+--
+
+### What is Revolutionary in Better.js ?
+
+* Better.js extends javascript in revolutionary ways.
+
+* Thus support features never seen in javascript.
+
+* Such as **private members** and **strong typing**.
+
+**Thus find new classes of bugs in your app!!**
+
+--
+
+## How Does It Look In Practice ?
+
+--
+
+### An Basic Example
+
+Say you got a basic ```add``` function
+
+```
+function add(num1, num2){
+    return num1 + num2;
+}
+```
+
+
+--
+
+### An Basic Example (bis)
+
+Here is the better.js specification for it - Dont worry, details will come later
+
+```
+add = Bjs.Function(add, {
+    arguments: [Number, Number],    // arguments strong typing
+    return : Number                 // return value strong typing
+})
+```
+
+**Better.js ensures the specification is respected!**
+
+--
+
+## Ok, better.js seems interesting, what is the content of this course ?
+
+--
+
+### Course Topics
+
+* What is Better.js?
+
+* Better.js Installation In Browser.
+
+* Better.js Installation In Node.js.
+
+--
+
+### Course Topics (bis)
+
+* Better.js For **Functions**.
+
+* Better.js For **Properties**.
+
+* Better.js For **Classes**.
 
 --
 
@@ -39,48 +116,43 @@ output: index.html
 
 --
 
-# What is Better.js
+# What Can Better.JS Do For You ?
 
 --
 
-### Meta
+### Faster Bug Fixes
 
-* [homepage](http://betterjs.org)
+* TODO take it from homepage
 
-* It helps you write a better javascript
-* It ensure your javascript is running as it is intented
-* you typically run it during your test phase
-* like jshint, like mocha, qunit
 
 --
 
-### Meta2
-* better.js extends javascript in revolutionary ways
-* to support feature unseen to javascript
-* such as private members and strong typing
+### Better Code Monitoring
 
-* take the first 2 lines of the homepages
+* Garbage collector monitoring
+* 
+* TODO take it from homepage
 
 --
+
 
 ### Pure 100% Javascript
 
-* no compilation step **=>** faster dev cycle
+* No compilation step **=>** Faster dev cycle.
 
-* no new language to learn **=>** no training for webdev
+* No new language to learn **=>** No training for webdevs.
 
-* 100% Javascript **=>** easier to integrate in your code
+* 100% Javascript **=>** Easier to integrate in your code.
 
 --
 
-# An Example
-## Simple One Just To See It Running
+## Let's see some code!
 
 --
 
 ### An Example Of Strong Typing For Function
 
-First let do a function to do addition
+First let's do a function to do an addition
 
 ```
 var add = function(n1,n2){
@@ -95,7 +167,7 @@ add(3, 'two')
 // return '3two'
 ```
 
-**No Error Detected with Plain Javascript**
+**Error Not Detected in Plain Javascript**
 
 --
 
@@ -109,7 +181,7 @@ add = Bjs.Function(add, {
 })
 ```
 
-Using it with wrong type of arguments
+Using it with the wrong type of arguments
 
 ```
 add(3, 'two');
@@ -121,21 +193,21 @@ add(3, 'two');
 
 --
 
-### Benefits
+### Benefits In This Specific Case
 
-* Support for strong typing in javascript
-* Arguments of wrong type are detected
-* Misusages is notified imeddiatly to the developpers 
+* Support for strong typing in javascript.
+* Arguments of wrong type are detected.
+* Misusages is notified imeddiatly to the developpers. 
 
-Earlier bugs detection leads to higher quality code
+Earlier bugs detection leads to higher quality code.
+
+All that lead to faster bug fixes. so better code.
+
+Good measures leads to better decision on which action to take.
 
 --
 
-### OK tell us more 
-
---
-
-# What Better.JS Can Do For You ?
+## Ok exactly, which features are available ?
 
 --
 
@@ -167,9 +239,9 @@ Earlier bugs detection leads to higher quality code
 
 ### How To Install Better in Browser
 
-* Install it in your project
-* Include it in your page
-* Use it in your application
+* Install it in your project.
+* Include it in your page.
+* Use it in your application.
 
 --
 
@@ -193,7 +265,7 @@ bower install better.js
 
 --
 
-### How To Include It In Your Code
+### How To Include It In Your Code?
 
 With the usual [script tag](https://developer.mozilla.org/en/docs/Web/HTML/Element/script)
 
@@ -203,13 +275,13 @@ With the usual [script tag](https://developer.mozilla.org/en/docs/Web/HTML/Eleme
 --
 
 # An Example
-## Just to check it is working
+## Just to check that it's working
 
 --
 
 ### Let's Have A Function
 
-A simple add function to add numbers
+A simple add function to add numbers.
 
 ```
 function add(n1,n2){
@@ -221,7 +293,7 @@ function add(n1,n2){
 
 ### Let's Overload This Function With Better.js
 
-Overload add with a better.js function
+Overload add with a better.js function.
 
 ```
 add = Bjs.Function(add, {
@@ -252,7 +324,7 @@ add(3, 'two');
 
 1. Include it in your page with **< script src="better.js">< /script> **
 
-1. Simple Example of Better.js Function in browser
+1. Simple Example of Better.js Function in browser.
 
 --
 
@@ -264,24 +336,24 @@ add(3, 'two');
 
 --
 
-### How To Install Better in Node.js
+### How To Install Better in Node.js?
 
-* Install it in your project
-* Include it in your code
-* Use it in your application
+* Install it in your project.
+* Include it in your code.
+* Use it in your application.
 
 --
 
-### How To Install It
+### How To Install It?
 
-Using the usual npm install line
+Using the usual npm install line.
 
 ```
 npm install better.js
 ```
 --
 
-### How To Include It In Your Code
+### How To Include It In Your Code?
 
 Using the usual require() line
 
@@ -292,13 +364,13 @@ var Bjs = require('better.js')
 --
 
 # An Example
-## Just to check it is working
+## Just to check that it's working
 
 --
 
 ### Let's Have A Function
 
-A simple add function to add numbers
+A simple add function to add numbers.
 
 ```
 function add(n1,n2){
@@ -310,7 +382,7 @@ function add(n1,n2){
 
 ### Let's Overload This Function With Better.js
 
-Overload add with a better.js function
+Overload add with a better.js function.
 
 ```
 add = Bjs.Function(add, {
@@ -349,11 +421,11 @@ add(3, 'two');
 
 --
 
-### What Better.js Can Do For Your Functions
+### What Can Better.js Do For Your Functions?
 
-* Verify strong typing to arguments and return value
+* Verify strong typing to arguments and return value.
 
-* Support private if this property belongs to a class
+* Support private if this property belongs to a class.
 
 
 --
@@ -365,7 +437,7 @@ add(3, 'two');
 
 ### Without Better.js
 
-Let's take our usual ```add``` function
+Let's take our usual ```add``` function.
 
 ```
 function add(num1, num2){
@@ -387,10 +459,10 @@ add(3, 'two');
 
 ### With Better.js
 
-* Types of ```num1, num2``` are verified at every usage
-* Type of returned ```value``` are verified at every usage
+* Types of ```num1, num2``` are verified at every usage.
+* Types of returned ```value``` are verified at every usage.
 * If ```add``` is a private function of a class,
-* better.js can ensure it is called only from this class
+* better.js can ensure it is called only from this class.
 
 ```
 function add(num1, num2){
@@ -403,7 +475,7 @@ function add(num1, num2){
 
 ### Strong Typing on Return Value With Better.js
 
-Overload ```add``` function with a better.js specification
+Overload ```add``` function with a better.js specification.
 
 ```
 add = Bjs.Function(add, {
@@ -411,7 +483,7 @@ add = Bjs.Function(add, {
 })
 ```
 
-Let's try to use it incorrectly
+Let's try to use it incorrectly.
 
 ```
 add(3, 'two');
@@ -424,7 +496,7 @@ add(3, 'two');
 
 ### Strong Typing On Arguments
 
-Let's add ```arguments``` in better.js specification
+Let's add ```arguments``` in better.js specification.
 
 ```
 add = Bjs.Function(add, {
@@ -433,7 +505,7 @@ add = Bjs.Function(add, {
 })
 ```
 
-Let's try to use it incorrectly
+Let's try to use it incorrectly.
 
 ```
 add(3, 'two');
@@ -465,13 +537,13 @@ See Details in [Better.js Function Documentation](http://betterjs.org/docs/bette
 
 --
 
-### What Better.js Can Do For Your Classes
+### What Can Better.js Do For Your Classes?
 
-* Verify strong typing of your class properties
+* Verify strong typing of your class properties.
 
-* Verify strong typing of your constructor arguments
+* Verify strong typing of your constructor arguments.
 
-* Support private for properties and functions
+* Support private for properties and functions.
 
 --
 
@@ -490,7 +562,7 @@ var Cat = function(name){
 }
 ```
 
-Let's try to use it incorrectly
+Let's try to use it incorrectly.
 
 ```
 var cat = new Cat('kitty')
@@ -498,13 +570,13 @@ console.log('name is', cat._name)
 // display 'name is kitty'
 ```
 
-**No Error Detected in Plain Javascript**
+**Error Not Detected in Plain Javascript**
 
 --
 
 ### Private With Better.js
 
-Make a better.js for your class
+Make a better.js for your class.
 
 ```
 Cat = Bjs.Class(Cat, {
@@ -512,7 +584,7 @@ Cat = Bjs.Class(Cat, {
 })
 ```
 
-Let's try to use it incorrectly
+Let's try to use it incorrectly.
 
 ```
 var cat = new Cat('kitty')
@@ -534,7 +606,7 @@ Cat = Bjs.Class(Cat, {
 })
 ```
 
-Let's try to use it incorrectly
+Let's try to use it incorrectly.
 
 ```
 var cat = new Cat()
@@ -557,7 +629,7 @@ Cat = Bjs.Class(Cat, {
 })
 ```
 
-Let's try to use it incorrectly
+Let's try to use it incorrectly.
 
 ```
 var cat = new Cat(99)
@@ -588,11 +660,11 @@ See Details in [Better.js Function Documentation](http://betterjs.org/docs/bette
 
 --
 
-### What Better.js Can Do For Your Properties
+### What Can Better.js Do For Your Properties?
 
-* Verify strong typing of your property
+* Verify the strong typing of your property.
 
-* Support private if this property belongs to a class
+* Support private if this property belongs to a class.
 
 --
 
@@ -603,7 +675,7 @@ See Details in [Better.js Function Documentation](http://betterjs.org/docs/bette
 
 ### Property Type Without Better.js
 
-Let's define a simple object with a ```name``` property which is a string
+Let's define a simple object with a ```name``` property which is a string.
 
 ```
 var foo = {
@@ -618,13 +690,13 @@ foo.name = 99
 // now foo.name is equal to 99
 ```
 
-**No Error Detected**
+**Error Not Detected**
 
 --
 
 ### Strong Typing With Better.js
 
-Overload ```name``` property with a better.js specification
+Overload ```name``` property with a better.js specification.
 
 ```
 Bjs.Property(foo, 'name', {
@@ -645,8 +717,8 @@ foo.name = 99
 
 ### Private Properties without Better.js
 
-* Let's do a Cat class
-* it got a private property cas
+* Let's do a Cat class.
+* It got a private property class.
 
 ```
 var Cat = function(name){
@@ -654,13 +726,13 @@ var Cat = function(name){
 }
 ```
 
-Merrely rely on conventions
+Simply rely on conventions.
 
 --
 
 ### Private Properties without Better.js
 
-Let's use it from outside the class
+Let's use it from outside the class.
 
 ```
 var cat = new Cat('kitty')
@@ -668,14 +740,14 @@ console.log(cat._name)
 // display 'kitty'
 ```
 
-**No Error Detected in Plain Javascript**
+**Error Not Detected in Plain Javascript**
 
 --
 
 
 ### Private Properties with Better.js
 
-Let's add a better.js specification at the end of the constructor
+Let's add a better.js specification at the end of the constructor.
 
 ```
 var Cat = function(name){

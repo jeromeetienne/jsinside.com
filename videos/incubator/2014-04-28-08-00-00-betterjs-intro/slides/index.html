@@ -413,155 +413,212 @@ pre .chunk {
 </section>
   </div>
   <div class="slide hidden" id="slide-2">
-    <section class="slide-content"><h3 id="introducing-better-js">Introducing Better.js</h3>
+    <section class="slide-content"><h3 id="what-is-better-js">What Is Better.js</h3>
+<p><strong>&quot;Library to help you write a better javascript&quot;</strong></p>
 <ul>
-<li><p>What is Better.js</p>
-</li>
-<li><p>Better.js Installation In Browser</p>
-</li>
-<li><p>Better.js Installation In Node.js</p>
-</li>
+<li><a href="http://betterjs.org">Better.js homepage</a> - <a href="https://github.com/jeromeetienne/better.js/">github repository</a></li>
+<li>Released under MIT license</li>
+<li>Works in node.js and in browser</li>
+<li>6k after min+gzip</li>
 </ul>
 </section>
   </div>
   <div class="slide hidden" id="slide-3">
-    <section class="slide-content"><h3 id="basic-usage-of-better-js">Basic Usage Of Better.js</h3>
-<ul>
-<li><p>Better.js For <strong>Functions</strong></p>
-</li>
-<li><p>Better.js For <strong>Properties</strong></p>
-</li>
-<li><p>Better.js For <strong>Classes</strong></p>
-</li>
-</ul>
+    <section class="slide-content"><h2 id="how-does-it-helps-me-write-better-javascript-">How Does It Helps Me Write Better Javascript ?</h2>
 </section>
   </div>
   <div class="slide hidden" id="slide-4">
-    <section class="slide-content"><h1 id="the-end">The End</h1>
+    <section class="slide-content"><h3 id="how-better-js-helps-write-better-javascript-">How Better.js Helps Write Better Javascript ?</h3>
+<ol>
+<li><p>With better.js, you specify how your code is intented to run.</p>
+</li>
+<li><p>You run with better.js during your test phase.</p>
+</li>
+<li><p>better.js verifies your code running according to specifications.</p>
+</li>
+<li><p>You find bugs earlier.</p>
+</li>
+</ol>
+<p>In spirit, <strong>better.js is a test tool</strong> like jshint, like mocha, qunit.</p>
 </section>
   </div>
   <div class="slide hidden" id="slide-5">
-    <section class="slide-content"><h1 id="what-is-better-js">What is Better.js</h1>
+    <section class="slide-content"><h3 id="what-is-revolutionary-in-better-js-">What is Revolutionary in Better.js ?</h3>
+<ul>
+<li><p>Better.js extends javascript in revolutionary ways.</p>
+</li>
+<li><p>Thus support features never seen in javascript.</p>
+</li>
+<li><p>Such as <strong>private members</strong> and <strong>strong typing</strong>.</p>
+</li>
+</ul>
+<p><strong>Thus find new classes of bugs in your app!!</strong></p>
 </section>
   </div>
   <div class="slide hidden" id="slide-6">
-    <section class="slide-content"><h3 id="meta">Meta</h3>
-<ul>
-<li><p><a href="http://betterjs.org">homepage</a></p>
-</li>
-<li><p>It helps you write a better javascript</p>
-</li>
-<li>It ensure your javascript is running as it is intented</li>
-<li>you typically run it during your test phase</li>
-<li>like jshint, like mocha, qunit</li>
-</ul>
+    <section class="slide-content"><h2 id="how-does-it-look-in-practice-">How Does It Look In Practice ?</h2>
 </section>
   </div>
   <div class="slide hidden" id="slide-7">
-    <section class="slide-content"><h3 id="meta2">Meta2</h3>
-<ul>
-<li>better.js extends javascript in revolutionary ways</li>
-<li>to support feature unseen to javascript</li>
-<li><p>such as private members and strong typing</p>
-</li>
-<li><p>take the first 2 lines of the homepages</p>
-</li>
-</ul>
+    <section class="slide-content"><h3 id="an-basic-example">An Basic Example</h3>
+<p>Say you got a basic <code>add</code> function</p>
+<pre><code>function add(num1, num2){
+    return num1 + num2;
+}</code></pre>
 </section>
   </div>
   <div class="slide hidden" id="slide-8">
-    <section class="slide-content"><h3 id="pure-100-javascript">Pure 100% Javascript</h3>
+    <section class="slide-content"><h3 id="an-basic-example-bis-">An Basic Example (bis)</h3>
+<p>Here is the better.js specification for it - Dont worry, details will come later</p>
+<pre><code>add = Bjs.Function(add, {
+    arguments: [Number, Number],    // arguments strong typing
+    return : Number                 // return value strong typing
+})</code></pre>
+<p><strong>Better.js ensures the specification is respected!</strong></p>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-9">
+    <section class="slide-content"><h2 id="ok-better-js-seems-interesting-what-is-the-content-of-this-course-">Ok, better.js seems interesting, what is the content of this course ?</h2>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-10">
+    <section class="slide-content"><h3 id="course-topics">Course Topics</h3>
 <ul>
-<li><p>no compilation step <strong>=&gt;</strong> faster dev cycle</p>
+<li><p>What is Better.js?</p>
 </li>
-<li><p>no new language to learn <strong>=&gt;</strong> no training for webdev</p>
+<li><p>Better.js Installation In Browser.</p>
 </li>
-<li><p>100% Javascript <strong>=&gt;</strong> easier to integrate in your code</p>
+<li><p>Better.js Installation In Node.js.</p>
 </li>
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-9">
-    <section class="slide-content"><h1 id="an-example">An Example</h1>
-<h2 id="simple-one-just-to-see-it-running">Simple One Just To See It Running</h2>
+  <div class="slide hidden" id="slide-11">
+    <section class="slide-content"><h3 id="course-topics-bis-">Course Topics (bis)</h3>
+<ul>
+<li><p>Better.js For <strong>Functions</strong>.</p>
+</li>
+<li><p>Better.js For <strong>Properties</strong>.</p>
+</li>
+<li><p>Better.js For <strong>Classes</strong>.</p>
+</li>
+</ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-10">
+  <div class="slide hidden" id="slide-12">
+    <section class="slide-content"><h1 id="the-end">The End</h1>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-13">
+    <section class="slide-content"><h1 id="what-can-better-js-do-for-you-">What Can Better.JS Do For You ?</h1>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-14">
+    <section class="slide-content"><h3 id="faster-bug-fixes">Faster Bug Fixes</h3>
+<ul>
+<li>TODO take it from homepage</li>
+</ul>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-15">
+    <section class="slide-content"><h3 id="better-code-monitoring">Better Code Monitoring</h3>
+<ul>
+<li>Garbage collector monitoring</li>
+<li></li>
+<li>TODO take it from homepage</li>
+</ul>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-16">
+    <section class="slide-content"><h3 id="pure-100-javascript">Pure 100% Javascript</h3>
+<ul>
+<li><p>No compilation step <strong>=&gt;</strong> Faster dev cycle.</p>
+</li>
+<li><p>No new language to learn <strong>=&gt;</strong> No training for webdevs.</p>
+</li>
+<li><p>100% Javascript <strong>=&gt;</strong> Easier to integrate in your code.</p>
+</li>
+</ul>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-17">
+    <section class="slide-content"><h2 id="let-s-see-some-code-">Let&#39;s see some code!</h2>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-18">
     <section class="slide-content"><h3 id="an-example-of-strong-typing-for-function">An Example Of Strong Typing For Function</h3>
-<p>First let do a function to do addition</p>
+<p>First let&#39;s do a function to do an addition</p>
 <pre><code>var add = function(n1,n2){
     return n1+n2
 }</code></pre>
 <p>Misusing it with string</p>
 <pre><code>add(3, &#39;two&#39;)
 // return &#39;3two&#39;</code></pre>
-<p><strong>No Error Detected with Plain Javascript</strong></p>
+<p><strong>Error Not Detected in Plain Javascript</strong></p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-11">
+  <div class="slide hidden" id="slide-19">
     <section class="slide-content"><h3 id="using-this-function">Using This Function</h3>
 <p>Overload add with a better.js function</p>
 <pre><code>add = Bjs.Function(add, {
     arguments : [Number, Number]
 })</code></pre>
-<p>Using it with wrong type of arguments</p>
+<p>Using it with the wrong type of arguments</p>
 <pre><code>add(3, &#39;two&#39;);
 // Exception Thrown Invalid Type for Argument 2. 
 // It should be Number</code></pre>
 <p><strong>Error Detected thanks to Better.js</strong></p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-12">
-    <section class="slide-content"><h3 id="benefits">Benefits</h3>
+  <div class="slide hidden" id="slide-20">
+    <section class="slide-content"><h3 id="benefits-in-this-specific-case">Benefits In This Specific Case</h3>
 <ul>
-<li>Support for strong typing in javascript</li>
-<li>Arguments of wrong type are detected</li>
-<li>Misusages is notified imeddiatly to the developpers </li>
+<li>Support for strong typing in javascript.</li>
+<li>Arguments of wrong type are detected.</li>
+<li>Misusages is notified imeddiatly to the developpers. </li>
 </ul>
-<p>Earlier bugs detection leads to higher quality code</p>
+<p>Earlier bugs detection leads to higher quality code.</p>
+<p>All that lead to faster bug fixes. so better code.</p>
+<p>Good measures leads to better decision on which action to take.</p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-13">
-    <section class="slide-content"><h3 id="ok-tell-us-more">OK tell us more</h3>
+  <div class="slide hidden" id="slide-21">
+    <section class="slide-content"><h2 id="ok-exactly-which-features-are-available-">Ok exactly, which features are available ?</h2>
 </section>
   </div>
-  <div class="slide hidden" id="slide-14">
-    <section class="slide-content"><h1 id="what-better-js-can-do-for-you-">What Better.JS Can Do For You ?</h1>
-</section>
-  </div>
-  <div class="slide hidden" id="slide-15">
+  <div class="slide hidden" id="slide-22">
     <section class="slide-content"><h3 id="better-classes">Better Classes</h3>
 <p><img src="images/betterjs-class-features-summary.png" alt="Better.js Class Features Summary"></p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-16">
+  <div class="slide hidden" id="slide-23">
     <section class="slide-content"><h3 id="better-functions">Better Functions</h3>
 <p><img src="images/betterjs-function-features-summary.png" alt="Better.js Functions Features Summary"></p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-17">
+  <div class="slide hidden" id="slide-24">
     <section class="slide-content"><h3 id="better-properties">Better Properties</h3>
 <p><img src="images/betterjs-property-features-summary.png" alt="Better.js Property Features Summary"></p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-18">
+  <div class="slide hidden" id="slide-25">
     <section class="slide-content"><h1 id="the-end">The End</h1>
 </section>
   </div>
-  <div class="slide hidden" id="slide-19">
+  <div class="slide hidden" id="slide-26">
     <section class="slide-content"><h1 id="better-js-installation-in-browser">Better.js Installation In Browser</h1>
 </section>
   </div>
-  <div class="slide hidden" id="slide-20">
+  <div class="slide hidden" id="slide-27">
     <section class="slide-content"><h3 id="how-to-install-better-in-browser">How To Install Better in Browser</h3>
 <ul>
-<li>Install it in your project</li>
-<li>Include it in your page</li>
-<li>Use it in your application</li>
+<li>Install it in your project.</li>
+<li>Include it in your page.</li>
+<li>Use it in your application.</li>
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-21">
+  <div class="slide hidden" id="slide-28">
     <section class="slide-content"><h3 id="how-to-install-it-download-from-github">How To Install It? Download From Github</h3>
 <ul>
 <li>Download it from <a href="http://github.com/jeromeetienne/better.js/">better.js github repository</a></li>
@@ -570,7 +627,7 @@ pre .chunk {
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-22">
+  <div class="slide hidden" id="slide-29">
     <section class="slide-content"><h3 id="how-to-install-it-via-bower-package">How To Install It? Via Bower Package</h3>
 <ul>
 <li><a href="http://bower.io">bower</a> package manager 
@@ -580,28 +637,28 @@ done by <a href="http://twitter.com">twitter</a></li>
 <pre><code>bower install better.js</code></pre>
 </section>
   </div>
-  <div class="slide hidden" id="slide-23">
-    <section class="slide-content"><h3 id="how-to-include-it-in-your-code">How To Include It In Your Code</h3>
+  <div class="slide hidden" id="slide-30">
+    <section class="slide-content"><h3 id="how-to-include-it-in-your-code-">How To Include It In Your Code?</h3>
 <p>With the usual <a href="https://developer.mozilla.org/en/docs/Web/HTML/Element/script">script tag</a></p>
 <pre><code>&lt;script src=&quot;better.js&quot;&gt;&lt;/script&gt;</code></pre>
 </section>
   </div>
-  <div class="slide hidden" id="slide-24">
+  <div class="slide hidden" id="slide-31">
     <section class="slide-content"><h1 id="an-example">An Example</h1>
-<h2 id="just-to-check-it-is-working">Just to check it is working</h2>
+<h2 id="just-to-check-that-it-s-working">Just to check that it&#39;s working</h2>
 </section>
   </div>
-  <div class="slide hidden" id="slide-25">
+  <div class="slide hidden" id="slide-32">
     <section class="slide-content"><h3 id="let-s-have-a-function">Let&#39;s Have A Function</h3>
-<p>A simple add function to add numbers</p>
+<p>A simple add function to add numbers.</p>
 <pre><code>function add(n1,n2){
     return n1+n2
 }</code></pre>
 </section>
   </div>
-  <div class="slide hidden" id="slide-26">
+  <div class="slide hidden" id="slide-33">
     <section class="slide-content"><h3 id="let-s-overload-this-function-with-better-js">Let&#39;s Overload This Function With Better.js</h3>
-<p>Overload add with a better.js function</p>
+<p>Overload add with a better.js function.</p>
 <pre><code>add = Bjs.Function(add, {
     arguments : [Number, Number]
 })</code></pre>
@@ -611,11 +668,11 @@ done by <a href="http://twitter.com">twitter</a></li>
 <p><strong>Working OK</strong></p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-27">
+  <div class="slide hidden" id="slide-34">
     <section class="slide-content"><h2 id="let-s-pack-it-up-">Let&#39;s pack it up.</h2>
 </section>
   </div>
-  <div class="slide hidden" id="slide-28">
+  <div class="slide hidden" id="slide-35">
     <section class="slide-content"><h3 id="what-have-we-learned-">What Have We Learned ?</h3>
 <ol>
 <li><p>Install it via download From <a href="http://github.com/jeromeetienne/better.js/">better.js github repository</a></p>
@@ -624,56 +681,56 @@ done by <a href="http://twitter.com">twitter</a></li>
 </li>
 <li><p>Include it in your page with <strong>&lt; script src=&quot;better.js&quot;&gt;&lt; /script&gt; </strong></p>
 </li>
-<li><p>Simple Example of Better.js Function in browser</p>
+<li><p>Simple Example of Better.js Function in browser.</p>
 </li>
 </ol>
 </section>
   </div>
-  <div class="slide hidden" id="slide-29">
+  <div class="slide hidden" id="slide-36">
     <section class="slide-content"><h1 id="the-end">The End</h1>
 </section>
   </div>
-  <div class="slide hidden" id="slide-30">
+  <div class="slide hidden" id="slide-37">
     <section class="slide-content"><h1 id="better-js-installation-in-node-js">Better.js Installation In Node.js</h1>
 </section>
   </div>
-  <div class="slide hidden" id="slide-31">
-    <section class="slide-content"><h3 id="how-to-install-better-in-node-js">How To Install Better in Node.js</h3>
+  <div class="slide hidden" id="slide-38">
+    <section class="slide-content"><h3 id="how-to-install-better-in-node-js-">How To Install Better in Node.js?</h3>
 <ul>
-<li>Install it in your project</li>
-<li>Include it in your code</li>
-<li>Use it in your application</li>
+<li>Install it in your project.</li>
+<li>Include it in your code.</li>
+<li>Use it in your application.</li>
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-32">
-    <section class="slide-content"><h3 id="how-to-install-it">How To Install It</h3>
-<p>Using the usual npm install line</p>
+  <div class="slide hidden" id="slide-39">
+    <section class="slide-content"><h3 id="how-to-install-it-">How To Install It?</h3>
+<p>Using the usual npm install line.</p>
 <pre><code>npm install better.js</code></pre>
 </section>
   </div>
-  <div class="slide hidden" id="slide-33">
-    <section class="slide-content"><h3 id="how-to-include-it-in-your-code">How To Include It In Your Code</h3>
+  <div class="slide hidden" id="slide-40">
+    <section class="slide-content"><h3 id="how-to-include-it-in-your-code-">How To Include It In Your Code?</h3>
 <p>Using the usual require() line</p>
 <pre><code>var Bjs = require(&#39;better.js&#39;)</code></pre>
 </section>
   </div>
-  <div class="slide hidden" id="slide-34">
+  <div class="slide hidden" id="slide-41">
     <section class="slide-content"><h1 id="an-example">An Example</h1>
-<h2 id="just-to-check-it-is-working">Just to check it is working</h2>
+<h2 id="just-to-check-that-it-s-working">Just to check that it&#39;s working</h2>
 </section>
   </div>
-  <div class="slide hidden" id="slide-35">
+  <div class="slide hidden" id="slide-42">
     <section class="slide-content"><h3 id="let-s-have-a-function">Let&#39;s Have A Function</h3>
-<p>A simple add function to add numbers</p>
+<p>A simple add function to add numbers.</p>
 <pre><code>function add(n1,n2){
     return n1+n2
 }</code></pre>
 </section>
   </div>
-  <div class="slide hidden" id="slide-36">
+  <div class="slide hidden" id="slide-43">
     <section class="slide-content"><h3 id="let-s-overload-this-function-with-better-js">Let&#39;s Overload This Function With Better.js</h3>
-<p>Overload add with a better.js function</p>
+<p>Overload add with a better.js function.</p>
 <pre><code>add = Bjs.Function(add, {
     arguments : [Number, Number]
 })</code></pre>
@@ -683,11 +740,11 @@ done by <a href="http://twitter.com">twitter</a></li>
 <p><strong>Working OK</strong></p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-37">
+  <div class="slide hidden" id="slide-44">
     <section class="slide-content"><h2 id="let-s-pack-it-up-">Let&#39;s pack it up.</h2>
 </section>
   </div>
-  <div class="slide hidden" id="slide-38">
+  <div class="slide hidden" id="slide-45">
     <section class="slide-content"><h3 id="what-have-we-learned-">What Have We Learned ?</h3>
 <ol>
 <li><p>use <code>npm install better.js</code> to install better.js</p>
@@ -697,32 +754,32 @@ done by <a href="http://twitter.com">twitter</a></li>
 </ol>
 </section>
   </div>
-  <div class="slide hidden" id="slide-39">
+  <div class="slide hidden" id="slide-46">
     <section class="slide-content"><h1 id="the-end">The End</h1>
 </section>
   </div>
-  <div class="slide hidden" id="slide-40">
+  <div class="slide hidden" id="slide-47">
     <section class="slide-content"><h1 id="better-js-for-functions">Better.js For Functions</h1>
 </section>
   </div>
-  <div class="slide hidden" id="slide-41">
-    <section class="slide-content"><h3 id="what-better-js-can-do-for-your-functions">What Better.js Can Do For Your Functions</h3>
+  <div class="slide hidden" id="slide-48">
+    <section class="slide-content"><h3 id="what-can-better-js-do-for-your-functions-">What Can Better.js Do For Your Functions?</h3>
 <ul>
-<li><p>Verify strong typing to arguments and return value</p>
+<li><p>Verify strong typing to arguments and return value.</p>
 </li>
-<li><p>Support private if this property belongs to a class</p>
+<li><p>Support private if this property belongs to a class.</p>
 </li>
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-42">
+  <div class="slide hidden" id="slide-49">
     <section class="slide-content"><h1 id="an-example">An Example</h1>
 <h2 id="show-don-t-tell">Show, Don&#39;t Tell</h2>
 </section>
   </div>
-  <div class="slide hidden" id="slide-43">
+  <div class="slide hidden" id="slide-50">
     <section class="slide-content"><h3 id="without-better-js">Without Better.js</h3>
-<p>Let&#39;s take our usual <code>add</code> function</p>
+<p>Let&#39;s take our usual <code>add</code> function.</p>
 <pre><code>function add(num1, num2){
     var value = num1 + num2
     return value
@@ -733,13 +790,13 @@ done by <a href="http://twitter.com">twitter</a></li>
 <p><strong>Error Not Detected</strong></p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-44">
+  <div class="slide hidden" id="slide-51">
     <section class="slide-content"><h3 id="with-better-js">With Better.js</h3>
 <ul>
-<li>Types of <code>num1, num2</code> are verified at every usage</li>
-<li>Type of returned <code>value</code> are verified at every usage</li>
+<li>Types of <code>num1, num2</code> are verified at every usage.</li>
+<li>Types of returned <code>value</code> are verified at every usage.</li>
 <li>If <code>add</code> is a private function of a class,</li>
-<li>better.js can ensure it is called only from this class</li>
+<li>better.js can ensure it is called only from this class.</li>
 </ul>
 <pre><code>function add(num1, num2){
     var value = num1 + num2
@@ -747,105 +804,105 @@ done by <a href="http://twitter.com">twitter</a></li>
 }</code></pre>
 </section>
   </div>
-  <div class="slide hidden" id="slide-45">
+  <div class="slide hidden" id="slide-52">
     <section class="slide-content"><h3 id="strong-typing-on-return-value-with-better-js">Strong Typing on Return Value With Better.js</h3>
-<p>Overload <code>add</code> function with a better.js specification</p>
+<p>Overload <code>add</code> function with a better.js specification.</p>
 <pre><code>add = Bjs.Function(add, {
     return : Number
 })</code></pre>
-<p>Let&#39;s try to use it incorrectly</p>
+<p>Let&#39;s try to use it incorrectly.</p>
 <pre><code>add(3, &#39;two&#39;);
 // Exception &#39;invalid type for returned value.&#39;</code></pre>
 <p><strong>Error Detected Thanks To Better.js</strong></p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-46">
+  <div class="slide hidden" id="slide-53">
     <section class="slide-content"><h3 id="strong-typing-on-arguments">Strong Typing On Arguments</h3>
-<p>Let&#39;s add <code>arguments</code> in better.js specification</p>
+<p>Let&#39;s add <code>arguments</code> in better.js specification.</p>
 <pre><code>add = Bjs.Function(add, {
     arguments : [Number, Number],
     return : Number
 })</code></pre>
-<p>Let&#39;s try to use it incorrectly</p>
+<p>Let&#39;s try to use it incorrectly.</p>
 <pre><code>add(3, &#39;two&#39;);
 // Exception &#39;invalid type for returned value.&#39;</code></pre>
 <p><strong>Error Detected Thanks To Better.js</strong></p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-47">
+  <div class="slide hidden" id="slide-54">
     <section class="slide-content"><h2 id="let-s-pack-it-up-">Let&#39;s pack it up.</h2>
 </section>
   </div>
-  <div class="slide hidden" id="slide-48">
+  <div class="slide hidden" id="slide-55">
     <section class="slide-content"><h3 id="what-have-we-learned-">What Have We Learned ?</h3>
 <p><img src="images/betterjs-function-features-summary.png" alt="Better.js Functions Features Summary"></p>
 <p>See Details in <a href="http://betterjs.org/docs/betterjs-function.html">Better.js Function Documentation</a></p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-49">
+  <div class="slide hidden" id="slide-56">
     <section class="slide-content"><h1 id="the-end">The End</h1>
 </section>
   </div>
-  <div class="slide hidden" id="slide-50">
+  <div class="slide hidden" id="slide-57">
     <section class="slide-content"><h1 id="better-js-for-class">Better.js For Class</h1>
 </section>
   </div>
-  <div class="slide hidden" id="slide-51">
-    <section class="slide-content"><h3 id="what-better-js-can-do-for-your-classes">What Better.js Can Do For Your Classes</h3>
+  <div class="slide hidden" id="slide-58">
+    <section class="slide-content"><h3 id="what-can-better-js-do-for-your-classes-">What Can Better.js Do For Your Classes?</h3>
 <ul>
-<li><p>Verify strong typing of your class properties</p>
+<li><p>Verify strong typing of your class properties.</p>
 </li>
-<li><p>Verify strong typing of your constructor arguments</p>
+<li><p>Verify strong typing of your constructor arguments.</p>
 </li>
-<li><p>Support private for properties and functions</p>
+<li><p>Support private for properties and functions.</p>
 </li>
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-52">
+  <div class="slide hidden" id="slide-59">
     <section class="slide-content"><h1 id="an-example">An Example</h1>
 <h2 id="show-don-t-tell">Show, Don&#39;t Tell</h2>
 </section>
   </div>
-  <div class="slide hidden" id="slide-53">
+  <div class="slide hidden" id="slide-60">
     <section class="slide-content"><h3 id="private-without-better-js">Private Without Better.js</h3>
 <p>Private only based on convention.</p>
 <pre><code>var Cat = function(name){
   this._name  = name
 }</code></pre>
-<p>Let&#39;s try to use it incorrectly</p>
+<p>Let&#39;s try to use it incorrectly.</p>
 <pre><code>var cat = new Cat(&#39;kitty&#39;)
 console.log(&#39;name is&#39;, cat._name)
 // display &#39;name is kitty&#39;</code></pre>
-<p><strong>No Error Detected in Plain Javascript</strong></p>
+<p><strong>Error Not Detected in Plain Javascript</strong></p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-54">
+  <div class="slide hidden" id="slide-61">
     <section class="slide-content"><h3 id="private-with-better-js">Private With Better.js</h3>
-<p>Make a better.js for your class</p>
+<p>Make a better.js for your class.</p>
 <pre><code>Cat = Bjs.Class(Cat, {
   privatize : true
 })</code></pre>
-<p>Let&#39;s try to use it incorrectly</p>
+<p>Let&#39;s try to use it incorrectly.</p>
 <pre><code>var cat = new Cat(&#39;kitty&#39;)
 console.log(&#39;name is&#39;, cat._name)
 // display &#39;name is kitty&#39;</code></pre>
 <p><strong>Error Detected thanks to better.js</strong></p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-55">
+  <div class="slide hidden" id="slide-62">
     <section class="slide-content"><h3 id="strong-typing-for-arguments-with-better-js">Strong Typing for Arguments With Better.js</h3>
 <p>Let&#39;s overload the class with a better.js</p>
 <pre><code>Cat = Bjs.Class(Cat, {
     arguments : [String]
 })</code></pre>
-<p>Let&#39;s try to use it incorrectly</p>
+<p>Let&#39;s try to use it incorrectly.</p>
 <pre><code>var cat = new Cat()
 // Exception thrown &quot;Invalid arguments 0 - Should be String&quot;</code></pre>
 <p><strong>Error Detected thanks to better.js</strong></p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-56">
+  <div class="slide hidden" id="slide-63">
     <section class="slide-content"><h3 id="strong-typing-for-properties-with-better-js">Strong Typing for Properties With Better.js</h3>
 <p>Let&#39;s overload the class with a better.js</p>
 <pre><code>Cat = Bjs.Class(Cat, {
@@ -853,60 +910,60 @@ console.log(&#39;name is&#39;, cat._name)
         _name   : String,
     }
 })</code></pre>
-<p>Let&#39;s try to use it incorrectly</p>
+<p>Let&#39;s try to use it incorrectly.</p>
 <pre><code>var cat = new Cat(99)
 // Exception thrown &quot;Invalid property ._name - Should be String&quot;</code></pre>
 <p><strong>Error Detected thanks to better.js</strong></p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-57">
+  <div class="slide hidden" id="slide-64">
     <section class="slide-content"><h2 id="let-s-pack-it-up-">Let&#39;s pack it up.</h2>
 </section>
   </div>
-  <div class="slide hidden" id="slide-58">
+  <div class="slide hidden" id="slide-65">
     <section class="slide-content"><h3 id="what-have-we-learned-">What Have We Learned ?</h3>
 <p><img src="images/betterjs-function-features-summary.png" alt="Better.js Functions Features Summary"></p>
 <p>See Details in <a href="http://betterjs.org/docs/betterjs-function.html">Better.js Function Documentation</a></p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-59">
+  <div class="slide hidden" id="slide-66">
     <section class="slide-content"><h1 id="the-end">The End</h1>
 </section>
   </div>
-  <div class="slide hidden" id="slide-60">
+  <div class="slide hidden" id="slide-67">
     <section class="slide-content"><h1 id="better-js-for-property">Better.js For Property</h1>
 </section>
   </div>
-  <div class="slide hidden" id="slide-61">
-    <section class="slide-content"><h3 id="what-better-js-can-do-for-your-properties">What Better.js Can Do For Your Properties</h3>
+  <div class="slide hidden" id="slide-68">
+    <section class="slide-content"><h3 id="what-can-better-js-do-for-your-properties-">What Can Better.js Do For Your Properties?</h3>
 <ul>
-<li><p>Verify strong typing of your property</p>
+<li><p>Verify the strong typing of your property.</p>
 </li>
-<li><p>Support private if this property belongs to a class</p>
+<li><p>Support private if this property belongs to a class.</p>
 </li>
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-62">
+  <div class="slide hidden" id="slide-69">
     <section class="slide-content"><h1 id="an-example">An Example</h1>
 <h2 id="show-don-t-tell">Show, Don&#39;t Tell</h2>
 </section>
   </div>
-  <div class="slide hidden" id="slide-63">
+  <div class="slide hidden" id="slide-70">
     <section class="slide-content"><h3 id="property-type-without-better-js">Property Type Without Better.js</h3>
-<p>Let&#39;s define a simple object with a <code>name</code> property which is a string</p>
+<p>Let&#39;s define a simple object with a <code>name</code> property which is a string.</p>
 <pre><code>var foo = {
     name : &#39;jsinside&#39;
 };</code></pre>
 <p>Wrong type without better.js</p>
 <pre><code>foo.name = 99
 // now foo.name is equal to 99</code></pre>
-<p><strong>No Error Detected</strong></p>
+<p><strong>Error Not Detected</strong></p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-64">
+  <div class="slide hidden" id="slide-71">
     <section class="slide-content"><h3 id="strong-typing-with-better-js">Strong Typing With Better.js</h3>
-<p>Overload <code>name</code> property with a better.js specification</p>
+<p>Overload <code>name</code> property with a better.js specification.</p>
 <pre><code>Bjs.Property(foo, &#39;name&#39;, {
   type  : String,
 })</code></pre>
@@ -916,30 +973,30 @@ console.log(&#39;name is&#39;, cat._name)
 <p><strong>Error Detected Thanks To Better.js</strong></p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-65">
+  <div class="slide hidden" id="slide-72">
     <section class="slide-content"><h3 id="private-properties-without-better-js">Private Properties without Better.js</h3>
 <ul>
-<li>Let&#39;s do a Cat class</li>
-<li>it got a private property cas</li>
+<li>Let&#39;s do a Cat class.</li>
+<li>It got a private property class.</li>
 </ul>
 <pre><code>var Cat = function(name){
   this._name = name
 }</code></pre>
-<p>Merrely rely on conventions</p>
+<p>Simply rely on conventions.</p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-66">
+  <div class="slide hidden" id="slide-73">
     <section class="slide-content"><h3 id="private-properties-without-better-js">Private Properties without Better.js</h3>
-<p>Let&#39;s use it from outside the class</p>
+<p>Let&#39;s use it from outside the class.</p>
 <pre><code>var cat = new Cat(&#39;kitty&#39;)
 console.log(cat._name)
 // display &#39;kitty&#39;</code></pre>
-<p><strong>No Error Detected in Plain Javascript</strong></p>
+<p><strong>Error Not Detected in Plain Javascript</strong></p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-67">
+  <div class="slide hidden" id="slide-74">
     <section class="slide-content"><h3 id="private-properties-with-better-js">Private Properties with Better.js</h3>
-<p>Let&#39;s add a better.js specification at the end of the constructor</p>
+<p>Let&#39;s add a better.js specification at the end of the constructor.</p>
 <pre><code>var Cat = function(name){
     this._name = name
     Bjs.Property(this, &#39;_name&#39;, {
@@ -948,7 +1005,7 @@ console.log(cat._name)
 }</code></pre>
 </section>
   </div>
-  <div class="slide hidden" id="slide-68">
+  <div class="slide hidden" id="slide-75">
     <section class="slide-content"><h3 id="private-properties-with-better-js">Private Properties with Better.js</h3>
 <p>Invalid usage with better.js</p>
 <pre><code>var cat = new Cat(&#39;kitty&#39;)
@@ -957,17 +1014,17 @@ console.log(cat._name)
 <p><strong>Error Detected thanks to better.js</strong></p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-69">
+  <div class="slide hidden" id="slide-76">
     <section class="slide-content"><h2 id="let-s-pack-it-up-">Let&#39;s pack it up.</h2>
 </section>
   </div>
-  <div class="slide hidden" id="slide-70">
+  <div class="slide hidden" id="slide-77">
     <section class="slide-content"><h3 id="what-have-we-learned-">What Have We Learned ?</h3>
 <p><img src="images/betterjs-function-features-summary.png" alt="Better.js Functions Features Summary"></p>
 <p>See Details in <a href="http://betterjs.org/docs/betterjs-function.html">Better.js Function Documentation</a></p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-71">
+  <div class="slide hidden" id="slide-78">
     <section class="slide-content"><h1 id="the-end">The End</h1>
 </section>
   </div>
