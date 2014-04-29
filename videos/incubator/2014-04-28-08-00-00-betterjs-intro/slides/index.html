@@ -447,7 +447,20 @@ pre .chunk {
   <div class="slide hidden" id="slide-6">
     <section class="slide-content"><h3 id="meta">Meta</h3>
 <ul>
-<li><a href="http://betterjs.org">homepage</a></li>
+<li><p><a href="http://betterjs.org">homepage</a></p>
+</li>
+<li><p>It helps you write a better javascript</p>
+</li>
+<li>It ensure your javascript is running as it is intented</li>
+<li>you typically run it during your test phase</li>
+<li><p>like jshint, like mocha, qunit</p>
+</li>
+<li><p>better.js extends javascript in revolutionary ways</p>
+</li>
+<li>to support feature unseen to javascript</li>
+<li>such as private members and strong typing</li>
+</ul>
+<ul>
 <li><p>take the first 2 lines of the homepages</p>
 </li>
 <li><p>it is a library </p>
@@ -460,6 +473,14 @@ pre .chunk {
   </div>
   <div class="slide hidden" id="slide-7">
     <section class="slide-content"><h3 id="pure-100-javascript">Pure 100% Javascript</h3>
+<ul>
+<li><p>no compilation step <strong>=&gt;</strong> faster dev cycle</p>
+</li>
+<li><p>no new language to learn <strong>=&gt;</strong> no training for webdev</p>
+</li>
+<li><p>100% Javascript <strong>=&gt;</strong> easier to integrate in your code</p>
+</li>
+</ul>
 </section>
   </div>
   <div class="slide hidden" id="slide-8">
@@ -578,12 +599,16 @@ done by <a href="http://twitter.com">twitter</a></li>
   </div>
   <div class="slide hidden" id="slide-26">
     <section class="slide-content"><h3 id="what-have-we-learned-">What Have We Learned ?</h3>
-<ul>
-<li>Install it via download From <a href="http://github.com/jeromeetienne/better.js/">better.js github repository</a></li>
-<li>Install it with bower using <strong>bower install better.js</strong></li>
-<li>Include it in your page with <strong>&lt; script src=&quot;better.js&quot;&gt;&lt; /script&gt; </strong></li>
-<li>Simple Example of Better.js Function in browser</li>
-</ul>
+<ol>
+<li><p>Install it via download From <a href="http://github.com/jeromeetienne/better.js/">better.js github repository</a></p>
+</li>
+<li><p>Install it with bower using <strong>bower install better.js</strong></p>
+</li>
+<li><p>Include it in your page with <strong>&lt; script src=&quot;better.js&quot;&gt;&lt; /script&gt; </strong></p>
+</li>
+<li><p>Simple Example of Better.js Function in browser</p>
+</li>
+</ol>
 </section>
   </div>
   <div class="slide hidden" id="slide-27">
@@ -625,11 +650,11 @@ done by <a href="http://twitter.com">twitter</a></li>
     return n1+n2
 }</code></pre>
 <p>Overload add with a better.js function</p>
-<pre><code>var Bjs = require(&#39;better&#39;)
+<pre><code>var Bjs = require(&#39;better.js&#39;)
 add = Bjs.Function(add, {
     arguments : [Number, Number]
 })</code></pre>
-<pre><code>add(&#39;foo&#39;, &#39;bar&#39;);
+<pre><code>add(&#39;add&#39;, &#39;bar&#39;);
 // Exception</code></pre>
 </section>
   </div>
@@ -639,10 +664,12 @@ add = Bjs.Function(add, {
   </div>
   <div class="slide hidden" id="slide-35">
     <section class="slide-content"><h3 id="what-have-we-learned-">What Have We Learned ?</h3>
-<ul>
-<li>use <code>npm install better.js</code> to install better.js</li>
-<li>Simple Example of Better.js Function in node.js</li>
-</ul>
+<ol>
+<li><p>use <code>npm install better.js</code> to install better.js</p>
+</li>
+<li><p>Simple Example of Better.js Function in node.js</p>
+</li>
+</ol>
 </section>
   </div>
   <div class="slide hidden" id="slide-36">
@@ -655,46 +682,68 @@ add = Bjs.Function(add, {
   </div>
   <div class="slide hidden" id="slide-38">
     <section class="slide-content"><h3 id="what-better-js-can-do-for-your-functions">What Better.js Can Do For Your Functions</h3>
+<ul>
+<li>Verify strong typing to arguments and return value</li>
+<li>Add support for private if this function belong to a class</li>
+</ul>
 <p><img src="images/betterjs-function-features-summary.png" alt="Better.js Functions Features Summary"></p>
 <p>See Details in <a href="http://betterjs.org/docs/betterjs-function.html">Better.js Function Documentation</a></p>
 </section>
   </div>
   <div class="slide hidden" id="slide-39">
-    <section class="slide-content"><h3 id="strong-typing-for-arguments">Strong Typing For Arguments</h3>
-<p>Types of <code>arg1, arg2</code> are verified at every usage</p>
-<pre><code>function foo(arg1, arg2){
-    var value = arg1 + arg2
-    return value
-}</code></pre>
+    <section class="slide-content"><h1 id="an-example">An Example</h1>
 </section>
   </div>
   <div class="slide hidden" id="slide-40">
-    <section class="slide-content"><h3 id="strong-typing-for-return-value">Strong Typing For Return Value</h3>
-<p>Type of returned <code>value</code> are verified at every usage</p>
-<pre><code>function add(arg1, arg2){
-    var value = arg1 + arg2
+    <section class="slide-content"><h3 id="without-better-js">Without Better.js</h3>
+<p>Let&#39;s take our usual <code>add</code> function</p>
+<pre><code>function add(num1, num2){
+    var value = num1 + num2
     return value
 }</code></pre>
+<p>Let&#39;s try a wrong return type without better.js</p>
+<pre><code>add(3, &#39;two&#39;);
+// return &#39;3two&#39;</code></pre>
+<p><strong>Error Not Detected</strong></p>
 </section>
   </div>
   <div class="slide hidden" id="slide-41">
-    <section class="slide-content"><h3 id="private-for-functions">Private For Functions</h3>
+    <section class="slide-content"><h3 id="with-better-js">With Better.js</h3>
 <ul>
+<li>Types of <code>num1, num2</code> are verified at every usage</li>
+<li>Type of returned <code>value</code> are verified at every usage</li>
 <li>If <code>add</code> is a private function of a class,</li>
 <li>better.js can ensure it is called only from this class</li>
 </ul>
-<pre><code>function add(arg1, arg2){
-    var value = arg1 + arg2
+<pre><code>function add(num1, num2){
+    var value = num1 + num2
     return value
 }</code></pre>
 </section>
   </div>
   <div class="slide hidden" id="slide-42">
-    <section class="slide-content"><h1 id="an-example">An Example</h1>
+    <section class="slide-content"><h3 id="strong-typing-on-return-value-with-better-js">Strong Typing on Return Value With Better.js</h3>
+<p>Overload <code>add</code> function with a better.js specification</p>
+<pre><code>add = Bjs.Function(add, {
+    return : Number
+})</code></pre>
+<p>Let&#39;s try a wrong return type with better.js</p>
+<pre><code>add(3, &#39;two&#39;);
+// Exception &#39;invalid type for returned value.&#39;</code></pre>
+<p><strong>Error Detected Thanks To Better.js</strong></p>
 </section>
   </div>
   <div class="slide hidden" id="slide-43">
-    <section class="slide-content"><p>META</p>
+    <section class="slide-content"><h3 id="strong-typing-on-arguments">Strong Typing On Arguments</h3>
+<p>Let&#39;s add <code>arguments</code> in better.js specification</p>
+<pre><code>add = Bjs.Function(add, {
+    arguments : [Number, Number],
+    return : Number
+})</code></pre>
+<p>Wrong arguments type</p>
+<pre><code>add(3, &#39;two&#39;);
+// Exception &#39;invalid type for returned value.&#39;</code></pre>
+<p><strong>Error Detected Thanks To Better.js</strong></p>
 </section>
   </div>
   <div class="slide hidden" id="slide-44">
@@ -704,8 +753,14 @@ add = Bjs.Function(add, {
   <div class="slide hidden" id="slide-45">
     <section class="slide-content"><h3 id="what-have-we-learned-">What Have We Learned ?</h3>
 <ul>
-<li>META: take it from feature summary</li>
-<li>and that</li>
+<li><p>Possible to overload function with a better.js specification </p>
+</li>
+<li><p>Specify strong typing for arguments</p>
+</li>
+<li><p>Specify strong typing for return value</p>
+</li>
+<li><p>Support class private if needed</p>
+</li>
 </ul>
 </section>
   </div>

@@ -46,6 +46,17 @@ output: index.html
 ### Meta
 
 * [homepage](http://betterjs.org)
+
+* It helps you write a better javascript
+* It ensure your javascript is running as it is intented
+* you typically run it during your test phase
+* like jshint, like mocha, qunit
+
+* better.js extends javascript in revolutionary ways
+* to support feature unseen to javascript
+* such as private members and strong typing
+
+
 * take the first 2 lines of the homepages
 
 * it is a library 
@@ -56,6 +67,12 @@ output: index.html
 --
 
 ### Pure 100% Javascript
+
+* no compilation step **=>** faster dev cycle
+
+* no new language to learn **=>** no training for webdev
+
+* 100% Javascript **=>** easier to integrate in your code
 
 --
 
@@ -198,10 +215,13 @@ META: same examples as for node.js
 
 ### What Have We Learned ?
 
-* Install it via download From [better.js github repository](http://github.com/jeromeetienne/better.js/)
-* Install it with bower using **bower install better.js**
-* Include it in your page with **< script src="better.js">< /script> **
-* Simple Example of Better.js Function in browser
+1. Install it via download From [better.js github repository](http://github.com/jeromeetienne/better.js/)
+
+1. Install it with bower using **bower install better.js**
+
+1. Include it in your page with **< script src="better.js">< /script> **
+
+1. Simple Example of Better.js Function in browser
 
 --
 
@@ -255,14 +275,14 @@ function add(n1,n2){
 Overload add with a better.js function
 
 ```
-var Bjs = require('better')
+var Bjs = require('better.js')
 add = Bjs.Function(add, {
     arguments : [Number, Number]
 })
 ```
 
 ```
-add('foo', 'bar');
+add('add', 'bar');
 // Exception
 ```
 
@@ -274,8 +294,9 @@ add('foo', 'bar');
 
 ### What Have We Learned ?
 
-* use ```npm install better.js``` to install better.js
-* Simple Example of Better.js Function in node.js
+1. use ```npm install better.js``` to install better.js
+
+1. Simple Example of Better.js Function in node.js
 
 --
 
@@ -289,49 +310,12 @@ add('foo', 'bar');
 
 ### What Better.js Can Do For Your Functions
 
+* Verify strong typing to arguments and return value
+* Add support for private if this function belong to a class
+
 ![Better.js Functions Features Summary](images/betterjs-function-features-summary.png)
 
 See Details in [Better.js Function Documentation](http://betterjs.org/docs/betterjs-function.html)
-
---
-
-### Strong Typing For Arguments
-
-Types of ```arg1, arg2``` are verified at every usage
-
-```
-function foo(arg1, arg2){
-    var value = arg1 + arg2
-    return value
-}
-```
-
---
-
-### Strong Typing For Return Value
-
-Type of returned ```value``` are verified at every usage
-
-```
-function add(arg1, arg2){
-    var value = arg1 + arg2
-    return value
-}
-```
-
---
-
-### Private For Functions
-
-* If ```add``` is a private function of a class,
-* better.js can ensure it is called only from this class
-
-```
-function add(arg1, arg2){
-    var value = arg1 + arg2
-    return value
-}
-```
 
 --
 
@@ -339,7 +323,84 @@ function add(arg1, arg2){
 
 --
 
-META
+### Without Better.js
+
+Let's take our usual ```add``` function
+
+```
+function add(num1, num2){
+    var value = num1 + num2
+    return value
+}
+```
+
+Let's try a wrong return type without better.js
+
+```
+add(3, 'two');
+// return '3two'
+```
+
+**Error Not Detected**
+
+--
+
+### With Better.js
+
+* Types of ```num1, num2``` are verified at every usage
+* Type of returned ```value``` are verified at every usage
+* If ```add``` is a private function of a class,
+* better.js can ensure it is called only from this class
+
+```
+function add(num1, num2){
+    var value = num1 + num2
+    return value
+}
+```
+
+--
+
+### Strong Typing on Return Value With Better.js
+
+Overload ```add``` function with a better.js specification
+
+```
+add = Bjs.Function(add, {
+    return : Number
+})
+```
+
+Let's try a wrong return type with better.js
+
+```
+add(3, 'two');
+// Exception 'invalid type for returned value.'
+```
+
+**Error Detected Thanks To Better.js**
+
+--
+
+### Strong Typing On Arguments
+
+Let's add ```arguments``` in better.js specification
+
+```
+add = Bjs.Function(add, {
+    arguments : [Number, Number],
+    return : Number
+})
+```
+
+Wrong arguments type
+
+```
+add(3, 'two');
+// Exception 'invalid type for returned value.'
+```
+
+**Error Detected Thanks To Better.js**
 
 --
 
@@ -349,8 +410,13 @@ META
 
 ### What Have We Learned ?
 
-* META: take it from feature summary
-* and that
+* Possible to overload function with a better.js specification 
+
+* Specify strong typing for arguments
+
+* Specify strong typing for return value
+
+* Support class private if needed
 
 --
 
