@@ -94,7 +94,7 @@ add = Bjs.Function(add, {
 
 ### Course Topics
 
-* What is Better.js?
+* What Better.js can do for you ?
 
 * Better.js Installation In Browser.
 
@@ -122,7 +122,12 @@ add = Bjs.Function(add, {
 
 ### Faster Bug Fixes
 
-* TODO take it from homepage
+Verification for your code with:
+
+* ```private``` to be sure your code comes from where it's intended.
+* ```strong typing``` to know when people are sending you garbage.
+
+***Faster bug fixes => Better Code*** 
 
 
 --
@@ -130,8 +135,10 @@ add = Bjs.Function(add, {
 ### Better Code Monitoring
 
 * Garbage collector monitoring
-* 
-* TODO take it from homepage
+
+* Global Variables motitoring 
+
+***More accurate measures => Better decisions*** 
 
 --
 
