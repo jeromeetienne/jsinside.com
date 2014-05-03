@@ -70,7 +70,6 @@ function add(num1, num2){
 }
 ```
 
-
 --
 
 ### An Basic Example (bis)
@@ -85,6 +84,27 @@ add = Bjs.Function(add, {
 ```
 
 **Better.js ensures the specification is respected!**
+
+
+--
+
+### An Basic Example - See By Yourself
+
+When your code is used properly, all it ok.
+
+```
+console.log('3+2=', add(3,2))
+// display 3+2=5
+```
+
+When your code is misued, error is immediatly notified!
+
+```
+console.log('3+2=', add(3,'two'))
+// Exception Thrown AssertionError: argument[1] type is invalid.
+```
+
+**Discover a whole type of bugs!!**
 
 --
 
@@ -122,13 +142,12 @@ add = Bjs.Function(add, {
 
 ### Faster Bug Fixes
 
-Verification for your code with:
+Verify for your code for a whole new class of bugs!
 
 * ```private``` to be sure your code comes from where it's intended.
 * ```strong typing``` to know when people are sending you garbage.
 
-***Faster bug fixes => Better Code*** 
-
+***Faster bug fixes => Better Code***
 
 --
 
@@ -200,17 +219,13 @@ add(3, 'two');
 
 --
 
-### Benefits In This Specific Case
+### Benefits of Better.js
 
-* Support for strong typing in javascript.
-* Arguments of wrong type are detected.
-* Misusages is notified imeddiatly to the developpers. 
+* Detect a new class of bugs! 
+* unauthorized access to private properties and functions
+* Strong Typing for Variable Types.
 
-Earlier bugs detection leads to higher quality code.
-
-All that lead to faster bug fixes. so better code.
-
-Good measures leads to better decision on which action to take.
+**Helps You Write a Better Javascript**
 
 --
 
@@ -244,7 +259,7 @@ Good measures leads to better decision on which action to take.
 
 --
 
-### How To Install Better in Browser
+### How To Install Better.js in Browser
 
 * Install it in your project.
 * Include it in your page.
@@ -277,7 +292,11 @@ bower install better.js
 With the usual [script tag](https://developer.mozilla.org/en/docs/Web/HTML/Element/script)
 
 ```
+<!doctype html>
 <script src="better.js"></script>
+<script>
+    // .. put your code here
+</script>
 ```
 --
 
@@ -286,7 +305,7 @@ With the usual [script tag](https://developer.mozilla.org/en/docs/Web/HTML/Eleme
 
 --
 
-### Let's Have A Function
+### Let's Have A Function in a Page
 
 A simple add function to add numbers.
 
@@ -343,7 +362,7 @@ add(3, 'two');
 
 --
 
-### How To Install Better in Node.js?
+### How To Install Better.js in Node.js?
 
 * Install it in your project.
 * Include it in your code.
@@ -653,9 +672,9 @@ var cat = new Cat(99)
 
 ### What Have We Learned ?
 
-![Better.js Functions Features Summary](images/betterjs-function-features-summary.png)
+![Better.js Class Features Summary](images/betterjs-class-features-summary.png)
 
-See Details in [Better.js Function Documentation](http://betterjs.org/docs/betterjs-function.html)
+See Details in [Better.js Class Documentation](http://betterjs.org/docs/betterjs-class.html)
 
 --
 
@@ -759,6 +778,7 @@ Let's add a better.js specification at the end of the constructor.
 ```
 var Cat = function(name){
     this._name = name
+    
     Bjs.Property(this, '_name', {
         private : true
     })
@@ -788,9 +808,9 @@ console.log(cat._name)
 
 ### What Have We Learned ?
 
-![Better.js Functions Features Summary](images/betterjs-function-features-summary.png)
+![Better.js Property Features Summary](images/betterjs-property-features-summary.png)
 
-See Details in [Better.js Function Documentation](http://betterjs.org/docs/betterjs-function.html)
+See Details in [Better.js Property Documentation](http://betterjs.org/docs/betterjs-property.html)
 
 --
 
