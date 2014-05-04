@@ -3,9 +3,12 @@
 server:
 	docpad run
 
-build:
+prepare:
 	bin/generateHtmlPageFromCourses.js videos/published/*
-	#bin/generateHtmlPageFromCourses.js videos/incubator/*getting-started-with-javascript-0*
+	bin/generateHtmlPageFromCourses.js videos/incubator/*-getting-started-with-javascript-0*
+	bin/generateHtmlPageFromCourses.js videos/incubator/*-betterjs-introduction-0*
+
+build: prepare
 	docpad generate
 
 clean:

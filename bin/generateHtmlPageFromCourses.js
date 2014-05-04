@@ -12,7 +12,7 @@ srcPaths.forEach(function(srcPath){
 	flow.seq(function(next){
 		var basename	= path.basename(srcPath)
 
-		// read the 
+		// read the README.md
 		var srcFileName	= path.join(srcPath, 'README.md')
 		var srcContent	= fs.readFileSync(srcFileName, 'utf8')
 		console.log('processing', basename)
@@ -36,10 +36,12 @@ srcPaths.forEach(function(srcPath){
 		fs.existsSync(dataDirname) || fs.mkdirSync(dataDirname)
 
 		// create src/file/data/
+		// FIXME it is a duplication
 		var dataDirname	= __dirname+'/../src/files/data/'+name
 		fs.existsSync(dataDirname) || fs.mkdirSync(dataDirname)
 
 		Flow().seq(function(nextNestest){
+			// to copy /files
 			var srcFullname	= srcPath+'/files'
 			if( fs.existsSync(srcFullname) )	nextNestest()
 			var cmdline	= 'cp -a '+srcFullname+' '+dataDirname+'/'; 
@@ -47,6 +49,16 @@ srcPaths.forEach(function(srcPath){
 				nextNestest()
 			})
 		}).seq(function(nextNestest){
+			// to build /slides
+			var srcFullname	= srcPath+'/slides'
+			if( fs.existsSync(srcFullname) )	nextNestest()
+			var cmdline	= 'cd '+srcFullname+'; make build'; 
+			console.log('exec', cmdline);	nextNestest()
+			require('child_process').exec(cmdline, function(){
+				nextNestest()
+			})
+		}).seq(function(nextNestest){
+			// to copy /slides
 			var srcFullname	= srcPath+'/slides'
 			if( fs.existsSync(srcFullname) )	nextNestest()
 			var cmdline	= 'cp -a '+srcFullname+' '+dataDirname+'/'; 
@@ -62,7 +74,7 @@ srcPaths.forEach(function(srcPath){
 
 
 //////////////////////////////////////////////////////////////////////////////////
-//										//
+//		Pseudo .md meta processor					//
 //////////////////////////////////////////////////////////////////////////////////
 
 function addHeaderLine(content, text){
