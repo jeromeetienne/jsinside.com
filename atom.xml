@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+	<title>JS Inside</title>
+	<link href="http://jsinside.com/atom.xml" rel="self"/>
+	<link href="http://jsinside.com"/>
+	<updated>2014-05-16T12:16:33.630Z</updated>
+	<id>http://jsinside.com</id>
+	<author>
+		<name>Jerome Etienne</name>
+		<email>jerome.etienne@gmail.com</email>
+	</author>
+
+	
+                <entry>
+			<title>Getting Started With Javascript - 07 - Conditions</title>
+			<link href="http://jsinside.com//course/getting-started-with-javascript-07-conditions"/>
+			<updated>2014-04-16T07:59:56.000Z</updated>
+			<id>http://jsinside.com//course/getting-started-with-javascript-07-conditions</id>
+			<content type="html">
+				<iframe width="480" height="360" frameborder="0"
+					src="//www.youtube.com/embed/zLgGTca6hJI">
+				</iframe>
+				<p>Everything in this world depends on a condition. It&#39;s the same thing in Javascript. In this course you will learn to define when something happens or not, depending on a given condition. This video will explain all about the &quot;if&quot; and the &quot;else&quot; conditions, the important difference between them and how to include them in your code. You will find out what branching is, and you will also learn how to chain conditions in your code the way you want.</p>
+
+			</content>
+		</entry>
+	
+                <entry>
+			<title>Getting Started With Javascript - 06 - Loops</title>
+			<link href="http://jsinside.com//course/getting-started-with-javascript-06-loops"/>
+			<updated>2014-04-16T07:59:46.000Z</updated>
+			<id>http://jsinside.com//course/getting-started-with-javascript-06-loops</id>
+			<content type="html">
+				<iframe width="480" height="360" frameborder="0"
+					src="//www.youtube.com/embed/9p_QU5T0cWE">
+				</iframe>
+				<p>Computers like to repeat things over and over again. That is what loops are for! In this course you will learn how to repeat instructions. You will get to know the &quot;for&quot; loop and the &quot;while&quot; loop. You will also understand the difference between these loops thanks to practical examples. Loops are powerful tools and, in this video, you will learn how you can control conditions with them. At the end of this course you will know how to run, count, repeat and master instructions!</p>
+
+			</content>
+		</entry>
+	
+                <entry>
+			<title>Getting Started With Javascript - 05 - Functions</title>
+			<link href="http://jsinside.com//course/getting-started-with-javascript-05-functions"/>
+			<updated>2014-04-16T07:59:36.000Z</updated>
+			<id>http://jsinside.com//course/getting-started-with-javascript-05-functions</id>
+			<content type="html">
+				<iframe width="480" height="360" frameborder="0"
+					src="//www.youtube.com/embed/xKi1KKOKxBM">
+				</iframe>
+				<p>In this video you&#39;re going to learn about &quot;functions&quot; in Javascript. You will learn how to define them and why they are useful. This course will explain the importance of functions in programming. It is detailed and to the point. It will explain how you can organize the instructions and tasks in your code by using functions. It will show you practical examples to help you understand them better.</p>
+
+			</content>
+		</entry>
+	
+                <entry>
+			<title>Getting Started With Javascript - 04 - Variable Type String</title>
+			<link href="http://jsinside.com//course/getting-started-with-javascript-04-variable-type-string"/>
+			<updated>2014-04-16T07:53:49.000Z</updated>
+			<id>http://jsinside.com//course/getting-started-with-javascript-04-variable-type-string</id>
+			<content type="html">
+				<iframe width="480" height="360" frameborder="0"
+					src="//www.youtube.com/embed/k7H-M-Sw8bc">
+				</iframe>
+				<p>This course will teach you how to store text. In programming text is usually called &quot;string&quot;, you will see why in the video. You will understand why strings don&#39;t react the same way as numbers. We will do some more additions, but this time with strings of text! You will discover that it is possible to add two texts together with practical examples. We will also do more advanced operations to modify strings that have nothing to do with normal mathematics.</p>
+
+			</content>
+		</entry>
+	
+                <entry>
+			<title>Getting Started With Javascript - 03 - Variable Type Number</title>
+			<link href="http://jsinside.com//course/getting-started-with-javascript-03-variable-type-number"/>
+			<updated>2014-04-16T07:53:43.000Z</updated>
+			<id>http://jsinside.com//course/getting-started-with-javascript-03-variable-type-number</id>
+			<content type="html">
+				<iframe width="480" height="360" frameborder="0"
+					src="//www.youtube.com/embed/7t55xDLJBK4">
+				</iframe>
+				<p>In this video you will learn how to store values called numbers. We will do a little bit of Math, by adding, subtracting and doing other basic operations with these numbers. But since we&#39;re not in school any more, we will also learn how to do more advanced operations with Math API. This course will show you that it is easy to group operations together and that math can also be useful when coding.</p>
+
+			</content>
+		</entry>
+	
+                <entry>
+			<title>Getting Started With Javascript - 02 - Variables</title>
+			<link href="http://jsinside.com//course/getting-started-with-javascript-02-variables"/>
+			<updated>2014-04-16T07:53:32.000Z</updated>
+			<id>http://jsinside.com//course/getting-started-with-javascript-02-variables</id>
+			<content type="html">
+				<iframe width="480" height="360" frameborder="0"
+					src="//www.youtube.com/embed/_7H0ymb5fjA">
+				</iframe>
+				<p>In this course you will learn all about the concept of variables. More specifically, you will understand how to store values in variables. You will know how to fetch the values you have stored in these variables when you need them later. After watching this video you will be able to identify the different variable types in Javascript and to distinguish them from each other.</p>
+
+			</content>
+		</entry>
+	
+                <entry>
+			<title>Getting Started With Javascript - 01 - Basics Of Javascript</title>
+			<link href="http://jsinside.com//course/getting-started-with-javascript-01-basics-of-javascript"/>
+			<updated>2014-04-16T07:52:12.000Z</updated>
+			<id>http://jsinside.com//course/getting-started-with-javascript-01-basics-of-javascript</id>
+			<content type="html">
+				<iframe width="480" height="360" frameborder="0"
+					src="//www.youtube.com/embed/1xOwkW0Ux6g">
+				</iframe>
+				<p>In this video you will learn how to write your first Javascript. It will give you simple and easy to understand examples of code. You will learn how to run your code inside the browser Javascript console. It will also explain what a comment is, the different ways you can write comments and why commenting your code can make your work more efficient.</p>
+
+			</content>
+		</entry>
+	
+                <entry>
+			<title>Getting Started With Javascript - 00 - Introduction</title>
+			<link href="http://jsinside.com//course/getting-started-with-javascript-00-introduction"/>
+			<updated>2014-04-16T07:45:01.000Z</updated>
+			<id>http://jsinside.com//course/getting-started-with-javascript-00-introduction</id>
+			<content type="html">
+				<iframe width="480" height="360" frameborder="0"
+					src="//www.youtube.com/embed/wQ2Q4n-xnEw">
+				</iframe>
+				<p>So you want to learn how to code in Javascript? This video will take you through the first steps of programming. This is a Javascript for beginners course. We will start by explaining what it is to code. This first course will define Javascript and show you why it is the most used language in the world; the language every developer should know and love. You can check out our other &quot;Getting Started with Javascript&quot; videos to go further into the basics of Javascript.</p>
+
+			</content>
+		</entry>
+	
+                <entry>
+			<title>How To Create Your First Project with Express.js</title>
+			<link href="http://jsinside.com//course/how-to-create-your-first-project-with-express"/>
+			<updated>2014-04-15T15:26:11.000Z</updated>
+			<id>http://jsinside.com//course/how-to-create-your-first-project-with-express</id>
+			<content type="html">
+				<iframe width="480" height="360" frameborder="0"
+					src="//www.youtube.com/embed/66JGGjfFhBw">
+				</iframe>
+				<p>This video explains how to install
+<a href="http://expressjs.com/">express.js</a> with 
+<a href="http://nodejs.org">node.js</a>.
+You will learn how to generate your first project
+and how to customized your project.</p>
+
+			</content>
+		</entry>
+	
+                <entry>
+			<title>How To Install Three.js Boilerplate With Yeoman</title>
+			<link href="http://jsinside.com//course/how-to-install-threejs-boilerplate-with-yeoman"/>
+			<updated>2011-08-30T09:24:00.000Z</updated>
+			<id>http://jsinside.com//course/how-to-install-threejs-boilerplate-with-yeoman</id>
+			<content type="html">
+				<iframe width="480" height="360" frameborder="0"
+					src="//www.youtube.com/embed/PbeTAlsrMlM">
+				</iframe>
+				<p>This videos explains what is
+<a href="http://yeoman.io">yeoman</a>
+and how to use it to generate
+<a href="http://jeromeetienne.github.io/threejsboilerplatebuilder/">three.js boilerplate</a>.
+It will walk you through the yeoman installation.
+It show how to build your own three.js project in a few seconds.
+It generate a sample project with all the good pratices.
+It is very efficient way to get started.
+This video goes deeper and explain how to fine 
+tune the boilerplate to your own need, by just anwering a few questions.</p>
+
+			</content>
+		</entry>
+	
+                <entry>
+			<title>How To Use Threex Game Extension For Three.js</title>
+			<link href="http://jsinside.com//course/how-to-use-threex-game-extension-for-threejs"/>
+			<updated>2011-08-30T09:24:00.000Z</updated>
+			<id>http://jsinside.com//course/how-to-use-threex-game-extension-for-threejs</id>
+			<content type="html">
+				<iframe width="480" height="360" frameborder="0"
+					src="//www.youtube.com/embed/eJpqBKJCpSI">
+				</iframe>
+				<p>This video explains what are threex game extension for three.js.
+You will learn how to find the game extension that you need,
+How to install them and how to include them in your own games.</p>
+
+			</content>
+		</entry>
+	
+</feed>

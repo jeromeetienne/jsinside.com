@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+	<title>JS Inside</title>
+	<link href="http://jsinside.com/atom.xml" rel="self"/>
+	<link href="http://jsinside.com"/>
+	<updated>2014-05-16T12:16:33.630Z</updated>
+	<id>http://jsinside.com</id>
+	<author>
+		<name>Jerome Etienne</name>
+		<email>jerome.etienne@gmail.com</email>
+	</author>
+
+	
+		<entry>
+			<title>Our Mission</title>
+			<link href="http://jsinside.com//posts/2014-04-24-our-mission"/>
+			<updated>2014-04-24T18:24:00.000Z</updated>
+			<id>http://jsinside.com//posts/2014-04-24-our-mission</id>
+			<content type="html">&lt;p&gt;Hello everybody! Introducing JSinside, a professionnal training site with high-quality bite sized videos to learn all you need to know about Javascript. Courses are short, efficient and 100% on javascript.&lt;/p&gt;
+&lt;p&gt;Keep in mind that the site is on version &amp;quot;beta&amp;quot;, so there&amp;#39;s still work to be done. That&amp;#39;s why we are counting on you to tell us what you think!&lt;/p&gt;
+&lt;p&gt;But why do we wanna share JSinside with you? What inspired us to create a site like this one? Well, we know it can be hard at first when you start learning a new topic that you don&amp;#39;t understand, that is why we will take you step by step through the process. The goal is to do short educational videos where you will learn useful things to improve your technical skills. With JSinside you will improve your knowledge as a web dev in only a few minutes. You don&amp;#39;t need to prepare for hours or spend your day reading boring lectures to learn something new. There wont be any blablabla, our courses will be direct and to the point. Thus, the no bullshit approach :)&lt;/p&gt;
+&lt;p&gt;Another main advantage is that you can learn anything from basic language programming to cutting edge innovations and writing better code. You can also learn how to do cool demos on 3D and enjoy creating your own video games on the web. But don&amp;#39;t worry, you can take your time to learn, go at your own rhythm and pace. You can look at a video, come back afterwards for the next.&lt;/p&gt;
+&lt;p&gt;You will learn from a professional with a long time experience on the field. You will learn useful information from practical examples. You will get tips and advice to increase your skills. Our videos will be up to date to keep you up to speed informed when it comes to new technologies.&lt;/p&gt;
+&lt;p&gt;We promise you that soon you will be able to subscribe and get you pro jsinside account. This will give you access to all videos, from anywhere, from your desktop or mobile devices. It will also give you to course supports like the slides used during the lecture.&lt;/p&gt;
+&lt;p&gt;The most important thing to keep in mind is that coding will be done and explained in bite sized and easy to understand way.&lt;/p&gt;
+&lt;p&gt;Try it! You can check out the videos and comment. Don&amp;#39;t be shy and please do not hesitate to contact us and tell us what you think. We are counting on your feedback :)&lt;/p&gt;
+</content>
+		</entry>
+	
+		<entry>
+			<title>Hello World!</title>
+			<link href="http://jsinside.com//posts/2014-04-21-hello-world"/>
+			<updated>2014-04-21T09:24:00.000Z</updated>
+			<id>http://jsinside.com//posts/2014-04-21-hello-world</id>
+			<content type="html">&lt;p&gt;Hello everybody! We have just created our JSinside website. We are quite proud of it.
+It is a professional training site with everything you need to learn about coding software in JavaScript.
+We have decided to release it as a rudimentary version because we&amp;#39;re depending on your feedback.
+We want you, dear users, to help us figure it out along the way.   &lt;/p&gt;
+&lt;p&gt;We hope you enjoy it.&lt;/p&gt;
+</content>
+		</entry>
+	
+</feed>
